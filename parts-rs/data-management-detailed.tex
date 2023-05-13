@@ -13,7 +13,7 @@ to query domain-specific information needs in practical multimodal applications.
 
 
 \semisection*{
-    Heteregenous Data Ingestion, Scalability, and Delivery-on-demand}
+    Heterogenous Data Ingestion, Scalability, and Delivery-on-demand}
     We used Postgres as the backend architecture  for both data storage and on-time delivery. 
     %%
     Building on top of the RDBMS allows us to scale to practical data % video 
@@ -21,7 +21,7 @@ to query domain-specific information needs in practical multimodal applications.
     % video-driven investigations \cite{stonebraker2020surveillance}.
     multimodal and visual domain search \cite{stonebraker2020surveillance}.
     %%
-    For consuming data from heteregeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD \cite{palacios2019wip}. 
+    For consuming data from heterogeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD \cite{palacios2019wip}. 
     %
     Any query to the system was formulated and considered as an \textit{incident in real life}.
     For delivery-on-demand from incomplete modalities, we used Postgres Trigger functionality, which 
@@ -29,7 +29,7 @@ to query domain-specific information needs in practical multimodal applications.
     is activated whenever an insert occurs that matches a certain incident (any matching data). 
     This feature allows us to deliver incomplete 
     information need %data 
-    and complete it later when new matching data is encountered, while being capable of adapting to changing information requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we proposed to build a \textit{\textbf{query-drive knowledge base}} for each user, where all queries can relate to a single incident. SKOD speeds up the data delivery by storing frequent incidents by cacheing hot queries, and recently used data.
+    and complete it later when new matching data is encountered, while being capable of adapting to changing information requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we proposed to build a \textit{\textbf{query-drive knowledge base}} for each user, where all queries can relate to a single incident. SKOD speeds up the data delivery by storing frequent incidents by caching hot queries, and recently used data.
 
 
      \semisection*{
