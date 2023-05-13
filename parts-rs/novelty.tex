@@ -1,0 +1,64 @@
+
+% \section{Novelty detection, characterization and domain complexity estimation}
+
+% \heading{Domain Complexity and Novelties in Learning Models}
+% Novelty Analysis}
+
+% \rule{2cm}{4pt} \heading{sonnt}
+
+
+\customsection*{Adaption to Open-world Novelties}
+
+AI systems learn to perform statistical reasoning based on the training data distribution and well-defined environments during training. But real-world applications often encounter sudden and unexpected events which does not fall under their generalization capabilites or the definition of anomaly. These significant changes are termed as \textbf{`Novelties'} under DARPA SAIL-ON project. Novelty characterization and adaptation techniques need to be developed at --
+\begin{enumerate*}[label=(\arabic*)]
+    \item data integration and relevance learning stage (for multimodal applications), % mmir
+    \item environment modeling stage (for planning domains), 
+    \item feature extraction stage,
+    \item training environment, and 
+    % such as environmental, contextual, distributional changes
+    \item domain or data level.
+\end{enumerate*}
+
+% To build robust systems for open-world environment, I integrated novelty characterization, detection, and adaptation in multimodal information retrieval, while building empirical methods to detect difficulty levels of novelty in planning domains. We also proposed building robust feature extraction techniques for visual modalities with novelty generation techniques. 
+
+
+% The program’s goals are to develop scientific principles to quantify and characterize novelty in open-world domains, create AI systems that react to novelty in those domains, 
+
+% Existing AI systems become ineffective and are unable to adapt when something significant and unexpected occurs. Unlike people, who recognize new experiences and adjust their behavior accordingly, machines continue to apply outmoded techniques until they are retrained.
+
+% Given enough data, machines are able to do statistical reasoning well, such as classifying images for face-recognition, Senator said. Another example is DARPA’s AI push in self-driving cars in the early 2000s, which led to the current revolution in autonomous vehicles. Thanks to massive amounts of data that include rare-event experiences collected from tens of millions of autonomous miles, self-driving technology is coming into its own. But the available data is specific to generally well-defined environments with known rules of the road.
+
+% “It wouldn’t be practical to try to generate a similar data set of millions of self-driving miles for military ground systems that travel off-road, in hostile environments and constantly face novel conditions with high stakes, let alone for autonomous military systems operating in the air and on sea,” Senator said.
+
+% If successful, SAIL-ON would teach an AI system how to learn and react appropriately without needing to be retrained on a large data set.
+
+% “The first thing an AI system has to do is recognize the world has changed. The second thing it needs to do is characterize how the world changed. The third thing it needs to do is adapt its response appropriately,” Senator said. “The fourth thing, once it learns to adapt, is for it to update its model of the world.”
+
+% SAIL-ON will require performers and teams to characterize and quantify types and degrees of novelty in open worlds, to construct software that generates novel situations at distinct levels of a novelty hierarchy in selected domains, and to develop algorithms and systems that are capable of identifying and responding to novelty in multiple open-world domains.
+
+% SAIL-ON seeks expertise in multiple subfields of AI, including machine learning, plan recognition, knowledge representation, anomaly detection, fault diagnosis and recovery, probabilistic programming, and others.
+
+
+% Adding any number of new data sources and modalities by WesJeM - Zero Shot Learning.
+%
+\semisection*{Novelty Characterization, Detection, and Difficulty Estimation}
+I characterized the novelties encountered in \textit{multimodal information retrieval} in \cite{solaiman2022open} and proposed how WesJeM can be adapted for changing data patterns and incomplete or noisy modalities.
+Moreover, motivated by the information-theoretic approach for difficulty estimation of novelties, I proposed an empirical framework for novelty characterization and difficulty estimation in planning domains \cite{solaiman2022measurement}. For a reinforcement-learning based Monopoly agent, graphically modeling the environment to augment the state and action space allow to integrate graph edit distance as a novelty difficulty metric.
+%
+\semisection*{Robust Feature Extraction with Dataset Augmentation}
+% In the everchanging environments, the ability of machine learning (classification or feature extraction) models to perform accurately depends on whether they are able to handle novel, unpredicted and unforeseen instances, examples and classes or any other novel changes in the world of model operation, such as environmental, contextual, distributional changes. 
+The efficiency of entity-centric machine learning models in response to novelties depends on the efforts during the model training, design and data collection stages. We proposed a \textbf{novelty generation framework} \cite{nesen2021dataset} at
+the data preparation stage of training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic
+and budget efficient manner with generated novelties for visual modalities, %perception domain%
+and improved the \textbf{novel object detection} performance with the augmented dataset.
+%
+%
+\semisection*{Intrinsic Domain Complexity for Distributed AI Systems}
+% Open-world AI systems in perception domain need to characterize the target domain for building models in predictive tasks, while reacting to the rare and unexpected phenomenons, termed as \textit{novelty}. 
+Understanding of the inherent characteristics of the domain is essential for novelty characterization and model adaptability. % for building in fail-safe into the model
+We proposed an \textbf{application-independent domain complexity} measure for the AI systems in perception domain \cite{solaiman2023domainComplexity} using \textbf{federated learning as the reference paradigm} to handle distributed dataset operations.
+% We complement existing works in domain complexity estimation, by using inherent 
+Building upon intrinsic dataset properties such as dimensionality, heterogeneity and sparsity for singular environment, we created a complexity metric \textit{for the distributed environment}, showing efficacy for classification task. 
+% The proposed approach uses federated learning as the reference paradigm to handle distributed dataset operations and model the training phase in a hierarchical manner. 
+% We define the relationships of the intrinsic properties and the environment features in distributed setting with the proposed metric. 
+%We conduct experiments on three variants of the MNIST dataset with increasing complexity and measure the domain complexities independent of any classifiers. 

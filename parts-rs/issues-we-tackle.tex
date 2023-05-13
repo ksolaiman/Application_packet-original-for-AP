@@ -1,0 +1,53 @@
+
+User satisfaction for multimodal information extraction in real-world depends on few pivotal aspects:
+\textcolor{red}{Challenges:}
+\begin{enumerate*}[label=(\roman*)]
+    \item Real-world datasets coming from multiple independent sources and modalities are often heterogeneous, noisy, and incomplete. % and changes with time 
+    A desirable system needs to consume and process large number of streaming and at-rest heterogeneous data on demand.
+    % Missing piece of information in one modality can be filled in with similar information from another modality.
+    % fill in missing data one modality with another
+    %
+    \item 
+    % Data has to be delivered on time. 
+    On-demand use-cases require online data delivery and slightest delay can render the delivered data useless.
+    % Quick delivery time/ How is data delivered on demand
+    %
+    \item Most use cases in open-world lack the class labels and require automated integration of data sources. % suffer from \textit{lack of labels}.
+    % \item The amount of multimedia data is large, and it streams from multiple sources. %%%%%%
+    \item With the influx of new data, it is necessary to avoid re-inventing information extraction models. Retrieval algorithms need to use the existing feature extraction models, which in turn needs to adapt to the resource constraints in open-world systems.
+    % RESOURCE Constrainted Feature Extraction
+    \item Data retrieval systems need to assess  the intrinsic complexity of the datasets and has to be adaptable to novel changes in data (i.e., data shift and concept drift).
+    %%%%%%%%% Rest can be put into future work
+    % \item User requirement is not always obvious or explicitly stated. Learning algorithms need to adapt to changing user preferrence and delivered data must be relevant to user requirement. %%%%%
+    % \item Without proper context and explanation the delivered data is not useful to user.  %%%%%
+    % % Explanability
+    %%%%%% Federated Learning / Data virtualization/data federation
+    %%%%%% Data Democratization
+    % Missing piece of information in one modality can be filled in with similar information from another modality.
+    % fill in missing data one modality with another
+\end{enumerate*}
+
+\textit{In particular, I will focus on developing new methods for incorporating contextual information and user feedback to enhance the relevance and accuracy of search results.}
+
+% \textcolor{red}{
+% \begin{enumerate}[label=(\roman*)]
+%     % \item Resource constrained Data-preprocessing (includes feature extraction - SurvQ, HART \cite{stonebraker2020surveillance, solaiman2022femmir}) 
+%     \item Heteregenous (Real-time streaming and at-rest) data consumption, Queries model the knowledge,  Resource constrained feature extraction - SurvQ, HART \cite{stonebraker2020surveillance, solaiman2022femmir}) 
+%     \item Scalability and On-time Data delivery (\cite{palacios2019wip, stonebraker2020surveillance})
+%     \item Label-independent Data Integration
+%     \begin{enumerate}
+%         \item Focused on speed and scale \cite{solaiman2021applying}
+%         \item Weakly supervised with approximate matching and adaptability to novel data sources \cite{solaiman2022femmir, solaiman2022open}
+%     \end{enumerate}
+%     % \item Dataset and Novelty Analysis
+%     % \begin{enumerate}
+%     %     \item Intrinsic Complexity of Datasets \cite{solaiman2023domainComplexity}
+%     %     \item Dataset Augmentation with generated novelty
+%     %     \item Novelty Characterization \cite{solaiman2022measurement}
+%     % \end{enumerate}
+% \end{enumerate}
+% }
+
+
+% FIGURE
+% \heading{Scalability to videos of pratical volume: Query outputs and delivery-on-demand}\\

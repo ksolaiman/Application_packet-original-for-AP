@@ -1,0 +1,18 @@
+\customsection*{Label-efficient Data Integration at Higher Semantic Level}
+
+\semisection*{View-based Data Integration} 
+% Since information need for users in domain-specific applications are based on specific properties-of-interest, multimodal data needs to be integrated based on these properties. 
+Traditional data integration approaches suffer because of heterogeneity among data sources and incomplete modalities. Machine learning models for multimodal data fusion learn joint representations to exploit complementarity and redundancy of multiple modalities, but overlooks the information needs based on higher-level semantic concepts. With the use of Postgres trigger and by using a mediated schema for each queried incident, SKOD delivers integrated query results over time. Since the number of properties-of-interest are quite moderate, using similar approach to the \textit{Global as View} data integration, I proposed to employ \textbf{schema mapping} between the \textit{mediated schema} and \textit{local schema} from different data sources. The proposed approach, \textbf{EARS} \cite{solaiman2021applying} adopts an entity-relationship-attribute schema for each new data source, and a wrapper is designed to translate the source schemas to the mediated schema. The queries are translated into conjuctive queries between features among data sources and a SQL-Join is performed at run-time to integrate all the relevant sources. Using the versatility of Postgres, we achieve the scalability and speed that is required for time sensitive use-cases, with minimal amount of computational resources. 
+% Paper was published in IEEE Computer journal.
+
+\semisection*{Approximate Matching using Graph Representation Learning}
+While the SQL-JOIN based relational DBMS approach allows a lot of flexibility, it does not utilize the historical knowledge of previous queries,
+% (previous queries become training samples),
+and cannot perform approximate matching. Considering the sensitivity of some open-world application domains, it is desirable to search for approximate relevance between different modalities and sources. 
+Motivated by
+% the 'limited properties-of-interest' property
+representation-invariant properties of graph representation models
+combined with the existing works on approximate graph matching techniques, 
+% (look at the COLON paper to see graph/GNN advantage), 
+I propose \textbf{co-ordinated graph representation learning of the data samples comprised of their semantic features} \cite{solaiman2022femmir}, where it learns to approximate a novel Edit distance metric, \textit{CED}, based on the multiplicative comparison of the \textit{Hierarchical Attributed Relational Graph} representations. 
+% Paper got two positive review from SIGMOD 2023.

@@ -1,0 +1,26 @@
+% \heading{'Data Integration'/ 'Relevance Learning' at Higher Semantic Level}
+\customsection*{Data Integration at Higher Semantic Level}
+
+% Mutlimodal data integration has shown significant advancements with correlation and metric learning, however, they have been trained on class labels and pairwise information. Data fusion in real-world applications does not have any training samples and severly lack the man-power to obtain annotations. 
+% I proposed to use inherent database management system properties to perform \textbf{SQL Join} \cite{solaiman2021applying} for data integration. % extend
+% I proposed to use \textbf{Graph Edit Distance} as a source of \textbf{weak label} for data integration at early fusion level \cite{solaiman2022femmir}. % extend
+
+
+% Motivation/ Based on what we developed?/ Existing work that you used?
+% What we developed?
+% Where was published/ recognized/ presented?
+% impact
+
+Although domain-specific applications have large amount of unannotated heteregeneous data, they have a limited number of properties-of-interest,
+% of very specific type, 
+which makes it feasible to employ \textbf{schema mapping between local schema and mediated schema in a GAV data integration approach}. This allows user to search for matching data sources based on higher-level semantic concepts \cite{solaiman2021applying}. The queries can be translated into conjuctive queries between feature tables among data sources. Using the versatility of Postgres with different types of SQL Join, we achieve the scalability and speed that is required for rapid action use-cases, with minimal amount of computational resources. Paper was published in IEEE Computer journal.
+
+While the SQL-JOIN based relational DBMS approach gives us a lot of flexibility, it does not utilize the historical knowledge of previous queries (previous queries become training samples), and cannot perform approximate matching. Considering the sensitivity of some open-world application domains, it is desirable to search for an approximate matching between different modalities and sources. 
+Using the 'limited properties-of-interest' property combined with the existing work on approximate graph matching techniques (look at the COLON paper to see graph/GNN advantage), 
+I propose a new Edit Distance Metric for data-objects, CED. 
+I propose learning a \textbf{co-ordinated representation of the graphs of the data objects comprised of the semantic features}, where it learns the edit-distance metric based on the multiplicative comparison of the graph representations. 
+Paper got two positive review from SIGMOD 2023.
+
+% Joins are an essential part of what makes relational databases powerful and flexible enough to handle so many different types of queries. Organizing data using logical boundaries while still being able to recombine the data in novel ways on a case-by-case basis gives relational databases like PostgreSQL incredible versatility.  
+
+% By leveraging this property combined with domain-specific knowledge, we built a scalable search system that outperformed prior approaches by up to 100× [2]. 

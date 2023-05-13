@@ -1,0 +1,223 @@
+
+% % document type % %
+\documentclass[11pt]{article}
+
+% % preamble % %
+\usepackage{amsmath} % % centers and provides equation numbers for align env
+\usepackage{amssymb} % % allows use of normal N symbol
+\usepackage{graphicx} % % allows graphics floats
+\usepackage{grffile} % % allows more image file names
+\usepackage{subcaption} % % allows subfigures in floats
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+\usepackage{color}
+\usepackage{setspace} % % allows line spacing
+\usepackage{moreverb} % % allows use of verbatimtab
+\renewcommand\verbatimtabsize{4\relax} % % sets verbatimtab indent to half of default, looks better
+\usepackage{parskip} % % don't indent new paragraphs
+\usepackage{enumerate}
+\usepackage{harvard}
+
+% change font to times new roman
+\usepackage{fontspec}
+% \usepackage{polyglossia} 
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf
+]
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{
+            \includegraphics
+            [height=60pt] %40pt
+            {\InstituteSeal}
+            % {cas_logo.png}
+        }  % left header
+	\fancyhead[R]{\today} % right header
+	\fancyfoot[C]{} % % remove default centered page numbers
+}
+
+\fancypagestyle{empty}{
+	\newgeometry{top=1.1in,bottom=1in,left=1in,right=1in}
+	\fancyfoot[C]{} % % remove default centered page numbers
+}
+
+% % omit line beneath header
+\renewcommand{\headrulewidth}{0pt}
+
+% % expand head of document:
+\setlength{\headheight}{44.35004pt}
+
+% % application specific information % %
+\usepackage{school}
+
+\renewcommand*\paragraph[1]{}
+
+% % Change font of whole document
+% \renewcommand{\familydefault}{\sfdefault}
+
+% % document begins % %
+\begin{document}
+
+% % header w/ logo on first page
+\thispagestyle{plain}
+
+% % no header or footer on second page
+\pagestyle{empty}
+
+% % address block % %
+Faculty Search Committee \\
+\DepartmentName \\
+% \SchoolName \\
+\InstitutionName \\
+\DepartmentAddress
+
+% % body % %
+Dear Members of the Search Committee:
+
+I am writing to express my interest in the tenure-track faculty positions in the Computer Science program within the College of Engineering and Science (COES) at Louisiana Tech University. I fully expect to complete my Ph.D. degree in Computer Science from Purdue University by July 2023, specializing in Machine Learning and Database Systems, and have a proven record of accomplishment in research and outstanding teaching skills.
+
+I am writing to express my strong interest in the tenure-track position in the area of foundations of machine learning and artificial intelligence (AI) at the University of Wisconsin-Madison.
+I am a doctoral candidate at Purdue University, and I am scheduled to complete my Ph.D. degree requirements, including defending and depositing, by July 2023. I have a track record of external research funding from federal agencies and industry partners such as DARPA, Sandia and NGC. I have a strong interdisciplinary orientation in my work and have collaborated with end-users and experts in database, NLP+CV, information and data science, and industry from MIT, NGC, USC-ISI, DARPA, and others. My research portfolio includes multiple publications in VLDB, SIGMOD, AAAI, and IEEE and systems with social impacts.
+%
+% % After being informed of this position by a colleague, 
+% I was motivated to apply 
+% as I believe I can contribute to \shortInstitutionName{}'s mission of promoting 
+% % intellectual pluralism 
+% accessible and inclusive 
+% % inclusive 
+% % and quality
+% education with my commitment to pursue collaborative teaching, the experience of attending a multi-faceted public research university, and my focus on impactful research and education.  
+With a teaching and research experience of more than six years, I believe I have the necessary skills to fulfill the duties of an \PositionName{} for the \InstitutionName{}.
+
+\paragraph{1 and P1) current research portfolio, accomplishments, and future research goals}
+% \paragraph{1) Bachelor's and Master's degrees in Computer Science}
+% I have completed my Master's degree requirements with systems, algorithms, and data-science-related courses, along with elective classes regarding current advancements in Database and Machine Learning. Previously, I completed my Bachelor's in Computer Science with a specialization in Pattern Recognition, where I proposed a novel clustering algorithm for irregularly shaped datasets using a single hyperparameter.
+% For my Ph.D. dissertation, I propose a system for \textit{Multimodal data discovery} to deliver users with the relevant data at the right time. My proposed system includes solutions for processing large-scale multimodal data, feature extraction from perceptual and textual domains, cross-modal relevance matching, and real-time data delivery. I also proposed a framework for measuring domain complexity in distributed perception domains and a weakly supervised model for open-world cross-modal retrieval to accommodate systems with open-world novelty. I aim to continue my research on Open-world AI and Multimodal information retrieval to understand the hidden patterns in ever-increasing influx of cross-modal data.
+
+%%%%% Just rudimentary level past research detail, didnot connect with application %%%
+% I have worked on developing algorithms and robust systems to extract meaningful information from heterogeneous and changing datasets, regardless of whether presented as text, images, videos, audio, or other modalities. % , while achieving data-driven and resource-aware data management and data integration capabilities. 
+% I also proposed scientific principles to \textit{quantify and characterize novelty in open-world domains, while creating scalable and efficient AI systems that react to novelty in those domains}. % My research focused on three main challenges for multimodal information processing in open-world: \textit{resource-aware data management system, label-independent data integration, and dealing with open-world novelties}. I have developed several approaches to address these challenges, including SKOD for situational knowledge deliver, EARS for data integration using schema mapping, FemmIR for approximate matching of co-ordinated graph representations of data samples, HART for attribute extraction from text, and WesJeM for embedding data-objects and their semantic properties in a high-dimensional space using higher-level semantic features. My work has had a positive impact on open societal problems, including Missing Person Search, Dataset Complexity Estimation, and Medical Triage. 
+
+I have experience developing algorithms and systems for open-world application domains and retrieval and recommendation of multimodal data. 
+My research focused on real applications of learning machines and foundations of artificial intelligence and machine learning for \textit{open-world novelties}, with an emphasis on large-scale machine learning systems, deep learning, representation learning, reinforcement learning, and explanability.
+% I also proposed scientific principles to \textit{quantify and characterize novelty in open-world domains, while creating scalable and efficient AI systems that react to novelty in those domains}.
+% Research in Applications for Learning Machines (REALM)
+% Science of Artificial Intelligence and Learning for Open-world Novelty 
+My work with NGC and DARPA resulted in innovative research programs that made an impact in the field, including novel approaches to \textit{resource-aware data management, label-independent data integration,} and \textit{addressing open-world novelties}.
+My work in \textit{quantifying and characterizing novelty in open-world domains} had impacts and collaborations in planning domains and autonomous system design.
+% 
+I have applied my work to address open societal problems, such as missing person search, dataset complexity estimation, and medical triage.
+
+My long-term goal is to create intelligent systems that can reason, learn and cooperate with humans to improve the standard of living by utilizing the 
+% vast amounts of data available in the modern era 
+modern-era data influx
+and address real-world challenges.
+To achieve this, I plan to continue my research on multimodal data management in open-world by focusing on \textit{user preference modeling, improving explainability and trustworthiness in data recommendation with validation and cross-checking, developing algorithms for privacy preserving data dissemeniation, and exploring theories on novelties in learning algorithms}. 
+% You believe your research can make a significant impact on society by leveraging existing scientific advancements and addressing real-world challenges.
+%%%%%%%%%%
+% During my research, I enjoyed working with our industry and academia colleagues (such as JPL, NGC, Sandia, Ford, MIT, UMichigan, USC-ISI, IDA).%
+%%%%%%%%% above is Mentioned in introduction %%%%
+% and understood the need for interdisciplinary collaborations between academia and industry.
+In pursuing my research goals, I would seek to collaborate with other faculty members within the department and across the university who share my interests, including experts in NLP, computer vision (Mohit Gupta), ethics, psychology, marketing, social science, human computer interaction (Yuhang Zhao, Yea-Seul Kim), novelties and robust systems (Sharon Yixuan Li, Frederic Sala), and data management systems and databases (Anhai Doan). 
+% ML and novelty: Sharon Yixuan Li, FREDERIC SALA
+Additionally, I have contributed significantly to the writing of grant proposals (such as DARPA ITM project, and DARPA Triage Challenge), including idea generation, method design, idea illustration and visual aid creation. I will keep exploring potential funding opportunities from funding agencies (e.g., DARPA, AFRL, NSF)
+% IARPA,  ARL, NIH, DOE, DOD) 
+and industries (e.g., NGC, Microsoft, IBM, Ford).
+I am excited about the prospect of contributing to UW-Madison's world-class core of interdisciplinary strength in the areas of computational and data-driven science and engineering.
+% , and robotics and autonomous systems.
+%%%%%%%%%%%%%%%%
+% My work has the potential to make a significant impact in the fields of machine learning, artificial intelligence, and data science, and I believe that I would be an asset to the interdisciplinary cohort of new faculty recruited across the College of Engineering in the broad areas of computational and data-driven science and engineering, and robotics and autonomous systems. 
+
+% \newpage
+%
+\paragraph{You should highlight your experience in teaching and mentoring students at different levels}
+As a Lecturer for 2 years and teaching assistant in the CS program at Purdue University for 5 years, I worked in a culturally, ethnically, and economically diverse and ever-evolving environment. This experience strengthened my communication, interpersonal, and organizational skills. 
+Leading large labs with the Undergraduate TAs or handling graduate labs on my own has allowed me to showcase my teamwork and adaptability skills. Teaching students from sophomore to graduate levels required continuous learning and flexibility to facilitate their progression and expectation from the courses.
+% In my graduate classes, the students appreciated using tools like HotCRP or Perusall for teaching literature reviews or paper writing.
+% Furthermore, teaching post-covid has equipped me with the tools and skills, including course management and automatic-grading software to teach online or in-person, e.g., Brightspace, Gradescope, or Campuswire.
+%
+\paragraph{Teaching Philosophy}
+My teaching philosophy revolves around growing intrinsic motivation, autonomous identity and critical thinking among students, understanding the diversity among students, and leading with a growth mindset.
+% As a teacher, I aim to develop self-motivation and critical thinking among my students. % Recognizing that every student comes from a different background and culture and finding the interconnection between the student's current knowledge and learning capability has helped me prepare better lectures. % To promote learning by doing, I choose exercises that are both related to the core concepts and challenging so that they have to step outside of their comfort zone and can develop the logical thinking needed for solving research questions and real-life problems. Letting the students choose the modality for lectures and deliverables, giving frequent feedback for homework and projects, grading with a growth mindset, and leaving detailed reasoning are some of my efforts to make them feel autonomous and involved in the learning process. 
+\paragraph{4) Good communication skills.}
+% I gained proficiency in delivering talks to large audiences through lectures in labs and classes and frequent presentations in review meetings and conferences with JPL, Northrop Grumman, and DARPA. Being authored and published multiple papers in VLDB, SIGMOD, and IEEE, I am confident in my communication skills. 
+
+\paragraph{4) Teaching Experience of lot of credits.}
+% As a full-time lecturer, I had the experience of taking upto 18 credit hours per semester while teaching multiple classes and labs on various courses. I have experience teaching programming language courses (Java, C/C++, Python), database courses (SQL), data structure and algorithm, and software engineering courses (JavaScript and PHP) for multiple semesters. 
+
+\paragraph{curriculum development for lecture and lab courses in Computer Science/Data Science}
+% I have prior involvement in developing course materials for \textit{Object-oriented programming, Databases,} and \textit{Simulation and Modeling}. In addition, during my tenure as a Lecturer, I improved the undergraduate curriculum for \textit{Network Programming} and \textit{Graphics}.
+I have prior involvement in developing course materials (OOP, databases, simulation and modeling) and improving course curriculum.
+% In my prospective career as \PositionName{}, 
+I look forward to working in a collaborative teaching and learning environment with both faculty and students, where I can improve courses incorporating novel teaching  techniques, research discoveries, and the most recent theories on learning, such as Self-determination theory, belongingness, etc. 
+I am excited to teach CS courses at both undergraduate and graduate levels. 
+I would also welcome the opportunity to develop new courses according to the departmental needs.
+
+\paragraph{interdiscipliniary colab}
+% During research, I enjoyed working with our industry colleagues and understood the need for interdisciplinary collaborations between academia and industry. 
+% This experience would be helpful for me to integrate with \shortInstitutionName{}'s mission of interdisciplinary collaboration to better the economic, social, cultural, and environmental health of the communities.
+% among social justice, the health sector, and academia.
+
+\paragraph{P4) The ability to contribute through teaching and/or service to the diversity, cultural sensitivity, and excellence of the academic community.}
+\paragraph{Diversity}
+I strongly believe in the value of diversity and inclusion and have actively worked to create an inclusive research and teaching environment. During classroom communication, I actively handle the diversity in accents by understanding the difference, addressing the speaking, and actively listening in traditional and alternative methods.
+I always create a safe and comfortable environment for all my students to learn and share their feedback and questions. In addition, I have actively engaged in promoting diversity and inclusion through international collaborations, mentoring students from diverse backgrounds, outreach, and socially impactful research. Under my guidance, multiple undergraduates and Master's students worked in teams on same projects for independent research and learned essential skills in developing practical solutions for real-world problems. As a future faculty of \shortInstitutionName{}, I would continue my efforts through leading an equal-opportunity research group, creation of inclusive environments, affinity group participation, outreach to younger generations and beyond borders, and involvement with groups advancing diversity at \shortInstitutionName{}. 
+% (such as ADVANCE and CMASS).
+
+\paragraph{P3) Relevant industrial experience beneficial to CS/ DS curriculum development and CS/DS capstone project advising}
+% UM System’s NextGen Precision Health initiative .
+
+
+% CRISP-DM breaks the process of data mining into six major phases:[14]
+% Business Understanding
+% Data Understanding
+% Data Preparation
+% Modeling
+% Evaluation
+% Deployment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Employee Management System
+% Food delivery system
+% Instagram Mini
+% Hotel Management System
+% Bank Management System
+% Blood Bank Management
+% Android E-commerce
+% Bus Ticket Management System
+% Hospital Appointment 
+% Online Library and Bookshop
+% CS 536 courses
+
+% \vfill
+
+% I am very excited about the opportunity of joining \InstitutionName{}, 
+I would enjoy further discussing the value I can add to this position and \InstitutionName{}. I am sharing my curriculum vitae and my research, teaching and diversity 
+statements
+% with evidence of my teaching experience 
+through the website. Letters of reference will be provided separately for your review. I will gladly provide any other supporting materials upon request. Thank you very much for your time and consideration.
+
+\bigskip
+Sincerely, 
+
+% \includegraphics[height=40pt]{signature.png}
+\Name{} \\
+\normalsize  \textnormal{
+          Ph.D. Candidate at Department of Computer Science, Purdue University, West Lafayette, IN 47907
+        }\\
+        \normalsize \textnormal{ % \small
+          \href{mailto:ksolaima@purdue.edu}{ksolaima@purdue.edu} ~|~ %
+          (+1) 765-775-8230 ~|~ %
+          % Ph.D. Candidate @ Purdue Computer Science
+          % 305 N University St, LWSN B132, West Lafayette, IN 47907
+          \href{https://ksolaiman.github.io/}{https://ksolaiman.github.io/}
+          % \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
+          % \ResumeUrl{https://github.com/fky2015}{github.com/fky2015}%
+}
+
+% % end % %
+\end{document} 

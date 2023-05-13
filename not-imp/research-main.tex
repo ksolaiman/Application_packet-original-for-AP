@@ -1,0 +1,328 @@
+\documentclass[9pt]{article}
+% \documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} %{tgbonum}
+% \usepackage{natbib}
+\usepackage[inline]{enumitem}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+% \usepackage[Sonny]{fncychap}
+
+% Set page margins
+\usepackage[margin=1in,top=0.8in]{geometry} % 0.4
+
+% Mathematical things
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+
+% \makeatletter
+% \def\paragraph{\@startsection{paragraph}{4}%
+%   \z@\z@{-\fontdimen 2 \font}%
+%   {\normalfont\bfseries}}
+% \makeatother
+
+\makeatletter
+\def \section {%
+    \@startsection {section}
+    {1}%
+    {\z@}%
+    {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0.2em}
+    {\normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
+
+% https://latexref.xyz/_005c_0040startsection.html
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@\z@{-\fontdimen 6 \font}%
+        % {0pt}% indent 
+        % {\normalfont\bfseries}}
+        % {\normalfont\scshape\bfseries}}
+        % {2pt} %afterskip
+        {\large \scshape \bfseries}% style
+    }
+\makeatother
+
+\newcommand*\bfheading[1]{\textbf{#1.}}
+\newcommand*\heading[1]{\large\textbf{\textit{#1.}}}
+
+\makeatletter
+\def \customsection {%
+    % \@startsection {section}
+    \@startsection{section}
+    {1}%
+    {\z@}%
+    % {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0em}
+    {0.2em}
+    {\rule{2cm}{4pt} \normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
+
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+ % \href{https://ksolaiman.github.io/}{Website}
+ % pg number in footer
+	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+        \fancyhead[C]{\thepage}
+        % \fancyhead[C]{\Name}
+	
+	\fancyfoot[R]{} % % pg number in footer
+	\fancyfoot[C]{} % % remove default centered page numbers
+	\fancyfoot[L]{} % last compiled in footer
+}
+
+% % application specific information % %
+\usepackage{school}
+
+
+\title{
+    \vspace{-3em}
+    \textbf{Research Statement} \hfill \href{https://ksolaiman.github.io/}{\textit{\Name}}
+    \vspace{-2.5em}
+}
+
+% \author{KMA Solaiman\vspace{-2em}}
+% \email{ksolaima@purdue.edu}
+\date{}
+
+% \input{pubs-authoryear.tex}
+% \input{pubs-num}
+% \addbibresource{ref.bib}
+% 
+% \mynames{
+% Solaiman$*$/KMA,
+% Solaiman/KMA,
+% }
+
+
+\begin{document}
+\maketitle
+\pagestyle{plain}
+
+\heading{Talk Title} Multimodal Information Retrieval in Open-world Environment: Right Information at the Right Time
+
+\heading{Research interest} Multimodal information extraction, data integration, and data mining.
+
+%% What was the burning question that you set out to answer?
+% My research goal was to build machines that can 
+% \section{Multimodal Information Retrival and Feature Extraction}
+
+% Old questions 1
+% Without proper context and explanation the recent growth in multimodal data from multiple independent sources will become obsolete. The data consumer has needs that may not be explicitly stated or they may not know what they are looking for.
+% With time their query may change, we need to anticipate their need and deliver it.
+% If data is delivered after the need has passed, it is unnecessary.
+% It has also necessitated the learning algorithms to be adapatable to real-world datasets, which in most cases are noisy, biased, and heteregenous. 
+
+% Old questions 2
+% Learning machines can analyze multi-model data coming from multiple independent sources and look for needs that are not obvious or explicitly stated.”
+% “Data coming from public tweets, videos, phone calls, and police reports may be noisy, incomplete, incorrect and changing fast,
+
+\texttt{My research vision is focused on building intelligent systems that can efficiently process and integrate heterogeneous data from multiple sources and modalities in real-world environments. His goal is to develop systems that can extract relevant information from large volumes of data and deliver it to the right user based on situational awareness, while providing decision-making information that is specific to mission needs. To achieve this, he aims to develop novel techniques and algorithms for data pre-processing, data fusion, and data integration that can handle the challenges posed by noisy, incomplete, and heterogeneous data. His research also involves developing scalable and efficient systems that can adapt to changing data patterns and operate under resource constraints. Ultimately, his work aims to contribute to the development of intelligent systems that can support a wide range of real-world applications, including surveillance, disaster response, healthcare, and transportation.}
+
+My research vision is to build systems capable of satisfying \textbf{multimodal information needs in open-world environments}. In the data-centric future, we want make sense of the data.
+\textit{With the increasing prevalence of multimedia data on the web, traditional uni-modal search engines are no longer sufficient to meet the needs of modern users. As a result, the development of effective techniques for multimodal information retrieval has become a key research area.
+My research will explore the challenges of retrieving information in an open world environment, where the types of data and sources available are constantly evolving.}
+User satisfaction for multimodal information extraction in real-world depends on few pivotal aspects:
+\begin{enumerate*}[label=(\roman*)]
+    \item Real-world datasets coming from multiple independent sources and modalities are often heterogeneous, noisy, and incomplete. % and changes with time 
+    A desirable system needs to consume and process large number of streaming and at-rest heterogeneous data on demand.
+    % Missing piece of information in one modality can be filled in with similar information from another modality.
+    % fill in missing data one modality with another
+    %
+    \item 
+    % Data has to be delivered on time. 
+    On-demand use-cases require online data delivery and slightest delay can render the delivered data useless.
+    % Quick delivery time/ How is data delivered on demand
+    %
+    \item Most use cases in open-world lack the class labels and require automated integration of data sources. % suffer from \textit{lack of labels}.
+    % \item The amount of multimedia data is large, and it streams from multiple sources. %%%%%%
+    \item With the influx of new data, it is necessary to avoid re-inventing information extraction models. Retrieval algorithms need to use the existing feature extraction models, which in turn needs to adapt to the resource constraints in open-world systems.
+    % RESOURCE Constrainted Feature Extraction
+    \item Data retrieval systems need to assess  the intrinsic complexity of the datasets and has to be adaptable to novel changes in data (i.e., data shift and concept drift).
+    %%%%%%%%% Rest can be put into future work
+    % \item User requirement is not always obvious or explicitly stated. Learning algorithms need to adapt to changing user preferrence and delivered data must be relevant to user requirement. %%%%%
+    % \item Without proper context and explanation the delivered data is not useful to user.  %%%%%
+    % % Explanability
+    %%%%%% Federated Learning / Data virtualization/data federation
+    %%%%%% Data Democratization
+    % Missing piece of information in one modality can be filled in with similar information from another modality.
+    % fill in missing data one modality with another
+\end{enumerate*}
+
+\textit{In particular, I will focus on developing new methods for incorporating contextual information and user feedback to enhance the relevance and accuracy of search results.}
+
+\textcolor{red}{
+\begin{enumerate}[label=(\roman*)]
+    \item Resource constrained Data-preprocessing (includes feature extraction - SurvQ, HART \cite{stonebraker2020surveillance, solaiman2022femmir}) 
+    \item Real-time streaming and at-rest data consumption and On-time Data delivery (\cite{palacios2019wip, stonebraker2020surveillance})
+    \item Label-independent Data Integration
+    \begin{enumerate}
+        \item Focused on speed and scale \cite{solaiman2021applying}
+        \item Weakly supervised with approximate matching and adaptability to novel data sources \cite{solaiman2022femmir, solaiman2022open}
+    \end{enumerate}
+    % \item Dataset and Novelty Analysis
+    % \begin{enumerate}
+    %     \item Intrinsic Complexity of Datasets \cite{solaiman2023domainComplexity}
+    %     \item Dataset Augmentation with generated novelty
+    %     \item Novelty Characterization \cite{solaiman2022measurement}
+    % \end{enumerate}
+\end{enumerate}
+}
+
+
+\textcolor{red}{
+% What I propose -- \\
+% Entity centric data integration \\
+% Even the weakly supercised ones are entity and entiry attribute centric\\
+% In a resource constrained environment (in real world)\\
+% $\bullet$ How is data ingested to a peta scale \\ 
+% $\bullet$ How is delivered on demand \\ 
+% $\bullet$ How to cut down the feature extraction phase for data intwgration\\
+% % Novelty in data itself
+%
+% What is the bigger research area!
+To obtain such knowledge from multimodal data, I focus on Multimodal Information Retrieval (MMIR), 
+% How do I mold it? And what is the novelty in that?
+and propose Entity-Centric Multimodal Data Integration to evolve traditional feature-centric Single-modality knowledge into Entity-centric Multi-modality knowledge.\\
+Feature level abstraction extracts features from various independent sensors to produce individual feature vector representations.
+}
+%
+\textcolor{blue}{
+% Difference in detail
+(Li) Traditional MMIR depends on class labels or advarsarial samples to create the classifier models, instead we rely on weakly supervised models (Amount of dissimilar or similar properties in each data object)
+Traditional entity-centric approaches to consuming multimodal information focus on concrete concepts (such as objects, object types, physical relations, e.g., a person in a car), while my work endows machines to understand complex abstract semantic structures that are difficult to ground into image regions but are essential knowledge (such as events and semantic roles of objects, e.g., driver, passenger, passerby, salesperson) (Li).
+% Benefits over existing works
+It is able to consolidate complex semantic structures of multiple modalities, providing a major benefit over recent research advances in single-modality (text-only or vision-only) knowledge. 
+}
+
+% FIGURE
+
+\heading{Scalability to videos of pratical volume: Query outputs and delivery-on-demand}\\
+\heading{ingesting streaming and data-at-rest inputs} 
+\heading{Contribution in Data Integration stage}\\
+\cite{palacios2019wip}
+Software stack \\
+Query-driven knowledge base \\
+Basic Data integration with scene-level! video/ image and semantic-level text features.
+%
+%
+
+%%%% \heading{Contribution in Data Pre-processing stage}\\
+% \heading{Resource-constrained 
+% domain-specific 
+% Data Pre-processing}
+\heading{Domain-agnostic to Domain-specific Data Pre-processing}
+\textcolor{red}{For feature-level data fusion, we need to extract features from the raw data. But Feature level abstraction extracts features from various independent sensors to produce \textbf{individual feature vector representations}!!}
+Task-specific querying systems suffer from lack of good quality property identification models and resource constraints in data preparation stage due to the low quality and lack of labels in training samples.
+% Unavailability of computing resources (training samples, GPU, man-power, etc.) in large-scale life-saving (disaster recovery) and social-good application domains makes it harder to adapt transfer learning, or traditional machine learnging algorithms.
+We proposed \textbf{priority-polling} \cite{stonebraker2020surveillance} for large scale object and attribute detection models for querying pedestrian \textit{videos}.
+% , along with a color-sampling approach to identify human attributes without using additional annotated samples.
+We also included a common-sense based reasoning with color and shape analysis \cite{stonebraker2020surveillance, solaiman2021applying} on top of YOLO. The tracking of a person at multiple scenes with multiple cameras can be done with 
+% Between shape analysis, color analysis and common sense reasoning, we can detect about half of the objects in Table 1.
+% In \cite{stonebraker2020surveillance}, we proposed SurvQ, a human-in-the-loop query system for analyzing surveillance \textit{videos}. We have described a database backend that can scale to practical video volumes, as well as an interface that dramatically lowers the human costs of video-driven investigations. 
+% For delivery-on-demand we used the postgres trigger whenever an insert occurs that matches a certain incident (any matching data). For accomodating the resource constraints in practical systems, we implemented a need-only feature extraction for video data via a priority pooling system. 
+% The trigger can be specified to fire before the operation is attempted on a row (before constraints are checked and the INSERT, UPDATE, or DELETE is attempted); or after the operation has completed (after constraints are checked and the INSERT, UPDATE, or DELETE has completed); or instead of the operation (in the case of inserts, updates or deletes on a view). If the trigger fires before or instead of the event, the trigger can skip the operation for the current row, or change the row being inserted (for INSERT and UPDATE operations only). If the trigger fires after the event, all changes, including the effects of other triggers, are “visible” to the trigger.
+%%%%%%%
+% A PostgreSQL trigger is a function called automatically whenever an event such as an insert, update, or deletion occurs.
+% A PostgreSQL trigger can be defined to fire in the following cases:
+% Before attempting any operation on a row (before constraints are checked and the INSERT, UPDATE or DELETE is attempted).
+% When an operation has been completed (after constraints are checked and the INSERT, UPDATE, or DELETE has been completed).
+% In spite of the operation (in the case of INSERT, UPDATE, or DELETE on a view).
+%
+%
+% Text Feature Extraction:
+% In \cite{solaiman2022femmir}, we proposed a novel property identification technique for \textit{unstructured texts} to extract features from large text documents. We identified the candidate sentences by forming the problem as a similarity-search problem using pre-trained language representation models (SBERT) and lexical knowledge bases. We used the syntactic characteristics and lexical meanings of the tokens in the Candidate Sentences to do the final identification of the feature values.
+I proposed \textbf{candidate sentence identification and property value understanding} \cite{solaiman2022femmir} from \textit{unstructured texts} based on similarity-search using pre-trained language representation models (SBERT) and lexical knowledge bases. Property values are extracted using the syntactic characteristics and lexical meanings of the tokens in the candidate sentences.
+
+
+\heading{Label Independent Data Integration}
+Mutlimodal data integration has shown significant advancements with correlation and metric learning, however, they have been trained on class labels and pairwise information. Data fusion in real-world applications does not have any training samples and severly lack the man-power to obtain annotations. 
+I proposed to use inherent database management system properties to perform \textbf{SQL Join} \cite{solaiman2021applying} for data integration. % extend
+I proposed to use \textbf{Graph Edit Distance} as a source of \textbf{weak label} for data integration at early fusion level \cite{solaiman2022femmir}. % extend
+I proposed using \textbf{entity-centric properties} from video, image, and text as a source of \textbf{weak label} for data integration at late fusion level \cite{solaiman2022open}. % extend
+
+% \begin{enumerate}
+%     \item Can we use GED as a source of weak label for data integration at early fusion level?
+%     \item Can we use data properties (features) as a source of weak label for data integration at late fusion level?
+% \end{enumerate}
+
+
+% \section{Novelty detection, characterization and domain complexity estimation}
+
+% \heading{Domain Complexity and Novelties in Learning Models}
+% Novelty Analysis}
+
+% \rule{2cm}{4pt} \heading{sonnt}
+
+\heading{Adaption to Open-world Novelties}
+Open-world AI systems in perception domain need to characterize the target domain for building models in predictive tasks, while reacting to the rare and unexpected phenomenons, termed as \textit{novelty}. Understanding of the inherent characteristics of the domain is essential for novelty characterization and model adaptability. % for building in fail-safe into the model
+We proposed an application independent \textit{\textbf{domain complexity}} measure for the AI systems in perception domain \cite{solaiman2023domainComplexity} using federated learning as the reference paradigm to handle distributed dataset operations,
+% We complement existing works in domain complexity estimation, by using inherent 
+and intrinsic dataset properties such as dimensionality, heterogeneity and sparsity as variables in the complexity metric \textit{for the distributed environment}. 
+% The proposed approach uses federated learning as the reference paradigm to handle distributed dataset operations and model the training phase in a hierarchical manner. 
+% We define the relationships of the intrinsic properties and the environment features in distributed setting with the proposed metric. 
+%We conduct experiments on three variants of the MNIST dataset with increasing complexity and measure the domain complexities independent of any classifiers. 
+%
+%
+% In the everchanging environments, the ability of machine learning (classification or feature extraction) models to perform accurately depends on whether they are able to handle novel, unpredicted and unforeseen instances, examples and classes or any other novel changes in the world of model operation, such as environmental, contextual, distributional changes. 
+Furthermore, the efficiency of entity-centric machine learning models in response to novelties depends on the efforts during the model training, design and data collection stages. We proposed a \textbf{\textit{novelty generation framework}} \cite{nesen2021dataset} at
+the data preparation stage of training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic
+and budget efficient manner with the generated novelties for visual modalities, %perception domain%
+and improved \textbf{\textit{novel object detection}} performance with the augmented dataset.
+Finally, we characterized the novelties encountered in \textit{multimodal information retrieval }in \cite{solaiman2022open} and proposed an adaptable framework for open-world MMIR.
+Moreover, we proposed an empirical framework for novelty characterization and difficulty estimation in planning domains \cite{solaiman2022measurement}. 
+
+
+\heading{Others}
+Work on clustering and data analysis
+
+\heading{Application}
+How is my research important?
+\begin{enumerate}
+    \item Finding missing persons
+    \item Data Discovery
+    \item Examples of Data Fusion: Use cases \href{https://proxet.com/blog/data-fusion-and-data-integration-best-practices/}{HERE}
+
+\textcolor{blue}{
+    The significance of my research lies in its potential to improve the efficiency and effectiveness of information retrieval in open world environments. By developing new techniques for multimodal information retrieval, my research can help users to quickly and accurately find the information they need, even in situations where the data sources are constantly changing. This can have broad implications for a variety of applications, including web search engines, digital libraries, and e-commerce platforms.\\
+In summary, my research statement proposes to develop new methods for multimodal information retrieval in open world environments, leveraging the latest advances in machine learning and natural language processing. I believe that this research has significant potential to improve the efficiency and effectiveness of information retrieval and make a meaningful contribution to the field of information science.}
+\end{enumerate}
+
+% \cite{solaiman2013avra}
+% \cite{stonebraker2020surveillance}
+% \cite{solaiman2022femmir}
+% \cite{solaiman2021applying}
+% \cite{palacios2019wip}
+
+\bfheading{Research Philosophy}
+
+\input{research-detailed}
+
+\customsection*{Future Research Agenda}
+%%%%%%%%% Rest can be put into future work
+    % \item User requirement is not always obvious or explicitly stated. Learning algorithms need to adapt to changing user preferrence and delivered data must be relevant to user requirement. %%%%%
+    % \item Without proper context and explanation the delivered data is not useful to user.  %%%%%
+    % % Explanability
+    %%%%%% Federated Learning / Data virtualization/data federation
+    %%%%%% Data Democratization
+    % Missing piece of information in one modality can be filled in with similar information from another modality.
+    % fill in missing data one modality with another
+
+\customsection*{Collaboration and Funding}
+Bhargava is joined on the project by faculty from Stanford University, Massachusetts Institute of Technology and Carnegie Mellon University.
+
+% \input{publications.tex}
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}

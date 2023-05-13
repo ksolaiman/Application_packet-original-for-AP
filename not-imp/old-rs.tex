@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} %{tgbonum}
+
+% Set page margins
+\usepackage[margin=1in,top=0.8in]{geometry} % 0.4
+
+% Mathematical things
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+
+% \makeatletter
+% \def\paragraph{\@startsection{paragraph}{4}%
+%   \z@\z@{-\fontdimen 2 \font}%
+%   {\normalfont\bfseries}}
+% \makeatother
+
+\makeatletter
+\def \section {%
+    \@startsection {section}
+    {1}%
+    {\z@}%
+    {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0.2em}
+    {\normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
+
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@\z@{-\fontdimen 6 \font}%
+        {\normalfont \bfseries}% style %\scshape \large
+    }
+\makeatother
+
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+ % \href{https://ksolaiman.github.io/}{Website}
+ % pg number in footer
+	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+        \fancyhead[C]{\thepage}
+        % \fancyhead[C]{\Name}
+	
+	\fancyfoot[R]{} % % pg number in footer
+	\fancyfoot[C]{} % % remove default centered page numbers
+	\fancyfoot[L]{} % last compiled in footer
+}
+
+% % application specific information % %
+\usepackage{school}
+
+
+\title{
+\vspace{-3em}
+\textbf{Teaching Statement} \hfill \href{https://ksolaiman.github.io/}{\textit{\Name}}
+\vspace{-2.5em}
+}
+
+% \author{KMA Solaiman\vspace{-2em}}
+% \email{ksolaima@purdue.edu}
+\date{}
+
+\newcommand{\textcourse}[1]{\textit{#1}}
+
+
+\title{Research Statement}
+\author{ksolaima }
+\date{November 2022}
+% \begin{abstract}
+%     (two page limit)
+% Include a brief overview of your scientific background, the current project you are working on, and how that connects to the research area(s) you are interested in exploring in postdoctoral research. This broad overview will be shared with all potential mentors. Note that the individual statements you write in the application for each potential mentor will supplement this information. If you choose to include references, please use a standard publication style.
+% \end{abstract}
+
+\begin{document}
+
+\maketitle
+
+My research vision is ...\\
+Finding the missing information, (providing a major benefit over recent
+research advances in single-modality (text-only or vision-only) knowledge).\\
+
+\section{Introduction}
+\begin{enumerate}
+    \item Multi-modal Information Retrieval
+    \item MMIR + Explainable AI 
+    \begin{enumerate}
+        \item Why are things similar?
+        \item Why are things different?
+        \item How are they achieving information needs?
+    \end{enumerate}
+    \item MMIR + Reinforcement Learning 
+    \begin{enumerate}
+        \item RL can be applied in User Feedback
+        \item RL in Relevance Feedback 
+    \end{enumerate}
+    \item DataPrism/ DICE/ Data Systems work (Future)
+    \item Experience with Writing Grant 
+    \item Experience with working with Funding managers (PM - program managers) directly (Jim) 
+\end{enumerate}
+
+
+\href{https://gradschool.cornell.edu/career-and-professional-development/pathways-to-success/prepare-for-your-career/take-action/research-statement/}{How to Guide from Cornell}
+
+\section{Tissue Plans}
+% \begin{enumerate}[label=(Proj \arabic*):]
+%     \item MMIR - 1) focusing on quick throughput, 2) focusing on approx. matches
+%     \item Attr. extraction from text
+%     \item Data Augmented Anamoly + Video FE
+%     \item Novelty
+%     \begin{enumerate}
+%         \item Intrinsic Complexity of dataset
+%         \item Measurement of Novelty Difficulty w/ GED
+%         \item Prisoners Dilemma! 
+%         \item Reducing state representation for RL
+%     \item Direction: Explainable MMIR
+%     \end{enumerate}
+% \end{enumerate}
+
+\section{OLD Files that may help give idea:}
+Stanford Collaboration:
+\paragraph{\#Blazeit}
+BlazeIt offers FRAMEQL, a SQL-like language for querying spatiotemporal information of objects in video. BlazeIt also allows User Defined Queries over the fields and content which will allow us to query video in an end-to-end faster method.
+\paragraph{User preference modeling via inference:}
+The SQL queries from a certain user would provide us base for building user preference over time by allowing us to infer most-probable variable assignments (MAP inference). From the SQL queries we will build the PSL model rules. For example, if a user wants information on a certain type of location in his previous queries, from a pool of locations our PSL rules will be able to infer which specific locations the user is interested in.
+ 
+\paragraph{Multi-modal knowledge base:}
+FRAMEQL represents videos as relations, with one relation per video. After we retrieve the relations in the video, we build a knowledge graph consisted of events formed by Subject-Predicate-Object relations from the video. We will have our knowledge graphs from text as well. And this will build our base for building up a knowledge base for multi-modal data.
+Another very common use case can be, if a tweet in Lafayette describes – 
+A blue Camry car just passed us through, and the police are chasing it.
+We can query the traffic cam feeds which frames contain a blue Camry car around that time and place (Lafayette) in a very fast and accurate way.
+ 
+\paragraph{Anomaly Detection:}
+FRAMEQL allows users to query the frame-level contents of a given video feed, specifically the objects appearing in the video over space and time by content and location which in turn we can use for the Anomaly Detection part of REALM.
+
+\paragraph{\#Willump}
+We can use Willump to optimize our models which will be bottlenecked by feature computation. Willump uses end-to-end cascading for feature selection. For delivering data to user, we can use Top-k-approximation of willump on our user preference models. Willump’s optimization will help us process incoming streaming data and help take decisions in right time.
+
+\section{new section}
+each challenges/ paper names become one section\\
+- explain the idea (short)\\
+- 
+
+\section{Future Research Directions/Agenda}
+\section{Collaboration and Funding}
+
+\end{document}

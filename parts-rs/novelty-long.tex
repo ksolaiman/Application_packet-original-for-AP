@@ -1,0 +1,20 @@
+\customsection*{Adaption to Open-world Novelties}
+
+AI systems are often limited by their inability to handle unexpected events that are not part of their training data or well-defined environments. These significant changes or events are referred to as \textbf{`novelties'} under DARPA SAIL-ON project, and their characterization and adaptation is critical for real-world applications. To build robust and intelligent AI systems, I developed novelty characterization and adaptation techniques at various stages, including data integration and relevance learning, environment modeling, feature extraction, training, and domain or data level.
+
+\semisection*{Novelty Characterization, Detection, and Difficulty Estimation}
+I characterized the \textbf{novelties encountered in multimodal information retrieval} in \cite{solaiman2022open} and proposed how WesJeM can be adapted for changing data patterns and incomplete or noisy modalities in data integration and relevance learning stage.
+Moreover, motivated by the information-theoretic approach for difficulty estimation of novelties, I proposed an empirical framework for novelty characterization and difficulty estimation in \textbf{planning domains} \cite{solaiman2022measurement}. For a reinforcement-learning based Monopoly agent, graphically modeling the environment to augment the state and action space allow to integrate graph edit distance as a novelty difficulty metric.
+%
+\semisection*{Robust Feature Extraction with Dataset Augmentation}
+The efficiency of entity-centric machine learning models in response to novelties depends on the efforts during the model training, design and data collection stages. We proposed a \textbf{novelty generation framework} \cite{nesen2021dataset} at
+the data preparation stage of training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic
+and budget efficient manner with generated novelties for visual modalities, %perception domain%
+and improved the \textbf{novel object detection} performance with the augmented dataset.
+%
+%
+\semisection*{Intrinsic Domain Complexity Estimation for Distributed AI Systems} 
+Understanding of the inherent characteristics of the domain is essential for novelty characterization and model adaptability. % for building in fail-safe into the model
+We proposed an \textbf{application-independent domain complexity} measure for the AI systems in perception domain \cite{solaiman2023domainComplexity} using \textbf{federated learning as the reference paradigm} to handle distributed dataset operations.
+% We complement existing works in domain complexity estimation, by using inherent 
+Building upon intrinsic dataset properties such as dimensionality, heterogeneity and sparsity for singular environment, we created a complexity metric \textit{for the distributed environment}, showing efficacy for classification task. 

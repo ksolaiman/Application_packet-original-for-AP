@@ -1,0 +1,47 @@
+% % color for links
+% \definecolor{linkcol}{rgb}{0.0,0.0,0.3}
+% \hypersetup{colorlinks,breaklinks,
+% 	linkcolor=linkcol,urlcolor=linkcol,
+% 	anchorcolor=linkcol,citecolor=linkcol}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS in teletype fixed-width font
+\providecommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+% For \url{ADDRESS}, links ADDRESS to the url https://ADDRESS in teletype fixed-width font
+\renewcommand*\url[1]{\href{http://#1}{\texttt{#1}}}
+
+% % use for commenting -- change initials to match yours
+\usepackage{color}
+\newcommand{\rwcomment}[1]{{\textcolor{blue}{\textsc{\textbf{[#1 --RW]}}}}}
+
+% % document variables % %
+
+% % your name
+\newcommand{\Name}{KMA Solaiman}
+
+% % position name
+% \newcommand{\PositionName}{Teaching Fellow}
+% \newcommand{\PositionName}{Instructional Faculty} 
+\newcommand{\PositionName}{Instructor}
+
+% % institution name
+\newcommand{\InstitutionName}{Virginia Tech}
+\newcommand{\shortInstitutionName}{VTech}
+\newcommand{\diversityOrgInUni}{APIDA, Disability Alliance, Black Women's Alliance, Association for Women in Science (AWIS), etc}
+\newcommand{\InstituteSeal}{seals/Horizontal_VT_Full_Color_CMYK.pdf}
+
+% % department name
+\newcommand{\DepartmentName}{Department of Computer Science}
+\newcommand{\SchoolName}{College of Engineering}
+% \newcommand{\SchoolName}{Innovation Campus} % CollegeName
+
+% % department address
+\newcommand{\DepartmentAddress}{
+ %        ROOM BUILDING \\
+	% STREET ADDRESS \\
+	% CITY STATE ZIP
+        Blacksburg, Virginia
+         %140 Governors Dr., Amherst, MA 01003 
+ }
+
+ % \newcommand{\ApplicationType}{AP}

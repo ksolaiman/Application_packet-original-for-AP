@@ -1,0 +1,261 @@
+\documentclass[9pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} %{tgbonum}
+\usepackage[inline]{enumitem}
+
+% Set page margins
+\usepackage[margin=1in,top=0.8in]{geometry} % 0.4
+
+% Mathematical things
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+
+% https://latexref.xyz/_005c_0040startsection.html
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@\z@{-\fontdimen 6 \font}%
+        % {0pt}% indent 
+        % {\normalfont\bfseries}}
+        % {\normalfont\scshape\bfseries}}
+        % {2pt} %afterskip
+        {\large \scshape \bfseries}% style
+    }
+\makeatother
+
+\newcommand*\heading[1]{\textbf{\textit{#1}:}}
+
+
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+ % \href{https://ksolaiman.github.io/}{Website}
+ % pg number in footer
+	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+        \fancyhead[C]{\thepage}
+        % \fancyhead[C]{\Name}
+	
+	\fancyfoot[R]{} % % pg number in footer
+	\fancyfoot[C]{} % % remove default centered page numbers
+	\fancyfoot[L]{} % last compiled in footer
+}
+
+% % application specific information % %
+\usepackage{school}
+
+
+\title{
+\vspace{-3em}
+\textbf{Diversity Statement} \hfill \href{https://ksolaiman.github.io/}{\textit{\Name}}
+\vspace{-2.5em}
+}
+% \author{KMA Solaiman\vspace{-2em}}
+% \email{ksolaima@purdue.edu}
+\date{}
+
+\begin{document}
+\maketitle
+% \vspace{-9em}
+\pagestyle{plain}
+
+% Describe your understanding of the barriers that exist for historically under-represented groups in higher
+% education and/or your field. This may be evidenced by personal experience and educational background. For
+% purposes of evaluating contributions to diversity, under-represented groups (URGs) include under-represented
+% ethnic or racial minorities (URM), women, LGBTQ, first-generation college, people with disabilities, and people
+% from underprivileged backgrounds
+% \paragraph{Understanding of Barriers.}
+\noindent My commitment to encouraging diversity, equity, and inclusion in our community emits from my realization of the barriers that exist in higher studies.
+During my journey from %the humble beginning of 
+a small-town high school student to a first-generation international graduate student at a public research university, I was fortunate enough to be inspired and guided by many
+altruistic % selfless
+role models.
+% along the way who believed in me and allowed me to move forward.
+This showed me the importance of having a supportive and inclusive environment in higher education 
+% that promotes equity toward all groups 
+for students to achieve their full potential. 
+
+ Transitioning from being a student to a researcher or leaving home for a foreign country is a daunting task in and of itself.
+% and suddenly becoming an adult is a daunting task for many.
+ % the cultural, social, and language barriers to higher education.
+From my experience of coming from a developing country
+and being friends with students from Colombia, Ghana, Thailand, and South Korea, I learned about different socio-economic hurdles people from under-represented countries had to overcome for a chance at higher studies. \textbf{Lack of information and accessibility} often makes it harder for under-represented groups (URG) even to take the first step towards it.
+% A welcoming and inclusive environment for higher education that promotes equity towards all groups is very much necessary for students to achieve their full potential. 
+% \%\% The admission exam and then the applying for higher study \%\%  -- REALLY!!! Is it even necessary anymore?
+%
+%
+The culture of inclusion during my Ph.D. has helped me identify the micro-aggressions and inequalities I witnessed growing up.
+% Whether growing up around a tenement home \%\%, or being a citizen of a developing nation, my experiences have made me better equipped to understand the privileges and barriers to diversity and inclusion in higher studies \%\%. 
+%
+%  5 percent for ethnic minorities
+During my undergraduate in Computer Science (CS), only 10\% of our class were girls, % !wording! - female/ girls/ gender bias
+along with only 3\% of ethnic minorities. 
+% joining the best engineering university in the country. 
+This gender inequality has emerged \textbf{either from the lack of female leaders in CS in Bangladesh or from the misconception that CS is a difficult career to pursue.} 
+%% COULD DELETE %%
+% My sister suffered from the social hurdles women face in developing countries despite having a very supportive environment at home with my mother and aunt being academicians. 
+%% TILL HERE %%
+\textbf{For the ethnic minority groups, the issue was the lack of preparation opportunities for the very competitive admission tests compared to the students in large cities.}
+% \%\% The reason: they have been conditioned to think CS is hard for girls to comprehend. (cultural bias - traditionally girls study it less)/ lack of female leaders in CS in Bangladesh.
+Although the situation has improved, these numbers still necessitate conscious and assertive steps toward inclusiveness and diversity in higher education. 
+
+%%%%%%%
+% Undergraduate Research Experience Purdue-Colombia (UREP-C), Nexo Global
+%%%%%%%%%%
+
+\medskip
+%% COULD DELETE %%
+\paragraph{Past Activities.} 
+% I have learned a lot about diversity and inclusion from my advisor who has been a great advocate for equity at Purdue University and in the Department of Computer Science. 
+My advisor has been a great advocate for equity at Purdue University and in the Department of Computer Science. During my Ph.D., having him as a mentor has helped me learn from him and participate in promoting diversity and inclusion.
+%% TILL HERE %%
+
+%
+% For all past activities, please be specific about the context, your role, scope or level of effort, and the impact.
+% Below are examples of activities that qualify as contributions to diversity and equity. These are illustrative and by
+% no means exhaustive. 
+%
+%
+\heading{Promote Opportunity for All}
+During $8^{th}$ grade, I realized kids from my neighboring tenement home could not afford basic primary education due to their economic conditions. Being close to them, I started teaching them primary subjects for a year before I moved. Many of them have completed their college education now and still is in touch with me.
+% An early childhood experience of mine has helped me understand the concept of equity at a young age.
+% I have lived next to a tenement home % slum
+% for the first 15 years of my life.
+% A group of children from those homes became very close to me. Due to their economic conditions, they could not afford basic primary education.
+% During my $8^{th}$ standard, I felt the necessity for them to have an access to education and started teaching them primary lessons for a year
+% % in Bengali, English, and Mathematics which continued for a year 
+% before I moved elsewhere. Many of them have completed their college education now.
+%
+%
+% Before I started formally teaching undergraduates after my graduation, 
+During my bachelor's, I tutored a large number of students for college admissions in Engineering in remote areas of the city allowing them to have more time for preparation rather than travel.
+% Jatrabari people
+% . I also offered tuition to college students during my undergraduate.  
+% 
+%%%%%%%%
+% Woman - having multiple women group members helped me understand the issues they face. rearing a child, doing internships, and finishing a Ph.D.
+% Latin American students - Servio/ Miguel
+% Women - Sharuna/ Varsha/ Alina
+
+% I have learned how to mentor people from different backgrounds and how to tackle inequities.
+\heading{Collaborations beyond Borders}
+Collaborating with people from different countries
+such as the US, Panama, Ukraine, China, India, and Turkey
+and across multiple disciplines 
+has broadened my view in terms of working style, personality, culture, and outlook. 
+% #1
+Paired with a senior colleague from Honduras with an extensive background in Software Engineering, I adapted to engineering-heavy research. We published the first paper for the REALM project while working with people from Boston, Indiana, and Turkey. I took the initiative to lead the paper and had to juggle between different timelines while traveling to Bangladesh.
+% who was a Fulbright Scholar 
+% I learned about Kafka and Docker in a short amount of time as that was asked of me. I extended the REALM project and took charge of it later. 
+% #2
+This led to multiple collaborations with a female colleague from Ukraine who has completed her Ph.D. and is working for Target now. 
+% Another of my female colleague from Egypt is working at Waymo now as an ML engineer. 
+After working through two successful publications, my collaborator from MIT has completed his Master's degree and has returned to China as an Engineer.
+% #3
+% Accommodating different timelines or personalities encourages inclusiveness.
+
+ \heading{Access through Mentoring}
+ As our research group harbors a culture of mentoring, I have had the opportunity to mentor \textbf{13 bright Masters and Bachelors}
+ % tao, sharuna, versha, kim, tom, harshit, rumela (masters) % tao bad
+ % Kevin, mit er 2 ta, metu er 2 ta meye, 1 ta chele, prahlad (dan) % undergrad
+ students from diverse backgrounds in \textbf{gender} (5 are female students), \textbf{race}, \textbf{geographical location} (including USA, Turkey, and India), and \textbf{universities} (MIT, Purdue, METU). Among the 6 master's students in the REALM project, \textbf{3 were female students} and one of them joined META in Spring'23.
+ % Tomáš Hrdlovics
+ % One master's student from Czech Republic have graduated now and is working as Software Engineer at WePay. 
+ \textbf{The master's student from the Czech Republic} is working at WePay now as Software Engineer. He worked with me for developing a novel human attribute recognition model from texts. 
+ % Kevin Kochpatcharin, harshit singh
+ % Sharuna, Varsha, Kim 
+ % Rabia varol (MSc in Munich), Merve Yaman (Still student at METU, internship ai apps)
+\textbf{One of the two undergraduate female students from Turkey has started her master's program in Germany.}
+% co-authors
+% My philosophy for mentoring is to equip students with the necessary tools to succeed, so they can continue on their own.
+
+\heading{Outreach} Besides my advisees, I have helped multiple students from URG communities and my alma mater to apply to graduate schools, including revising their application materials, suggesting research directions, preparing for interviews, etc. After my Ph.D. admission, I wrote blogs describing the application process and provided free access to the preparation materials.
+
+\heading{Teaching}
+% \textit{Other (e.g. recruitment/retention/teaching/):} 
+Having taught large classes for a long time and on various levels, I have slowly identified the biases and micro-aggressions that happen in a classroom. 
+\textit{Recognizing diversity can come in many forms, such as recognizing different accents, genders, races, preferences, disabilities, mental issues, etc.} I have always tried to have an interactive classroom where everyone has a voice. Asking students about their understanding of the materials or their well-being always makes them feel included, and as a teacher, we can improve and re-adjust. After knowing about the students' backgrounds and their goals in my courses, I was able to provide more relatable examples in the classroom. In addition, I actively tried to identify my own cultural and educational biases so that it does not affect my class.
+
+% \textit{Ethical and Socially Situated AI Research:}
+\heading{Socially Impactful and Ethical Research} 
+The primary goal of my research has always been to work on problems that have an impact on complex societal issues. For instance, \textit{multimodal information retrieval} has been applied to finding missing persons or helping people with PTSD. 
+We also explored identifying human anxiety or stress symptoms based on gait and emotion detection. \textit{These have a direct implication for accommodating people with disabilities}. Furthermore, \textit{identifying intrinsic and extrinsic domain complexity} before any large ML model is applied to new datasets can help reduce the hidden bias of the AI models.
+% As an ML researcher who works with sensitive human attributes such as gender or race, it is of utmost importance.
+As a Database+ML+NLP researcher, my research involves working with people from diverse backgrounds, including people from essential services. This kind of interdisciplinary setting makes diversity a natural requirement and helps progress the scientific community. 
+
+\medskip
+\paragraph{Future Plans.}
+% My plans	for	promoting	diversity, equity,	and	inclusion	in	the	context of	a Teaching	Professor	position	include:
+% Although my position as `Assistant College Lecturer' does not include research as a responsibility, I would be happy to provide such academic services to the University.
+%%%%%%%%%%%%%%%%%%
+% My plans for supporting diversity and inclusion are derived from my personal and peer experiences. 
+My goal as a faculty is to create a welcoming and safe learning space for everyone, irrespective of their backgrounds. Along with continuing my efforts from the past, I would take the following tangible steps to promote diversity, equity,	and	inclusion in the	context of a new faculty member:
+
+% % must have space b4 and after this line
+\ifdefined\ApplicationType
+    \input{div-future-research.tex}
+\else
+    %
+\fi
+
+\heading{Teaching}
+\begin{enumerate*}[leftmargin=*, noitemsep, topsep=0pt, label=(\arabic*)]
+    \item Promote an environment that ensures equity and inclusion in my classes. Every student should feel a sense of belonging, and I would ensure that the classroom stays free from bias, stereotypes, or prejudices. 
+    \item Each student perceives lessons differently based on their background, and allowing them to freely express that brings out their full potential.
+    % \item Equip me with the diversity and etiquette training from their CS GTA training. 
+    \item Implement methods that promote student participation and a fair assessment of the class. I will also want to take frequent feedback from the students to ensure accountability on my part.
+    \item Build an interpersonal relationship with them through active participation in and outside the classroom. They should feel at ease to share their concerns and needs.
+    \item Train the teaching assistants to practice diversity and inclusion in my classes.
+    \item Use of \textit{inclusive language} in the classroom and my teaching materials.
+    \item Keep myself updated with relevant research literature and class etiquette. Since most of my expertise revolves around data management and ML, I would make the best effort to teach students how to practice diversity, fairness, and inclusion in research and life.
+\end{enumerate*}
+
+% must have space b4 and after this line
+% \input{teaching-div-future-research.tex}
+
+\heading{Outreach and Academic Services}
+\begin{enumerate*}[leftmargin=*, noitemsep, topsep=0pt, label=(\arabic*)]
+    \item Being part of the `UNICEF Guardian Circle' or `Save the Orphans', I have seen suffering children from all over the world. I want to connect with them for the next phase of their development 
+    % with ASU's universal access to education and opportunity.
+    and provide them with tools to develop themselves.
+    % -- outreach to young students from all over the world and from a diverse body to connect with seniors and ignite the spark
+    \item Continue my research on societal problems that impose hindrances to an inclusive and supportive environment in education and society. 
+    % I aim to understand the complex patterns in multi-modal data while avoiding hidden bias in the decision-making process. %!
+    \item Continue promoting diversity and inclusion in database and ML conferences such as SIGMOD, VLDB, AAAI, ECML, etc. %!
+    % \item 
+    % \textit{Build Supportive Communities:} In the future, I will continue actively serving at social events to support underrepresented groups. For example, I plan to organize and participate in workshops in top-tier conferences on “Muslims in NLP/CS/STEM”.\\
+    \item Actively serving in \textit{affinity group workshops} in Conferences such as NeurIPS to support under-represented groups.
+    % including ethnic, religious, cultural, or racial minorities, women, LG
+    % in terms of gender, race, ethnicity, religion, culture, and other diversity factors. 
+    % like Women in Machine Learning, Queer in AI, Black in AI, LatinX in AI, {Dis}Ability in AI, Indigenous Protocols in AI, Muslims in ML, and Jews in ML have organized workshops and socials at NeurIPS.
+    % under-represented ethnic or racial minorities (URM), women, LGBTQ, first-generation college, people with disabilities, and people from underprivileged backgrounds
+    \item Promote the inclusive culture at \InstitutionName ~to academic community and students, especially to recruit students from under-represented groups and countries. 
+    \item Actively participating in workshops and organizations	that	promote diversity	in	\shortInstitutionName.% ~such as \diversityOrgInUni.
+    % + \item Continuing	to	foster	relationships	between	\InstitutionName~ and	local minority-serving	institutions.
+\end{enumerate*}
+
+% Extra from the research part,
+% As an ML researcher who works with all kinds of data, it is imperative to maintain the integrity and privacy of the data while maximizing the impact.
+    % research on finding solutions % providing support to socially impactful problems that impose hindrance to inclusion such as dealing with mental health problems, or disabilities. 
+    % - doing socially impactful research such as works on mental health and disabilities. \\
+    % --- And be careful about bias in my research, as ML research often conforms to many biases \\
+    % Ethical and Socially Situated AI Research
+    % \textit{Encourage Interdisciplinary Collaborations: }
+    % \item My research goal for the future would include working on societal problems that present barriers to an inclusive and supportive environment in education and society as a whole.
+
+% Service: // need work
+% • Continuing	my	involvement	with	organizations	that	promote	diversity	in	STEM	fields:	Association	for	Women	in	Science (AWIS),	IRACDA,	and	the UCSD	MARC program).
+% • Continuing	to	foster	relationships	between	UCSD	and	local	minority-serving	institutions	such	as	City	College.
+% • Engaging	in	community	outreach	by	teaching	Student	Tech	K-12	workshops.
+% • Helping recruit	underrepresented	minority students	for	UCSD	graduate	programs	by	contributing	to	the	SACNAS	conference.\\
+
+% -- Muslims In ML (MusIML) is an affinity workshop for the NeurIPS community. We focus on both the potential for advancement and harm to Muslims and those in Muslim-majority countries who religiously identify, culturally associate, or are classified by proximity, as “Muslim”.
+% https://blog.neurips.cc/2022/04/24/call-for-affinity-workshops/#:~:text=Unlike%20other%20workshops%2C%20affinity%20group,the%20challenges%20faced%20by%20them.
+% Unlike other workshops, affinity group workshops are more loosely defined and meant to promote diversity and inclusion. The idea of having affinity group workshops is to establish research communities out of affinity groups and raise awareness of the challenges faced by them.
+
+\end{document}
+
+% Use of inclusive language
+% Inclusive language acknowledges diversity, conveys respect to all people, is sensitive to differences, and promotes equal opportunities. Content should make no assumptions about the beliefs or commitments of any reader; contain nothing which might imply that one individual is superior to another on the grounds of age, gender, race, ethnicity, culture, sexual orientation, disability, or health condition; and use inclusive language throughout. Authors should ensure that writing is free from bias, stereotypes, slang, reference to the dominant culture, and/or cultural assumptions. We advise seeking gender neutrality by using plural nouns ("clinicians, patients/clients") as default/wherever possible to avoid using "he, she," or "he/she." We recommend avoiding the use of descriptors that refer to personal attributes such as age, gender, race, ethnicity, culture, sexual orientation, disability, or health condition unless they are relevant and valid. When coding terminology is used, we recommend avoiding offensive or exclusionary terms such as "master", "slave", "blacklist" and "whitelist". We suggest using alternatives that are more appropriate and (self-) explanatory such as "primary", "secondary", "blocklist" and "allowlist". These guidelines are meant as a point of reference to help identify appropriate language but are by no means exhaustive or definitive

@@ -1,0 +1,144 @@
+\customsection*{Resource Aware Data Management for Multimodal Applications}
+
+% \heading{1) Ingesting streaming and data-at-rest inputs (heteregenous data)} 
+
+% Real-world applications in domains such as societal, healthcare, or education with little to no resources pose unique challenges for multimodal information processing with domain-specific workloads and changing requirements. 
+%
+Modern applications with societal impacts exemplified as missing person search, disaster resource management, triage,
+% disability identification, 
+and emotion recognition change the design tradeoffs of building data management systems. 
+% I have worked in large scale data analytics for video querying system where each video describes multiple people and each person is described with a limited number of properties-of-interest. The problem is: Given a database of video and images (spanning 100+ hours), how to quickly find all video frames with the similar person to the person/s in the query example video/image. %above a given threshold? We found that each video is highly skewed in the sense that only a few significant frames contain similar people as the query example.
+The architecture for multimodal data management needs to account for both data-at-rest and streaming input, while building a data integration approach to achieve on-time data delivery. For a retrieval system to be robust, it needs to be scalable to both increasing information need and growing data ingestion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proposed solution must be scalable to account for future data influx and to adapt to the changing data requirements knowledge base needs to updated.
+My colleagues and I proposed a novel framework 
+for querying domain-specific information need
+% recommendation
+%% query engine 
+for different contexts in practical multimodal applications. 
+%%% TODO: Example: missing person context
+The approach leveraged \textbf{entity-centric higher semantic concepts} (such as objects, object
+types, physical relations, e.g., a person wearing blue shirt, time and place of  an incident) derived from 
+% feature extraction models for image and video, and language models for text. 
+feature extraction and language models. 
+% SKOD improved the design ...
+%%%
+% Improve the next line and get rid of the headings in next paragraph
+% We built the system on top of Postgres using it as primary data store and its' functionalities to achieve scalability, delivery-on-demand, and data integration, and allowing query-by-example and query-by-features.
+% The approach leveraged entity-centric higher semantic concepts (such as objects, object
+% types, physical relations, e.g., a person wearing blue shirt) derived from 
+% % feature extraction models for image and video, and language models for text. 
+% feature extraction and language models, and improved the design for a multimodal data management system on multiple fronts: Data Ingestion, Scalability, Delivery-on-demand, Knowledge Base Creation, and Feature Extraction.
+% % Improve the next line and get rid of the headings in next paragraph
+% We built the system on top of Postgres using it as primary data store and its' functionalities to achieve scalability, delivery-on-demand, and data integration, and allowing query-by-example and query-by-features.
+%
+The prototype called `\textbf{SKOD}' (Situational Knowledge on Demand), implemented in collaboration with Northrop Grumman, MIT and CMU, was demonstrated at Northrop Grumman TechFest in 2019 \cite{palacios2019wip}. Northrop Grumman
+funded the projects I have been working in for 3 consecutive years, renewing the funding every year, starting from 2019.
+% SKOD improved the design for a multimodal data management system on multiple fronts such as Data Ingestion, Scalability, Delivery-on-demand, Knowledge Base Creation, and Feature Extraction, and allows flexibility with both query-by-example and query-by-features.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \noindent 
+% \begin{enumerate*}[label=(\arabic*)]
+    % \item \itheading{
+    \semisection*{
+    Heteregenous Data Ingestion, Scalability, and Delivery-on-demand}
+    % We used Postgres as database backend for storing both raw and processed data in SKOD framework \cite{palacios2019wip}. 
+    We used Postgres as the backend architecture  for both data storage and on-time delivery. 
+    %%
+    Building on top of the RDBMS allows us to scale to practical data % video 
+    volumes, as well as using the querying interface with query-by-example and query-by-features dramatically lowers the human costs of 
+    % video-driven investigations \cite{stonebraker2020surveillance}.
+    multimodal and visual domain search \cite{stonebraker2020surveillance}.
+    %%
+    For consuming data from heteregeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD \cite{palacios2019wip}. % serializing the input process
+    %%
+    % We used a view-based data integration approach similar to Global as view (GAV) and any query is framed as an incident and is considered as the mediated schema.
+    %%
+    Any query to the system was formulated and considered as an \textit{incident in real life}.
+    For delivery-on-demand from incomplete modalities, we used Postgres Trigger functionality, which 
+    %
+    is activated whenever an insert occurs that matches a certain incident (any matching data). 
+    This feature allows us to deliver incomplete 
+    information need %data 
+    and complete it later when new matching data is encountered, while being capable of adapting to changing information requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we proposed to build a \textit{\textbf{query-drive knowledge base}} for each user, where all queries can relate to a single incident. SKOD speeds up the data delivery by storing frequent incidents by cacheing hot queries, and recently used data.
+    % , along with fulfilling .
+    %%%%%
+    %%%%%
+    % \item \itheading{
+    \semisection*{
+    Resource-constrained Feature Extraction}
+    Task-specific querying systems suffer from limited resources in data preparation stage due to the low quality data set and lack of labels in training samples. Despite giant advancements in large scale language models, there exists very few task-specific attribute extractors for texts. 
+    We solved these issues in SKOD by implementing a \textit{priority polling system} to choose the candidate data sample to extract features for videos and images, instead of immediate feature processing for batch inputs. 
+    % Instead of immediate feature processing for batch video inputs, we implement a priority polling system to choose videos to extract features, which coupled with the trigger functionality allows us to deliver information need on-demand, if not immediate. %or soon afterwards.
+    This feature coupled with the trigger functionality allows us to deliver information need on-demand and complete it in time.
+    Our team also built a \textbf{cloth-color extractor} for videos using common-sense reasoning and color and shape analysis \cite{stonebraker2020surveillance} on top of YOLO. 
+    % We can trace the walking trajectories of pedestrians by combining the displacement and cloth-color information. Pose detection allows the analysis of people’s behavior across continuous frames.
+    For unstructured text, I propose an attribute identification model, \textbf{HART} with \textbf{candidate sentence identification}  and \textbf{semantic attribute understanding}  
+    %(Iterative search)
+    % entity-centric (
+    \cite{solaiman2022femmir}. This approach can be generalized for any domain and  paves the path for intelligent document processing. %(understanding).
+    %%%%%%
+     % In [7], we proposed a novel property identification technique for unstructured texts to extract features from large text documents. 
+    We identified the candidate sentences
+    by forming the problem as a similarity-search problem using pre-trained language representation models (SBERT) and
+    lexical knowledge bases. We used the syntactic characteristics and lexical meanings of the tokens in the Candidate
+    Sentences to do the final identification of the feature values.
+% \end{enumerate*}
+
+% \itheading{Heteregenous data ingestion, Scalability, and Delivery-on-demand}
+% \cite{palacios2019wip}
+% Software stack \\
+% We used Postgres for data architecture. \\
+% Trigger in SurvQ
+%
+%
+% \itheading{Query-driven knowledge base}
+% 1) SQL-JOIN for building knowledge with data fusion, 2) returning incidents based knowledge, 3) Cache hot queries, and ...
+%%%%
+%%%% \heading{Contribution in Data Pre-processing stage}\\
+% \heading{Resource-constrained 
+% domain-specific 
+% Data Pre-processing}
+%
+%%%%%%%%%%%
+% % \heading{Domain-agnostic to Domain-specific Data Pre-processing}\\
+% \itheading{2) Resource-constrained Feature Extraction}
+% % high level abstract concept extraction
+% \textcolor{red}{For feature-level data fusion, we need to extract features from the raw data. But Feature level abstraction extracts features from various independent sensors to produce \textbf{individual feature vector representations}!!}
+% Task-specific querying systems suffer from lack of good quality property identification models and resource constraints in data preparation stage due to the low quality and lack of labels in training samples.
+% % Unavailability of computing resources (training samples, GPU, man-power, etc.) in large-scale life-saving (disaster recovery) and social-good application domains makes it harder to adapt transfer learning, or traditional machine learnging algorithms.
+% We proposed \textbf{priority-polling} \cite{stonebraker2020surveillance} for large scale object and attribute detection models for querying pedestrian \textit{videos}.
+% % , along with a color-sampling approach to identify human attributes without using additional annotated samples.
+% Our team built a common-sense based reasoning with color and shape analysis \cite{stonebraker2020surveillance, solaiman2021applying} on top of YOLO. We can trace the walking trajectories of pedestrians by combining the displacement and cloth-color information. Pose detection allows the analysis on the people’ behaviors across continuous frames.
+
+% •	My team and I proposed color sampling and pedestrian tracking using gait and pose.
+% •	We tested comparison among 3 different types of feature extraction for videos. And obviously transfer learning failed, color sampling performance although don’t need samples, performs poorly, and we used the last approach for retrieval models.
+% •	We ran experiments on these pedestrian attribute models, and found the ones that perform best. 
+ 
+
+% % Between shape analysis, color analysis and common sense reasoning, we can detect about half of the objects in Table 1.
+% % In \cite{stonebraker2020surveillance}, we proposed SurvQ, a human-in-the-loop query system for analyzing surveillance \textit{videos}. We have described a database backend that can scale to practical video volumes, as well as an interface that dramatically lowers the human costs of video-driven investigations. 
+
+% %%%%%%%%%%%%
+% % Text Feature Extraction:
+% % In \cite{solaiman2022femmir}, we proposed a novel property identification technique for \textit{unstructured texts} to extract features from large text documents. We identified the candidate sentences by forming the problem as a similarity-search problem using pre-trained language representation models (SBERT) and lexical knowledge bases. We used the syntactic characteristics and lexical meanings of the tokens in the Candidate Sentences to do the final identification of the feature values.
+% I propose \textbf{candidate sentence identification} and \textbf{semantic attribute understanding}  
+% %(Iterative search)
+% % entity-centric (
+% \cite{solaiman2022femmir} of objects from \textit{unstructured texts}, which paves the path for intelligent document processing (understanding).
+% % (for domain-specific objects)
+
+% % based on similarity-search using pre-trained language representation models (SBERT) and lexical knowledge bases. Property values are extracted using the syntactic characteristics and lexical meanings of the tokens in the candidate sentences.
+% %%%%%%%%%%%%%%%
+
+% % For delivery-on-demand we used the postgres trigger whenever an insert occurs that matches a certain incident (any matching data). For accomodating the resource constraints in practical systems, we implemented a need-only feature extraction for video data via a priority pooling system. 
+% % The trigger can be specified to fire before the operation is attempted on a row (before constraints are checked and the INSERT, UPDATE, or DELETE is attempted); or after the operation has completed (after constraints are checked and the INSERT, UPDATE, or DELETE has completed); or instead of the operation (in the case of inserts, updates or deletes on a view). If the trigger fires before or instead of the event, the trigger can skip the operation for the current row, or change the row being inserted (for INSERT and UPDATE operations only). If the trigger fires after the event, all changes, including the effects of other triggers, are “visible” to the trigger.
+% %%%%%%%
+% % A PostgreSQL trigger is a function called automatically whenever an event such as an insert, update, or deletion occurs.
+% % A PostgreSQL trigger can be defined to fire in the following cases:
+% % Before attempting any operation on a row (before constraints are checked and the INSERT, UPDATE or DELETE is attempted).
+% % When an operation has been completed (after constraints are checked and the INSERT, UPDATE, or DELETE has been completed).
+% % In spite of the operation (in the case of INSERT, UPDATE, or DELETE on a view).
+% %
+% %

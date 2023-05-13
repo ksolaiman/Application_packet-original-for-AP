@@ -1,0 +1,46 @@
+% \heading{Label Independent MMIR}
+% \customsection*
+\semisection*{Weakly Supervised Metric Learning for Cross-Modal Matching.}
+%/ `Data Integration'}
+%
+% Contribution in cross media feature learning
+%
+I proposed using \textbf{entity-centric properties} from video, image, and text as a source of \textbf{weak label} for data integration at late fusion level \cite{solaiman2022open}. % extend
+This is actually one kind of early fusion as all modalities are converted to text before feature/ triplet extraction.
+
+Motivated by the existing translation models (the summary paper on five challenges) and the higher-level semantic information, I propose a joint representation learning method, where we assume the complementary data comes from separate sources and use COntrastive learning methodology to mmmir. Poster Presented in TechFest 2019, and paper was presented in AAAI Spring Symposium 2022.
+
+Features are
+generated automatically in two steps - 1) a textual description of each data sample is generated from any modality; 2)
+topics, entities, and events are extracted from the textual descriptions and are considered as weak labels for two reasons.
+First, the quality of the extracted structural units rely on the
+choice of the extraction models, and can be noisy. Second,
+output generated from the modality specific textual descriptors can be ambiguous and noisy.
+
+For our approach, first, we utilize the existing neural network approaches to find a translation from different modalities of data to a textual representation. Then, we create a data information network by connecting data samples to
+their features via their interactions.
+Finally, we construct a
+structure-infused textual representation, by jointly embedding in a single space the data samples, the features in which
+these data samples are similar, and the similarity labels associated with them. We define a multi-task learning objective capturing the interaction information, by aligning the
+representation of the data samples, defined by their textual
+content, with the representation of structural features, based
+on their on their common relations. 
+
+% \begin{enumerate}
+%     \item Can we use GED as a source of weak label for data integration at early fusion level?
+%     \item Can we use data properties (features) as a source of weak label for data integration at late fusion level?
+% \end{enumerate}
+
+% Weakly supervised Coupled Metric Learning for Cross-Modal Matching\\
+% A deep semantic framework for multimodal representation learning
+
+ % Unlike existing cross-modal matching methods which learn a linear common space to reduce the modality gap, our DCML designs two feedforward neural networks which learn two sets of hierarchical nonlinear transformations (one set for each modality) to nonlinearly map samples from different modalities into a shared latent feature subspace, under which the intraclass variation is minimized and the interclass variation is maximized, and the difference of each data pair captured from two modalities of the same class is minimized, respectively. 
+
+
+
+ %% LI 
+ My solution to joint event structure extraction is to construct a multimodal common semantic
+space via Vision-Language (V+L) pretraining that preserves event semantic structures, i.e., similar
+events and their arguments are close in this embedding space regardless of their source modality. I propose WesJem [cite] to transfer such event knowledge from text to images in a
+zero-shot manner. My work is the first to introduce event semantic structures into vision-language understanding, and to optimize this structural alignment to bridge the gap between two modalities
+during V+L pretraining.

@@ -1,0 +1,49 @@
+% \heading{Contribution in Data Pre-processing stage}\\
+\customsection*{Resource-constrainted Data Pre-processing}
+% Video feature extraction:\\
+Postgres trigger \\
+\texttt{Complete unavailability of one or more modalities or absence of samples in a modality a ects the model learning, as most of the existing DL models cannot process the \missing information". This requirement, in turn, constrains the already insufficient size of datasets in oncology. Almost all publicly available oncology datasets have missing data for a large number of samples [201]. Various approaches for handling missing data samples and missing modalities in DL models are gradually gaining the attention of researchers [203]. However, this is still an open challenge in oncology ML [204].}
+% resource-available feature extraction via a priority system \\
+% SOURCE: https://sci2s.ugr.es/noisydata#Introduction%20to%20Noise%20in%20Data%20Mining
+Performance of object detection, attribute recognition, or classification algorithms in data preparation stage 
+% for retrieval tasks 
+significantly falls due to the 
+low quality and noise in real-world datasets. 
+% From design considerations of SurvQ
+Unavailability of computing resources (training samples, GPU, man-power, etc.) in large-scale life-saving and social-good application domains makes it harder to adapt transfer learning, or traditional machine learnging algorithms.
+In \cite{stonebraker2020surveillance}, we proposed SurvQ, a human-in-the-loop query system for analyzing surveillance \textit{videos}. We have described a database backend that can scale to practical video volumes, as well as an interface that dramatically lowers the human costs of video-driven investigations. 
+For delivery-on-demand we used the postgres trigger whenever an insert occurs that matches a certain incident (any matching data). For accomodating the resource constraints in practical systems, we implemented a need-only 
+% resource-available
+feature extraction for video data via a priority pooling system. 
+% The trigger can be specified to fire before the operation is attempted on a row (before constraints are checked and the INSERT, UPDATE, or DELETE is attempted); or after the operation has completed (after constraints are checked and the INSERT, UPDATE, or DELETE has completed); or instead of the operation (in the case of inserts, updates or deletes on a view). If the trigger fires before or instead of the event, the trigger can skip the operation for the current row, or change the row being inserted (for INSERT and UPDATE operations only). If the trigger fires after the event, all changes, including the effects of other triggers, are “visible” to the trigger.
+%%%%%%%
+% A PostgreSQL trigger is a function called automatically whenever an event such as an insert, update, or deletion occurs.
+% A PostgreSQL trigger can be defined to fire in the following cases:
+% Before attempting any operation on a row (before constraints are checked and the INSERT, UPDATE or DELETE is attempted).
+% When an operation has been completed (after constraints are checked and the INSERT, UPDATE, or DELETE has been completed).
+% In spite of the operation (in the case of INSERT, UPDATE, or DELETE on a view).
+%
+%
+% Text Feature Extraction:
+In \cite{solaiman2022femmir}, we proposed a novel property identification technique for \textit{unstructured texts} to extract features from large text documents. We identified the candidate sentences by forming the problem as a similarity-search problem using pre-trained language representation models (SBERT) and lexical
+knowledge bases. We used the syntactic characteristics and lexical meanings of the tokens in the Candidate Sentences to do the final identification of the feature values.
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
+
+For querying systems, extracting properties-of-interest comes before data fusion.
+Due to low resolution, poor lighting,  relatively insignificant in size, and rare object-properties compared to other objects.
+Due to the intrinsic noise in class labels and feature values along with low-quality, privacy issues in real-world datasets, obtaining abstract features-of-interest for data-prerpcessing stage in retrieval tasks are difficult to obtain through general large-scale pretraining.
+% Video feature extraction:\\
+% Postgres trigger \\
+% resource-available feature extraction via a priority system \\
+% SOURCE: https://sci2s.ugr.es/noisydata#Introduction%20to%20Noise%20in%20Data%20Mining
+
+\customsection*{Label Independent Data Integration}
+Data fusion with SQL Join
+\texttt{Lack of labels}
+
+\begin{enumerate}
+    \item Can we use GED as a source of weak label for data integration at early fusion level?
+    \item Can we use data properties (features) as a source of weak label for data integration at late fusion level?
+\end{enumerate}

@@ -1,0 +1,80 @@
+% How do I mold it? And what is the novelty in that?
+To obtain such functionalities from multimodal data in real applications, I focus on \textbf{Multimodal Data Integration}, and propose \textbf{entity-centric Multimodal Data 
+Integration % Querying %
+system at higher semantic level} to evolve \textit{traditional stateful 
+% (structured - theroy works on schema and database tables) 
+data integration system} into \textit{explicit semantic concept-based 
+Multi-modal data querying system for unstructured data} by capturing high-level semantic correlations across modalities.
+% pairwise similarity based Single-modality knowledge into explicit feature-based Multi-modality knowledge. Specific applications refer to specific contexts. \textit{These works neglected the exploration of fusing multiple modalities at higher semantic level. In this paper, inspired by the success of deep networks in multimedia computing, we propose a novel unified deep neural framework for multimodal representation learning. To capture the high-level semantic correlations across modalities, we adopted deep learning feature as image representation and topic feature as text representation respectively.} 
+% Feature level abstraction extracts features from various independent sensors to produce individual feature vector representations.
+%%%
+% data representation learning on graphs
+%%%%
+% This is what is required, not what is different from traditional models
+% Real-world dataset requires resource-constrained data management including heteregenous data ingestion and online delivery, feature extraction, and building knowledge base. 
+%%%%
+% Difference between traditional and my model
+Traditional data integration approach relies on mediated schema
+
+Traditional data integration 
+and multimodal learning approaches only allow relevance evaluation based on lower level features from feature extraction models, while my work allows users to make explicit and implicit queries on multimodal data fused on specific semantic concepts based on user context.
+
+Traditional Data Integration models ... pad .... lower level features mapping into common subspace based on pairwise or class label information (SQL-JOIN and FemmIR) .. high level features with a coordinated representation.... to solve the lack of annotations, contrary to traditional models we exploited the existing feature extraction models to infer weak signals from the semantic concepts (and propose a metric learning approach)\\
+Sometimes user have specific context they want to search for in image/text/video, rather than generic query by example. Given an image, find similar text. But what I did was, given an image, find text with similar features in this text. The difference between information need and low level features are apparent.
+% }
+%
+\textcolor{blue}{
+% Difference in detail
+(Li) Traditional MMIR depends on class labels or advarsarial samples to create the classifier models, instead we rely on weakly supervised models (Amount of dissimilar or similar properties in each data object)
+Traditional entity-centric approaches to consuming multimodal information focus on concrete concepts (such as objects, object types, physical relations, e.g., a person in a car), while my work endows machines to understand complex abstract semantic structures that are difficult to ground into image regions but are essential knowledge (such as events and semantic roles of objects, e.g., driver, passenger, passerby, salesperson) (Li).
+% Benefits over existing works
+It is able to consolidate complex semantic structures of multiple modalities, providing a major benefit over recent research advances in single-modality (text-only or vision-only) knowledge. 
+}
+Traditional entity-centric approaches to consuming multimodal information focus on 
+Pairwise similarities
+Pairwise information
+Class labels
+While being dependent on modality-specific encoders 
+Whereas 
+My work focuses on building systems that uses entity-centric concepts and semantic concepts to perform data integration to accommodate multiple modalities and novel data sources.
+
+% tradeoffs can be further improved by
+% I also work on developing scalable and efficient systems that can adapt to changing data patterns and operate under resource constraints in open-world.
+Additionally, I am investigating how the problem of multimodal data understanding can be further improved by designing algorithms that can learn and leverage inherent structure of data in different learning environments.
+% In the data-centric future, interdisciplinary research and real-world applications require us to make sense of ever-evolving data types and sources. This requires us to find a balance between computational resources and seemless data integration!
+% In addition, I see how the novel changes in domain/dataset affects the efficacy of the learning algorithms in different environment.
+Ultimately, my work aims to contribute to the development of intelligent systems that can support a wide range of real-world applications, including surveillance, missing person search, disaster response, healthcare, transportation, and information systems.
+
+%%%% \textcolor{blue}{My vision is to advance the fundamental techniques and theories for data-driven and (knowledge-integrated) contextually-aware information fusion to improve human-in-the-loop
+% retrieval (intelligent) systems.}
+
+% % \texttt{
+% My research vision is to build intelligent systems that can efficiently process and integrate heterogeneous data from multiple sources and modalities in open-world 
+% % real-world
+% environments, \textcolor{blue}{and can deliver
+% relevant information to the right user based on contextual awareness, while providing decision-making information
+% that is specific to user information needs}.
+% % }
+% \textcolor{blue}{My vision is to advance the fundamental techniques and theories for data-driven and (knowledge-integrated) contextually-aware information fusion to improve human-in-the-loop
+% retrieval (intelligent) systems.}
+% %
+% % \bfheading{Research Goal} 
+% %
+% % \texttt{
+% % \textcolor{blue}{(Alternative)My goal is to develop systems that can extract relevant information from large volumes of heteregenous data and deliver it to the right user based on 
+% % % situational awareness
+% % contextual awareness, while providing decision-making information that is specific to 
+% % % mission needs. 
+% % user information needs.}
+%  My goal is to develop \textbf{multimodal information retrieval} systems that can deliver relevant information to the right user based on contextual awareness, while providing decision-making information that is specific to user information needs.
+% My goal is to develop systems capable of satisfying multimodal information needs in open-world environment.
+
+% To achieve this, he aims to develop novel techniques and algorithms for data pre-processing, data fusion, and data integration that can handle the challenges posed by noisy, incomplete, and heterogeneous data. 
+% % \\ \textcolor{blue}{goal continues?}\\
+% His research also involves developing scalable and efficient systems that can adapt to changing data patterns and operate under resource constraints.
+% Ultimately, his work aims to contribute to the development of intelligent systems that can support a wide range of real-world applications, including surveillance, missing person search, disaster response, healthcare, transportation, and information systems.
+% % }
+
+% My research vision is to build systems capable of satisfying \textbf{multimodal information needs in open-world environments}. In the data-centric future, we want make sense of the data.
+% \textit{With the increasing prevalence of multimedia data on the web, traditional uni-modal search engines are no longer sufficient to meet the needs of modern users. As a result, the development of effective techniques for multimodal information retrieval has become a key research area.
+% My research will explore the challenges of retrieving information in an open world environment, where the types of data and sources available are constantly evolving.}
