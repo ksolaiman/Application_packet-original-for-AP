@@ -15,14 +15,14 @@
 <h2 class='titleHead'> Research Statement                                                <a href='https://ksolaiman.github.io/'>KMA Solaiman</a> </h2><div class='author'></div><br />
 <div class='date'></div>
    </div>
-<!-- l. 3 --><p class='indent'>   Real-world use-cases in data-centric aplications (including societal, healthcare, or education) with minimal computational
+<!-- l. 3 --><p class='indent'>   Real-world use-cases in data-centric applications (including societal, healthcare, or education) with minimal computational
 resources often have an unprecedented influx of unstructured and noisy data from multiple sources and modalities. Extraction
-of meaningful information from such heteregenous and changing datasets requires achieving the complementary functionalities
+of meaningful information from such heterogenous and changing datasets requires achieving the complementary functionalities
 of  <span class='ptmri8t-'>cross-modal matching, scalable data management system (mostly search engines and databases), </span>and <span class='ptmri8t-'>situationally-aware
 </span><span class='ptmri8t-'>data recommendation. </span>My research goal is to understand how these functionalities can be achieved by designing interactive
 algorithms and robust systems that solve the problem of <span class='ptmb8t-'>situational knowledge on demand in open-world</span>
 from multiple forms of information, regardless of whether presented as text, images, videos, audio, or other
-modalities, while achieving data-driven and resource-aware <span class='ptmri8t-'>data management </span>and <span class='ptmri8t-'>data integration </span>capabilites.
+modalities, while achieving data-driven and resource-aware <span class='ptmri8t-'>data management </span>and <span class='ptmri8t-'>data integration </span>capabilities.
 <br class='newline' />   My later works branched into developing scientific principles to <span class='ptmri8t-'>quantify </span>and <span class='ptmri8t-'>characterize novelty </span>(significant and
 unexpected events) <span class='ptmri8t-'>in open-world domains</span>, while creating scalable and efficient AI systems that <span class='ptmri8t-'>react to novelty </span>in those
 domains.
@@ -30,7 +30,7 @@ domains.
 tackling multiple <span class='ptmri8t-'>system design challenges</span>: <a id='x1-2r1'></a><br class='newline' /><span class='ptmb8t-'>(1)</span> <span class='ptmb8t-'>Resource-aware Data Management: </span>Data management systems require a comprehensive understanding of the data
 properties, user requirements, and limitations imposed by open-world to achieve optimal performance and scalability for
 multimodal data recommendation. Emerging multimodal applications impose challenges for traditional system (hardware and
-software) design choices ranging all the way from input (heteregeneous sources, context and modalities) and output
+software) design choices ranging all the way from input (heterogeneous sources, context and modalities) and output
 (delivery-on-time, quick throughput and diverse users), changing information needs (knowledge base creation and query), to
 computational resources (lack of annotations, domain-specific feature extractors or human resources). For instance, we showed
 that transfer learning for fine-grained semantic concept extraction from videos turned out to be ill-suited in large-scale systems
@@ -46,7 +46,7 @@ properties in a high-dimensional space using higher-level semantic features in a
 allowing zero-shot similarity matching and data discovery of multimodal data in open-world environments. <a id='x1-4r3'></a>
 <br class='newline' /><span class='ptmb8t-'>(3)</span> <span class='ptmb8t-'>Dealing with Open-world Novelties: </span>To construct intelligent AI systems, it is necessary to adapt to evolving scenarios.
 However, conventional AI systems face restrictions when it comes to managing unexpected events or "novelties"
-that were not previsouly seen or modeled. We need to characterize, detect and adapt to novelties at various
+that were not previously seen or modeled. We need to characterize, detect and adapt to novelties at various
 stages of the AI life cycle, such as data integration, relevance learning, environment modeling, feature extraction,
 and inherent domain properties. Novelty characterization and difficulty estimation is required in a plethora of
 AI systems ranging from multimodal information retrieval <span class='cite'>[<span class='ptmb8t-'>?</span>]</span> (distribution change and concept drift), dataset
@@ -75,18 +75,18 @@ collaboration with Northrop Grumman, MIT, and CMU and demonstrated at Northrop G
 has been funded by Northrop Grumman for three consecutive years since 2019, renewing the funding every
 year.
 </p><!-- l. 15 --><p class='indent'>
-</p><!-- l. 16 --><p class='noindent'> <span class='ptmbi8t-x-x-120'>Heteregenous Data Ingestion, Scalability, and Delivery-on-demand</span>
+</p><!-- l. 16 --><p class='noindent'> <span class='ptmbi8t-x-x-120'>Heterogenous Data Ingestion, Scalability, and Delivery-on-demand</span>
 </p><!-- l. 17 --><p class='indent'>   We used Postgres as the backend architecture for both data storage and on-time delivery. Building on top of the RDBMS
 allows us to scale to practical data volumes, as well as using the querying interface with query-by-example and
 query-by-features dramatically lowers the human costs of multimodal and visual domain search <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. For consuming data from
-heteregeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. Any
-query to the system was formulated and considered as an <span class='ptmri8t-'>incident in real life</span>. For delivery-on-demand from incomplete
-modalities, we used Postgres Trigger functionality, which is activated whenever an insert occurs that matches a certain
-incident (any matching data). This feature allows us to deliver incomplete information need and complete it later
-when new matching data is encountered, while being capable of adapting to changing information requirements.
-Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we
-proposed to build a <span class='ptmbi8t-'>query-drive knowledge base </span>for each user, where all queries can relate to a single incident.
-SKOD speeds up the data delivery by storing frequent incidents by cacheing hot queries, and recently used
+heterogeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. Any
+query to the system was formulated and considered as an <span class='ptmri8t-'>incident in real life</span>. For delivery-on-demand from
+incomplete modalities, we used Postgres Trigger functionality, which is activated whenever an insert occurs that
+matches a certain incident (any matching data). This feature allows us to deliver incomplete information need and
+complete it later when new matching data is encountered, while being capable of adapting to changing information
+requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing
+requirements, we proposed to build a <span class='ptmbi8t-'>query-drive knowledge base </span>for each user, where all queries can relate to a single
+incident. SKOD speeds up the data delivery by storing frequent incidents by caching hot queries, and recently used
 data.
 </p><!-- l. 35 --><p class='indent'>
 </p><!-- l. 36 --><p class='noindent'> <span class='ptmbi8t-x-x-120'>Resource-constrained Feature Extraction</span>
@@ -115,7 +115,7 @@ delivers integrated query results over time. Since the number of properties-of-i
 similar approach to the <span class='ptmri8t-'>Global as View </span>data integration, I proposed to employ <span class='ptmb8t-'>schema mapping </span>between the
 <span class='ptmri8t-'>mediated schema </span>and <span class='ptmri8t-'>local schema </span>from different data sources. The proposed approach, <span class='ptmb8t-'>EARS </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span> adopts an
 entity-relationship-attribute schema for each new data source, and a wrapper is designed to translate the source schemas to the
-mediated schema. The queries are translated into conjuctive queries between features among data sources and a
+mediated schema. The queries are translated into conjunctive queries between features among data sources and a
 SQL-Join is performed at run-time to integrate all the relevant sources. Using the versatility of Postgres, we achieve
 the scalability and speed that is required for time sensitive use-cases, with minimal amount of computational
 resources.
@@ -129,7 +129,7 @@ approximate graph matching techniques, I propose <span class='ptmb8t-'>co-ordina
 </span><span class='ptmb8t-'>samples comprised of their semantic features </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span>, where it learns to approximate a novel Edit distance metric,
 <span class='ptmri8t-'>CED</span>, based on the multiplicative comparison of the <span class='ptmri8t-'>Hierarchical Attributed Relational Graph </span>representations.
 </p><!-- l. 1 --><p class='noindent'><span class='ptmbi8t-x-x-120'>Weakly Supervised Metric Learning for Cross-Modal Matching</span>
-</p><!-- l. 2 --><p class='indent'>   For real-world systems, <span class='ptmri8t-'>data discovery from heteregenous modalities </span>and <span class='ptmri8t-'>explanation of the relevant properties among
+</p><!-- l. 2 --><p class='indent'>   For real-world systems, <span class='ptmri8t-'>data discovery from heterogenous modalities </span>and <span class='ptmri8t-'>explanation of the relevant properties among
 </span><span class='ptmri8t-'>similar data objects </span>is of equal importance. Since in these applications, manual annotation is not feasible or they lack
 annotation resources, we need alternative supervision techniques for cross-modal matching. Motivated by the advancement in
 translation and captioning models (video/audio <span class='zptmcm7y-'>→ </span>text), I propose to embed data-objects and their semantic properties in a high
@@ -184,8 +184,8 @@ following directions:
 </p><!-- l. 13 --><p class='indent'>
 </p><!-- l. 13 --><p class='noindent'><span class='ptmbi8t-x-x-120'>User Preference Modeling</span>
 </p><!-- l. 14 --><p class='indent'>   To complete the life-cycle of <span class='ptmri8t-'>situational knowledge delivery</span>, we still have challenges in modeling user’s information need
-in a robust and efficient manner in multiple directions <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>: <a id='x1-5r1'></a>(1) user requirement is not always obvious or explicitly
-stated,<a id='x1-6r2'></a> (2) user can be interested in multiple types of events and knowledge bases with varying probabilites,<a id='x1-7r3'></a> (3) 
+in a robust and efficient manner in multiple directions <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>: <a id='x1-5r1'></a>(1) user requirement is not always obvious or explicitly stated,<a id='x1-6r2'></a>
+(2) user can be interested in multiple types of events and knowledge bases with varying probabilities,<a id='x1-7r3'></a> (3) 
 learning algorithms need to <span class='ptmri8t-'>adapt to changing user preferences with time</span>. I aim to develop novel algorithms
 using techniques such as active learning and reinforcement learning that can accurately capture and predict
 users’ preferences based on their behavior, interactions, and feedback. Understanding the features that drive user
@@ -203,7 +203,7 @@ across multiple areas is necessary, including <span class='ptmb8t-'>data science
 taking into account their cognitive and perceptual abilities. This collaboration can also lead to the <span class='ptmri8t-'>development of
 </span><span class='ptmri8t-'>ethical guidelines and principles for designing trustworthy systems</span>, ensuring that users’ rights and privacy are
 protected.
-</p><!-- l. 46 --><p class='noindent'><span class='ptmbi8t-x-x-120'>Privacy preserving Data Dissemeniation and Federated Learning</span>
+</p><!-- l. 46 --><p class='noindent'><span class='ptmbi8t-x-x-120'>Privacy preserving Data Dissemination and Federated Learning</span>
 </p><!-- l. 47 --><p class='indent'>   To address the growing concern over data privacy, particularly in medical and identity contexts, research in
 privacy-preserving multimodal data dissemination and federated learning is crucial, as identified in SKOD framework <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>.
 Further research to integrate the use of local data processing and remote federation with multimodal machine learning
