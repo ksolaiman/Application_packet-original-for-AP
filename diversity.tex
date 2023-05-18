@@ -1,4 +1,4 @@
-\documentclass[9pt]{article}
+\documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx} %{tgbonum}
 \usepackage[inline]{enumitem}
@@ -223,7 +223,7 @@ My goal as a faculty is to create a welcoming and safe learning space for everyo
     % -- outreach to young students from all over the world and from a diverse body to connect with seniors and ignite the spark
     \item Continue my research on societal problems that impose hindrances to an inclusive and supportive environment in education and society. 
     % I aim to understand the complex patterns in multi-modal data while avoiding hidden bias in the decision-making process. %!
-    \item Continue promoting diversity and inclusion in database and ML conferences such as SIGMOD, VLDB, AAAI, ECML, etc. %!
+    % \item Continue promoting diversity and inclusion in database and ML conferences such as SIGMOD, VLDB, AAAI, ECML, etc. %!
     % \item 
     % \textit{Build Supportive Communities:} In the future, I will continue actively serving at social events to support underrepresented groups. For example, I plan to organize and participate in workshops in top-tier conferences on “Muslims in NLP/CS/STEM”.\\
     \item Actively serving in \textit{affinity group workshops} in Conferences such as NeurIPS to support under-represented groups.
@@ -232,8 +232,14 @@ My goal as a faculty is to create a welcoming and safe learning space for everyo
     % like Women in Machine Learning, Queer in AI, Black in AI, LatinX in AI, {Dis}Ability in AI, Indigenous Protocols in AI, Muslims in ML, and Jews in ML have organized workshops and socials at NeurIPS.
     % under-represented ethnic or racial minorities (URM), women, LGBTQ, first-generation college, people with disabilities, and people from underprivileged backgrounds
     \item Promote the inclusive culture at \InstitutionName ~to academic community and students, especially to recruit students from under-represented groups and countries. 
-    \item Actively participating in workshops and organizations	that	promote diversity	in	\shortInstitutionName.% ~such as \diversityOrgInUni.
-    % + \item Continuing	to	foster	relationships	between	\InstitutionName~ and	local minority-serving	institutions.
+    \item Actively participating in workshops and organizations	that	promote diversity at
+    \ifx\shortInstitutionName\insEmpty
+        \InstitutionName{}.
+    \else
+        \shortInstitutionName{}.
+    \fi
+    % ~such as \diversityOrgInUni.
+    \item Continue to	foster	relationships	between	\InstitutionName~ and	local minority-serving	institutions.
 \end{enumerate*}
 
 % Extra from the research part,

@@ -17,6 +17,7 @@
 \usepackage{parskip} % % don't indent new paragraphs
 \usepackage{enumerate}
 \usepackage{harvard}
+\usepackage{enumitem}
 
 % change font to times new roman
 \usepackage{fontspec}
@@ -80,16 +81,10 @@ Faculty Search Committee \\
 Dear Members of the Search Committee:
 
 I am writing to apply for the position of Interdisciplinary Artificial Intelligence (AI) Research faculty member at University of Missouri as part of the MizzouForward initiative.
-I am a doctoral candidate at Purdue University, and I am scheduled to complete my Ph.D. degree requirements, including defending and depositing, by July 2023. I have a track record of external research funding from federal agencies and industry partners such as DARPA, Sandia and NGC. I have a strong interdisciplinary orientation in my work and have collaborated with end-users and experts in database, NLP+CV, information and data science, and industry from MIT, NGC, USC-ISI, DARPA, and others. My research portfolio includes multiple publications in VLDB, SIGMOD, AAAI, and IEEE and systems with social impacts.
-
-% After being informed of this position by a colleague, 
-I was motivated to apply 
-as I believe I can contribute to \shortInstitutionName{}'s mission of promoting intellectual pluralism 
-% accessible and inclusive 
-% inclusive 
-and quality
-education with my commitment to pursue collaborative teaching, the experience of attending a multi-faceted public research university, and my focus on impactful research and education.  With a teaching and research experience of more than six years, I believe I have the necessary skills to fulfill the duties of an \PositionName{} for the University of Missouri Institute for Data Science and Informatics (MUIDSI). %at MU.
-As a Lecturer and teaching assistant in the CS program at Purdue University, I worked in a culturally, ethnically, and economically diverse and ever-evolving environment. This experience strengthened my communication, interpersonal, and organizational skills. 
+I am a doctoral candidate at Purdue University, and I am scheduled to complete my Ph.D. in Computer Science by July 2023. My research has been funded by federal agencies and industry partners such as DARPA, Sandia and NGC. I have a strong interdisciplinary orientation in my work and have collaborated with end-users and experts in database, NLP+CV, informatics and data science, along with industry partners from MIT, NGC, USC, UMichigan, DARPA, and others. My research portfolio includes multiple publications in top data management venues such as VLDB, SIGMOD, AAAI, and IEEE and systems with societal impacts. With a teaching and research experience of more than six years, I believe I have the necessary skills to fulfill the duties of an Assistant Professor at University of Missouri.
+ 
+% I was motivated to apply as I believe I can contribute to \shortInstitutionName{}'s mission of promoting intellectual pluralism and quality education with my commitment to pursue collaborative teaching, the experience of attending a multi-faceted public research university, and my focus on impactful research and education.  With a teaching and research experience of more than six years, I believe I have the necessary skills to fulfill the duties of an \PositionName{} for the University of Missouri Institute for Data Science and Informatics (MUIDSI). %at MU.
+% As a Lecturer and teaching assistant in the CS program at Purdue University, I worked in a culturally, ethnically, and economically diverse and ever-evolving environment. This experience strengthened my communication, interpersonal, and organizational skills. 
 % Managing large labs with the Undergraduate TAs or handling graduate labs on my own has allowed me to showcase my teamwork and adaptability skills. Teaching students from sophomore to graduate levels required continuous learning and flexibility to facilitate their progression and expectation from the courses. 
 
 \paragraph{1 and P1) current research portfolio, accomplishments, and future research goals}
@@ -97,46 +92,85 @@ As a Lecturer and teaching assistant in the CS program at Purdue University, I w
 % I have completed my Master's degree requirements with systems, algorithms, and data-science-related courses, along with elective classes regarding current advancements in Database and Machine Learning. Previously, I completed my Bachelor's in Computer Science with a specialization in Pattern Recognition, where I proposed a novel clustering algorithm for irregularly shaped datasets using a single hyperparameter.
 % For my Ph.D. dissertation, I propose a system for \textit{Multimodal data discovery} to deliver users with the relevant data at the right time. My proposed system includes solutions for processing large-scale multimodal data, feature extraction from perceptual and textual domains, cross-modal relevance matching, and real-time data delivery. I also proposed a framework for measuring domain complexity in distributed perception domains and a weakly supervised model for open-world cross-modal retrieval to accommodate systems with open-world novelty. I aim to continue my research on Open-world AI and Multimodal information retrieval to understand the hidden patterns in ever-increasing influx of cross-modal data.
 
-I have worked on developing algorithms and robust systems to extract meaningful information from heterogeneous and changing datasets, regardless of whether presented as text, images, videos, audio, or other modalities.
-% , while achieving data-driven and resource-aware data management and data integration capabilities. 
-I also proposed scientific principles to \textit{quantify and characterize novelty in open-world domains, while creating scalable and efficient AI systems that react to novelty in those domains}.
-My research focused on three main challenges for multimodal information processing in open-world: \textit{resource-aware data management system, label-independent data integration, and dealing with open-world novelties}. I have developed several approaches to address these challenges, including SKOD for situational knowledge deliver, EARS for data integration using schema mapping, FemmIR for approximate matching of co-ordinated graph representations of data samples, HART for attribute extraction from text, and WesJeM for embedding data-objects and their semantic properties in a high-dimensional space using higher-level semantic features.
-My work has had a positive impact on open societal problems, including Missing Person Search, Dataset Complexity Estimation, and Medical Triage. 
+I have experience developing algorithms and systems for retrieval and recommendation of multimodal information in open-world application domains, regardless of whether presented as text, images, videos, audio, or other modalities. My research focused on real applications of learning algorithms and foundations of artificial intelligence and machine learning for open-world novelties, with an emphasis on large-scale machine learning systems, deep learning, representation learning, planning agents, and feature-centered knowledge accumulation. My work with NGC and DARPA resulted in innovative research programs that made an impact in the field, including novel approaches to \textit{resource-aware data management, novel feature extraction methods, label-independent data integration,} and \textit{addressing open-world novelties}. My work in \textit{quantifying and characterizing novelty in open-world domains} had impacts and collaborations in planning domains and autonomous systems. I have successfully applied my work to address open societal problems, such as missing person search, dataset complexity estimation, and medical triage.
 
-My long-term goal is to create intelligent systems that can reason, learn and cooperate with humans to improve the standard of living by utilizing the vast amounts of data available in the modern era and address real-world challenges.
-To achieve this, I plan to continue my research on multimodal data management in real-world scenarios by focusing on user preference modeling, improving explainability and trustworthiness in multimodal data recommendation for validation and cross-checking, developing algorithms for privacy preserving data dissemeniation, and exploring novelties in learning algorithms. 
+% I have worked on developing algorithms and robust systems to extract meaningful information from heterogeneous and changing datasets, regardless of whether presented as text, images, videos, audio, or other modalities. I also proposed scientific principles to \textit{quantify and characterize novelty in open-world domains, while creating scalable and efficient AI systems that react to novelty in those domains}. My research focused on three main challenges for multimodal information processing in open-world: \textit{resource-aware data management system, label-independent data integration, and dealing with open-world novelties}. I have developed several approaches to address these challenges, including SKOD for situational knowledge deliver, EARS for data integration using schema mapping, FemmIR for approximate matching of co-ordinated graph representations of data samples, HART for attribute extraction from text, and WesJeM for embedding data-objects and their semantic properties in a high-dimensional space using higher-level semantic features. My work has had a positive impact on open societal problems, including Missing Person Search, Dataset Complexity Estimation, and Medical Triage. 
+
+My long-term goal is to create intelligent systems that can reason, learn and cooperate with humans to improve the standard of living by utilizing the 
+% vast amounts of data available in the modern era 
+modern-era data influx
+and address real-world challenges.
+To achieve this, I plan to continue my research on multimodal data management in open-world by focusing on \textit{user preference modeling, improving explainability and trustworthiness in data recommendation with validation and cross-checking, developing algorithms for privacy preserving data dissemeniation, and exploring theories on novelties in learning algorithms}. 
 % You believe your research can make a significant impact on society by leveraging existing scientific advancements and addressing real-world challenges.
-During my research, I enjoyed working with our industry colleagues (such as JPL, NGC, Sandia, Ford) and several institutes.
+%%%%%%%%%%
+% During my research, I enjoyed working with our industry and academia colleagues (such as JPL, NGC, Sandia, Ford, MIT, UMichigan, USC-ISI, IDA).%
+%%%%%%%%% above is Mentioned in introduction %%%%
 % and understood the need for interdisciplinary collaborations between academia and industry.
-I am excited about the opportunity to collaborate with Mizzou CERI, SDS Lab, MINDFUL, and 
-% the University of Missouri Institute for Data Science and Informatics (MUIDSI) 
-the NextGen Precision Health initiative 
-on cutting-edge AI research. I believe that my expertise and experience will enable me to make a significant contribution to the MizzouForward initiative and help drive innovation and collaboration across campus.
-
-\newpage
+%%%%%%%%%%%%%%%%%%%
+% In pursuing my research goals, I would seek to collaborate with other faculty members within the department and across MU who share my interests, including different labs at MU:
+% % There is large potential of collaborations with different labs: 
+% 1) SDS lab on distributed systems, multimodal information extraction, and data privacy, % (Praveen Rao) 
+%  2) MINDFUL lab with Derek Anderson and Jeffrey Uhlmann on information fusion, %(Derek Anderson)
+% 3) CERI on big data and video analytics, special education and public safety, %  (Prasad Calyam), 
+% % iv) CGI (Curt Davis), % geospatial
+% and 
+% 4) MUIDSI.
+% % on the NextGen Precision Health initiative and cutting-edge AI research.
+% % Big data analytics in precision medicine
+% % Geo-spatial video analytics
+% % Cyber security
+% % Special education
+% % Public safety 
+% %%%%%
+% % I am excited about the opportunity to collaborate with Mizzou CERI 
+% % SDS Lab (Praveen Rao), % federated learning, data privacy, content extrac,. big data, genome 
+% % Jeffrey Uhlmann % information and sensor fusion, metric data structures and nonlinear estimation.
+% % Khaza Anuarul Hoque % safe AI/ML,design, analysis, and formal verification of safe, secure, trustworthy, and
+% %%%%%%%
+% I look forward to collaborating in the areas of
+% % ethics, psychology, social science, % marketing, nlp 
+% computer vision (Guilherme Desouza), % Yi Shang - small object detection
+% healthcare (Marjorie Skubic,
+% Janine Stichter), % Special Education, disability
+% human computer interaction (Mihail Popescu, Filiz Bunyak Ersoy, Janine Stichter, Joi Moore), % +Interactive Learning Environments
+% novelties and robust systems (Andrew Buck, Khaza Anuarul Hoque), and data management systems and databases (Grant Scott) to achieve my long-term research goals. 
 %
-As a teacher, I aim to develop self-motivation and critical thinking among my students. Recognizing that every student comes from a different background and culture, I always consider the interconnection between the student's current knowledge and learning capability while preparing the lectures. To promote learning by doing, I choose exercises that are both related to the core concepts and challenging so that they have to step outside of their comfort zone and can develop the logical thinking needed for solving research questions and real-life problems. Letting the students choose the modality for lectures and deliverables, giving frequent feedback for homework and projects, grading with a growth mindset, and leaving detailed reasoning are some of my efforts to make them feel autonomous and involved in the learning process. 
-% In my graduate classes, the students appreciated using tools like HotCRP or Perusall for teaching literature reviews or paper writing.
-% Furthermore, teaching post-covid has equipped me with the tools and skills, including course management and automatic-grading software to teach online or in-person, e.g., Brightspace, Gradescope, or Campuswire.
+In pursuing my research goals, I aim to establish collaborations with fellow faculty members both within the department and across MU who share similar interests. These potential collaborations include various labs at MU, namely:
+1) the SDS lab, focusing on distributed systems, multimodal information extraction, and data privacy,
+2) the MINDFUL lab with Derek Anderson and Jeffrey Uhlmann, specializing in information fusion,
+3) CERI, which emphasizes big data and video analytics, special education, and public safety, and
+4) MUIDSI for data science and informatics.
+I am eager to engage in collaborative work within the domains of computer vision (with Guilherme Desouza), healthcare (involving Marjorie Skubic and Janine Stichter), human-computer interaction (with Mihail Popescu, Filiz Bunyak Ersoy, Janine Stichter, Joi Moore), novelties and robust systems (including Andrew Buck and Khaza Anuarul Hoque), as well as data management systems and databases (with Grant Scott)
+% . By fostering these partnerships, I aim 
+to achieve my long-term research goals.
 
-\paragraph{4) Good communication skills.}
-% I gained proficiency in delivering talks to large audiences through lectures in labs and classes and frequent presentations in review meetings and conferences with JPL, Northrop Grumman, and DARPA. Being authored and published multiple papers in VLDB, SIGMOD, and IEEE, I am confident in my communication skills. As a full-time lecturer, I had the experience of taking upto 18 credit hours per semester while teaching multiple classes and labs on various courses. I have experience teaching programming language courses (Java, C/C++, Python), database courses (SQL), data structure and algorithm, and software engineering courses (JavaScript and PHP) for multiple semesters. 
-% During research, I enjoyed working with our industry colleagues and understood the need for interdisciplinary collaborations between academia and industry. 
-% This experience would be helpful for me to integrate with \shortInstitutionName{}'s mission of interdisciplinary collaboration to better the economic, social, cultural, and environmental health of the communities.
-% among social justice, the health sector, and academia.
+%%%%%%%%%%%%%%%%%%%%%%%%
+Additionally, I have contributed significantly to the writing of grant proposals (such as DARPA ITM project and DARPA Triage Challenge), including idea generation, method design, idea illustration and visual aid creation. I will keep exploring potential funding opportunities from funding agencies (e.g., DARPA, AFRL, NSF)
+% IARPA,  ARL, NIH, DOE, DOD) 
+and industries (e.g., NGC, Microsoft, IBM, Ford).
+As part of the MizzouForward initiative, I am excited about the prospect of contributing to \shortInstitutionName{}'s collaborative and interdisciplinary efforts involving AI applied to important societal and economic problems.
+% , and robotics and autonomous systems.
+%%%%%%%%%%%%%%%%
+% My work has the potential to make a significant impact in the fields of machine learning, artificial intelligence, and data science, and I believe that I would be an asset to the interdisciplinary cohort of new faculty recruited across the College of Engineering in the broad areas of computational and data-driven science and engineering, and robotics and autonomous systems. 
 
-% \paragraph{curriculum development for lecture and lab courses in Computer Science/Data Science}
-% I have prior involvement in developing course materials for \textit{Object-oriented programming} and \textit{Simulation and Modeling}. In addition, during my tenure as a Lecturer, I improved the undergraduate curriculum for \textit{Network Programming} and \textit{Graphics}.
-% % added to the course curriculum for \textit{Network Programming} and \textit{Graphics}. 
-% In my prospective career as \PositionName{}, I look forward to working in a collaborative teaching and learning environment with both faculty and students, where I can improve courses incorporating novel teaching  techniques, research, and the most recent theories on learning, such as Self-determination theory, belongingness, etc. 
-% I am excited to teach CS courses at any levels.
-% % both undergraduate and graduate levels. 
-% I would also welcome the opportunity to develop new courses according to the departmental needs.
+ % I believe that my expertise and experience will enable me to make a significant contribution to the MizzouForward initiative and help drive innovation and collaboration across campus.
+
+% \newpage
+As a Lecturer for 2 years and teaching assistant in the CS program at Purdue University for 5 years, I worked in a culturally, ethnically, and economically diverse and ever-evolving environment. This experience strengthened my communication, interpersonal, and organizational skills. 
+Leading large labs with the Undergraduate TAs or handling graduate labs on my own has allowed me to showcase my teamwork and adaptability skills. Teaching students from sophomore to graduate levels required continuous learning and flexibility to facilitate their progression and expectation from the courses.
+%
+I will feel very familiar to work in a collaborative teaching and learning environment, such as 
+% University of Missouri Institute for Data Science and Informatics (
+MUIDSI, alongside faculty and students. This environment will provide me with the opportunity to teach and enhance courses by integrating innovative teaching techniques, research findings, and the latest theories on learning, such as self-determination theory and belongingness.
+% \paragraph{Teaching Philosophy}
+My teaching philosophy revolves around growing intrinsic motivation, autonomous identity and critical thinking among students, understanding the diversity among students, and leading with a growth mindset.
+%
+
 
 \paragraph{P4) The ability to contribute through teaching and/or service to the diversity, cultural sensitivity, and excellence of the academic community.}
 \paragraph{Diversity}
 I strongly believe in the value of diversity and inclusion and have actively worked to create an inclusive research and teaching environment. During classroom communication, I actively handle the diversity in accents by understanding the difference, addressing the speaking, and actively listening in traditional and alternative methods.
-I always create a safe and comfortable environment for all my students to learn and share their feedback and questions. In addition, I have actively engaged in promoting diversity and inclusion through international collaborations, mentoring students from diverse backgrounds, outreach, and socially impactful research. Under my guidance, multiple undergraduates and Master's students worked in teams on the same project for independent research and learned essential skills in developing practical solutions for real-world problems. As a future teaching faculty of \shortInstitutionName{}, I would continue my efforts through inclusive environments, affinity group participation, outreach to younger generations and beyond borders, and involvement with groups advancing diversity. 
+I always create a safe and comfortable environment for all my students to learn and share their feedback and questions. In addition, I have actively engaged in promoting diversity and inclusion through international collaborations, mentoring students from diverse backgrounds, outreach, and socially impactful research. Under my guidance, multiple undergraduates and Master's students worked in teams on the same project for independent research and learned essential skills in developing practical solutions for real-world problems. As a future teaching faculty of \shortInstitutionName{}, I would continue my efforts through inclusive environments for teaching and research, affinity group participation, outreach to younger generations and beyond borders, and involvement with groups advancing diversity at \InstitutionName{}. 
 % (such as ADVANCE and CMASS).
 
 \paragraph{P3) Relevant industrial experience beneficial to CS/ DS curriculum development and CS/DS capstone project advising}
@@ -166,10 +200,10 @@ I always create a safe and comfortable environment for all my students to learn 
 % \vfill
 
 % I am very excited about the opportunity of joining \InstitutionName{}, 
-I would enjoy further discussing the value I can add to this position and \InstitutionName{}. I am sharing my curriculum vitae
+I look forward to further discussing the value I can add to this position and \InstitutionName{}. I am sharing my curriculum vitae and statements through the website.
 % with evidence of my teaching experience 
-through the website. I have also attached my research, teaching and diversity 
-statements with the letter of application. Letters of reference will be provided separately for your review. I will gladly provide any other supporting materials upon request. Thank you very much for your time and consideration.
+% through the website. I have also attached statements describing my experiences, philosophies, and future plans with the letter of application. 
+Letters of reference will be provided separately for your review. I will gladly provide any other supporting materials upon request. Thank you very much for your time and consideration.
 
 \bigskip
 Sincerely, 
