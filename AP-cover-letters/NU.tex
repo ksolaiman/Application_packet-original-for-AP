@@ -1,0 +1,258 @@
+
+% % document type % %
+\documentclass[9pt]{article}
+
+% % preamble % %
+\usepackage{amsmath} % % centers and provides equation numbers for align env
+\usepackage{amssymb} % % allows use of normal N symbol
+\usepackage{graphicx} % % allows graphics floats
+\usepackage{grffile} % % allows more image file names
+\usepackage{subcaption} % % allows subfigures in floats
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+\usepackage{color}
+\usepackage{setspace} % % allows line spacing
+\usepackage{moreverb} % % allows use of verbatimtab
+\renewcommand\verbatimtabsize{4\relax} % % sets verbatimtab indent to half of default, looks better
+\usepackage{parskip} % % don't indent new paragraphs
+\usepackage{enumerate}
+\usepackage{harvard}
+
+% change font to times new roman
+\usepackage{fontspec}
+% \usepackage{polyglossia} 
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf
+]
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{
+            \includegraphics
+            [height=40pt] %40pt
+            {\InstituteSeal}
+            % {cas_logo.png}
+        }  % left header
+	\fancyhead[R]{\today} % right header
+	\fancyfoot[C]{} % % remove default centered page numbers
+}
+
+\fancypagestyle{empty}{
+	\newgeometry{top=1.1in,bottom=1in,left=1in,right=1in}
+	\fancyfoot[C]{} % % remove default centered page numbers
+}
+
+% % omit line beneath header
+\renewcommand{\headrulewidth}{0pt}
+
+% % expand head of document:
+\setlength{\headheight}{44.35004pt}
+
+% % application specific information % %
+\usepackage{school}
+\usepackage{ifthen}
+
+\renewcommand*\paragraph[1]{}
+
+% % Change font of whole document
+% \renewcommand{\familydefault}{\sfdefault}
+
+% % document begins % %
+\begin{document}
+
+% % header w/ logo on first page
+\thispagestyle{plain}
+
+% % no header or footer on second page
+\pagestyle{empty}
+
+% % address block % %
+Faculty Search Committee \\
+\DepartmentName \\
+% \SchoolName\\
+\InstitutionName \\
+% \DepartmentAddress\\
+
+% % body % %
+Dear Members of the Search Committee:
+
+I am writing to apply for the position of \PositionName{} 
+\ifx\DepartmentName\undefined
+\else
+in 
+% Computer Science 
+% the Software and Information Systems Department
+\DepartmentName{} 
+\fi
+% in the \SchoolName{}
+at \InstitutionName{}%. %(\shortInstitutionName{}), 
+%%%%
+\ifx\shortInstitutionName\undefined
+    \ifx\startDate\undefined
+        .
+    \else
+        , beginning \startDate{}. %, as mentioned on your department website. 
+    \fi
+\else
+    ~(\shortInstitutionName).   \ifx\startDate\undefined
+    \else
+        , beginning \startDate{}. %, as mentioned on your department website. 
+    \fi
+\fi
+%%%%
+I am a doctoral candidate at Purdue University, and I am scheduled to complete my Ph.D. in Computer Science by July 2023, including defending and depositing. Previosuly I have completed my Master's degree requirements with systems, algorithms, and data-science-related courses from Purdue University, along with elective classes regarding current advancements in Database and Machine Learning. 
+% I was motivated to apply 
+% as I believe I can contribute to \ifx\shortInstitutionName\undefined \InstitutionName{}'s \else \shortInstitutionName{} with my commitment to pursue teaching, the experience of 
+% attending a multi-faceted public research university, expertise in Data Mining, and Software Engineering,  and my focus on 
+% impactful research and education. 
+%
+%
+% \shortInstitutionName{}'s mission of brining together industry, and academia in dynamic project-based learning and purpose driven research would allow me to work in a truly collaborative and familiar environment.
+% to shape the way emerging technologies influence society.
+% The interdisciplinary research in \InstitutionName{} with the goal of the common good to alleviate the community and specific focus on Information Retrieval and Data Science would allow me to work in a truly collaborative and familiar environment. \shortInstitutionName{}'s opportunities for the diverse student body and marginalized community, along with the Partner Employment program, bolstered my choice.
+\paragraph{2 and 3) Demonstrated ability to teach and interact with both undergraduate and graduate students}
+With a teaching and research 
+experience of more than six years, and my expertise in computer science courses, at both graduate and undergraduate levels, I believe I have the necessary skills to fulfill the duties of  \PositionName{} at \InstitutionName.
+
+\textbf{\textit{Functional Skills: }}
+As a Lecturer and teaching assistant in Computer Science (CS) at Purdue University, I worked in a culturally, ethnically, and economically diverse and ever-evolving environment. This experience strengthened my communication, interpersonal, and organizational skills. Leading large labs with the Undergraduate TAs or handling graduate labs on my own has allowed me to showcase my teamwork and adaptability skills. Teaching students from sophomore to graduate levels required continuous learning and flexibility to facilitate their progression and expectation from the courses. 
+I value accountability and take full responsibility for the quality of my work, promptly addressing any mistakes or concerns in my research and other academic responsibilities. I make informed decisions by carefully analyzing options and determining the best course of action, allowing me to meet deadlines and manage multiple responsibilities effectively. In teamwork, I promote cooperation, mutual support, and active participation, as evidenced by my collaborations with five professors, over 15 students, and multiple industry partners during my Ph.D. These qualities shape my research and teaching approach, fostering a productive and collaborative environment. 
+
+\paragraph{4) Good communication skills.}
+\textbf{\textit{Essential Functions:}}
+I gained proficiency in delivering talks to large audiences through lectures in labs and classes and frequent presentations in review meetings and conferences with JPL, Northrop Grumman, and DARPA. Being authored and published multiple papers in VLDB, SIGMOD, and IEEE, I am confident in my communication skills. During my tenure as a full-time lecturer, I had the experience of taking up to 18 credit hours per semester while instructing multiple classes and 
+labs on various courses. My duties included delivering lectures, designing course materials, conducting labs, grading assignments, and providing advising. I have taught upper and lower-level undergraduate courses for multiple semesters including Programming Languages (Java, C/C++, Python), Databases, Data Structure and Algorithm, Graphics, Networking, and Software Engineering (web and mobile development). I also instructed in graduate-level courses at Purdue University including Data Communication and Networking, Simulation and Modeling, etc. 
+% Previously, I completed my Bachelor's in Computer Science with a specialization in Pattern Recognition, where I proposed a novel clustering algorithm for irregularly shaped datasets using a single hyperparameter.
+Under my guidance, multiple undergraduates and Master's students worked on their independent research.
+% and learned essential skills in developing practical solutions for real-world problems.  
+% Mentoring students on capstone projects would allow me to collaborate with other faculty members and industry leaders. 
+% % Yongjian Fu Multimodal information retrieval, Satish Kumar Disaster Resilience, Hongkai Yu Autonomous Driving 
+% My experience in interdisciplinary research would require minimal effort from them, benefiting both the students and the research teams.
+As a full time lecturer, I have served on dissertation, accreditation and administrative committees.
+%
+I have prior involvement in developing course materials and improving course curriculum.
+%
+% In my graduate classes, the students appreciated using tools like HotCRP or Perusall for teaching literature reviews or paper writing.
+Furthermore, teaching post-covid has equipped me with the tools and skills, including course management and automatic-grading
+software to teach online or in-person, e.g., Brightspace, Gradescope, HotCRP or Campuswire.
+
+
+\paragraph{P4) The ability to contribute through teaching and/or service to the diversity, cultural sensitivity, and excellence of the academic community.}
+\textit{\textbf{Inclusion.}}
+During classroom communication, I actively handle the diversity in accents by understanding the difference, addressing the speaking, and actively listening in traditional and alternative methods.
+I always create a safe and comfortable environment for all my students to learn and share their feedback and questions. In addition, I have actively engaged in promoting diversity and inclusion through international collaborations, mentoring, outreach, collaborative and growth-focused teaching, and socially impactful research. As a future faculty of \shortInstitutionName{}, I would continue my efforts through inclusive teaching environments, affinity group participation, outreach to younger generations and beyond borders, and involvement with groups and student development programs advancing diversity and inclusion in \shortInstitutionName{}.
+% in terms of race, gender, religion, culture, etc. 
+% (such as ADVANCE and CMASS).
+% \paragraph{Demonstrated commitment to and/or experience in the use of inclusive teaching methodologies and approaches that will engage and inspire students from all racial, ethnic, and socio-economic groups to reach their maximum potential.
+I have experience utilizing inclusive teaching methodologies and approaches that have inspired students from diverse backgrounds to realize their potential, 
+% In the context of object-oriented programming, the course implemented a differentiated approach by dividing the class into two groups: those with prior programming experience and those without. By tailoring the curriculum and providing additional support from teaching assistants, all students were able to catch up and align their skills for future courses. 
+for example, creating differentiated approach for lesser experienced students or allowing the students to choose their goals.
+% Similarly, in the network programming class, we empowered students to choose their course project topics and the format of their final presentations based on their individual goals. This approach fostered a sense of autonomy and resulted in impressive outcomes for each group. 
+As a teacher, I am wholeheartedly dedicated to applying these experiences to inspire students from all racial, ethnic, and socio-economic backgrounds to achieve their utmost potential.
+
+
+%
+\textbf{\textit{Teaching Philosophy:}}
+As a teacher, I aim to develop self-motivation and critical thinking among my students. Recognizing that every student comes from a different background and culture, I always consider the interconnection between the student's current knowledge and learning capability while preparing the lectures. To promote learning by doing, I choose exercises that are both related to the core concepts and challenging so that they have to step outside of their comfort zone and can develop the logical thinking needed for solving research questions and real-life problems. Letting the students choose the modality for lectures and deliverables, giving frequent feedback for homework and projects, grading with a growth mindset, and leaving detailed reasoning are some of my efforts to make them feel autonomous and involved in the learning process. In my prospective career as \PositionName{}, I look forward to working in a collaborative teaching and learning environment with both faculty and students, where I can improve courses incorporating novel teaching  techniques, research, and the most recent theories on learning, such as self-determination theory, belongingness, etc. 
+
+
+% \paragraph{curriculum development for lecture and lab courses in Computer Science/Data Science}
+% I have prior involvement in developing course materials for \textit{Object-oriented programming} and \textit{Simulation and Modeling}. In addition, during my tenure as a Lecturer, I improved the undergraduate curriculum for \textit{Network Programming} and \textit{Graphics}.
+% In my prospective career as \PositionName{}, I look forward to working in a collaborative teaching and learning environment with both faculty and students, where I can improve courses incorporating novel teaching  techniques, research, and the most recent theories on learning, such as self-determination theory, belongingness, etc. 
+% % My primary area of interest would be Artificial Intelligence, Capstone Design, Mobile Application Development, Software Engineering, Usability and User Experience, and Web Development.
+% % Having said that, 
+% I am excited to teach 
+% \ifx\degreeLevel\undefined 
+% undergraduate
+% \fi
+% courses at 
+% \ifx\degreeLevel\undefined 
+% both upper and lower levels.
+% \else
+% both undergraduate and graduate levels.
+% \fi
+% I would also welcome the opportunity to develop new courses according to the departmental needs.
+
+% Demonstrated commitment to mentoring/advising a multicultural population to expand and enhance their educational experience and career goals within and outside traditional classroom settings in accordance with the university philosophy supporting diversity, equity, inclusion, and academic success}
+% I have had the privilege of mentoring students from diverse backgrounds, both in terms of their geographical locations (including the USA, Czech Republic, Turkey, and India) and the universities they attended (such as MIT, Purdue, and METU). Among them, two students became interested in my research after attending my guest lecture in my advisor's class. Additionally, two undergraduate students from Turkey who I advised went on to pursue graduate programs in Germany. In addition to my own advisees, I have provided guidance and support to numerous students from underrepresented groups (URG) and my alma mater in their applications to graduate schools. This support involved revising their application materials, suggesting research directions, and helping them for interviews, among other aspects. Moving forward, I plan to continue mentoring students across borders, as I find great joy in witnessing their success and seek to give back to the altruistic individuals I encountered during my journey as a first-generation international student.
+
+
+\paragraph{1 and P1) Earned doctoral degree in computer science or a closely related field}
+% \paragraph{1) Bachelor's and Master's degrees in Computer Science}
+\textbf{\textit{Scholarship:}}
+During my Ph.D, I gained experience developing algorithms and systems for the retrieval and recommendation of multimodal information in open-world application domains. My Ph.D. thesis focuses on real applications of learning algorithms and foundations of artificial intelligence and machine learning for open-world novelties, with an emphasis on large-scale machine learning systems, deep learning, representation learning, planning agents, and feature-centered knowledge accumulation. My work with NGC and DARPA resulted in innovative research programs that made an impact in the field, including novel approaches to \textit{resource-aware data management, novel feature extraction methods, label-independent data integration,} and \textit{addressing open-world novelties}. My work in \textit{quantifying and characterizing novelty in open-world domains} had impacts and collaborations in planning domains and autonomous systems. I have successfully applied my work to address open societal problems, such as missing person search, dataset complexity estimation, and medical triage.
+%
+% \vfill
+My long-term goal is to create intelligent systems that can reason, learn and cooperate with humans to improve the standard of living by utilizing the 
+% vast amounts of data available in the modern era 
+modern-era data influx
+and address real-world challenges.
+To achieve this, I plan to continue my research on multimodal data management in open-world by focusing on \textit{user preference modeling, improving explainability and trustworthiness in data recommendation with validation and cross-checking, developing algorithms for privacy-preserving data dissemination, and exploring theories on novelties in learning algorithms} and by designing it for classroom-assisted research. 
+% As I strive to achieve my research objectives, my intention is to foster partnerships with like-minded faculty members at NU and other research institutions beyond NU.
+% %
+% To establish a successful and inclusive research program at a predominantly undergraduate institution (PUI) like
+% \shortInstitutionName{}, my research plan at \shortInstitutionName{}
+% % a predominantly undergraduate institution 
+% will involve collaborative and interdisciplinary research, integrating research with teaching, adapting modular approaches, fostering direct mentorship, being resourceful, and creating an inclusive and supportive environment for student researchers. More information is included in the research statement under `future research agenda'.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+Additionally, I have made significant contributions to writing grant proposals, including notable projects such as the DARPA ITM project and the DARPA Triage Challenge. My involvement encompassed various aspects, such as generating ideas, designing methods, illustrating concepts, and creating visual aids. For future funding endeavors, I intend to develop research proposals that are well-articulated, feasible projects, with clearly defined hypotheses, research questions, implementation plans, and identifiable milestones. As a future faculty member, I will actively pursue funding opportunities from a range of sources, including early career support, esteemed funding agencies (such as DARPA, ARL, AFRL, NSF, DOE, DOD), and industry partners (such as NGC, Microsoft, IBM, Ford, Meta, Google, Intel), while collaborating with recognized experts and colleagues in my research field. 
+% Emphasizing the specific designations that align with predominantly undergraduate institutions (PUI) in grant writing, such as NSF-ROA, NSF-RUI, NSF-REU, seed funds, and more, will enhance my ability to secure funding for student-centered teaching, research, and outreach initiatives.
+
+
+\paragraph{P3) Relevant industrial experience beneficial to CS/ DS curriculum development and CS/DS capstone project advising}
+
+\textbf{\textit{Relevant Industrial Experience:}}
+During my research, I enjoyed working with our industry colleagues and understood the need for interdisciplinary collaborations between academia and industry.
+Regarding guiding students in capstone projects for project-based and collaborative learning, I would like to highlight my experience from research in Multimodal Information Retrieval and from teaching in Computer Networks. I have experience with current industrial developments in transformer-based language representation models, multimodal attention networks, data discovery, and object detection models. Moreover, from my recent TA offering, I am familiar with current developments in network and communication, including Mininet, Software-defined networks, P4-language, 5G, etc. In addition, I am familiar with the CRISP-DM methodology for the data science pipeline and have implemented it in use-cases such as \textit{finding Missing Persons} or \textit{analyzing political bias in newspaper articles}. 
+
+
+% CRISP-DM breaks the process of data mining into six major phases:[14]
+% Business Understanding
+% Data Understanding
+% Data Preparation
+% Modeling
+% Evaluation
+% Deployment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Employee Management System
+% Food delivery system
+% Instagram Mini
+% Hotel Management System
+% Bank Management System
+% Blood Bank Management
+% Android E-commerce
+% Bus Ticket Management System
+% Hospital Appointment 
+% Online Library and Bookshop
+% CS 536 courses
+
+% I am very excited about the opportunity of joining \InstitutionName{}, 
+I would enjoy further discussing the value I can add to this position and \InstitutionName{}. I have attached my curriculum vitae (CV), which provides detailed information about my educational background, teaching experience, and scholarly achievements. 
+% Letters of reference will be provided separately for your review. 
+I will gladly provide any other supporting materials upon request. Thank you very much for your time and consideration.\\
+
+
+
+Sincerely, 
+% \includegraphics[height=40pt]{signature.png}
+
+\Name{} \\
+\normalsize  \textnormal{
+          Ph.D. Candidate at Department of Computer Science, Purdue University, West Lafayette, IN 47907
+        }\\
+        \normalsize \textnormal{ % \small
+          \href{mailto:ksolaima@purdue.edu}{ksolaima@purdue.edu} ~|~ %
+          (+1) 765-775-8230 ~|~ %
+          % Ph.D. Candidate @ Purdue Computer Science
+          % 305 N University St, LWSN B132, West Lafayette, IN 47907
+          \href{https://ksolaiman.github.io/}{https://ksolaiman.github.io/}
+}
+
+% % end % %
+\end{document} 

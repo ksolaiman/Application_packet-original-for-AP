@@ -1,0 +1,182 @@
+\documentclass[9pt]{article}
+% \documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} %{tgbonum}
+% \usepackage{natbib}
+\usepackage[inline]{enumitem}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+% \usepackage[Sonny]{fncychap}
+
+% Set page margins
+\usepackage[margin=1in,top=0.8in]{geometry} % 0.4
+
+% Mathematical things
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+
+% \makeatletter
+% \def\paragraph{\@startsection{paragraph}{4}%
+%   \z@\z@{-\fontdimen 2 \font}%
+%   {\normalfont\bfseries}}
+% \makeatother
+
+\makeatletter
+\def \section {%
+    \@startsection {section}
+    {1}%
+    {\z@}%
+    % {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    {0.1em}%
+    {0.1em}
+    {\normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
+
+% https://latexref.xyz/_005c_0040startsection.html
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@\z@{-\fontdimen 6 \font}%
+        % {0pt}% indent 
+        % {\normalfont\bfseries}}
+        % {\normalfont\scshape\bfseries}}
+        % {2pt} %afterskip
+        {\large \scshape \bfseries}% style
+    }
+\makeatother
+
+\newcommand*\bfheading[1]{{\scshape\textbf{#1.}}}
+
+\newcommand*\itheading[1]{\textbf{\textit{#1.}}}
+
+\newcommand*\heading[1]{\textbf{\large #1.}}
+
+\makeatletter
+\def \customsection {%
+    % \@startsection {section}
+    \@startsection{section}
+    {1}%
+    {\z@}%
+    % {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0.2em}
+    {0.2em}
+    {\noindent \large 
+    \scshape 
+    \bfseries} % \Large \normalfont 
+    }
+\makeatother
+
+\makeatletter
+\def \semisection {%
+    % \@startsection {section}
+    \@startsection{section}
+    {1}%
+    {\z@}%
+    % {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0.2em}
+    {0.2em}
+    {\noindent \normalfont \it \bfseries} % \Large
+    }
+\makeatother
+
+% \makeatletter
+% \def \customsection {%
+%     % \@startsection {section}
+%     \@startsection{section}
+%     {1}%
+%     {\z@}%
+%     % {-3.3ex \@plus -1ex \@minus -.2ex}%
+%     % {2.2ex \@plus.2ex}%
+%     % {-1em}%
+%     {0.1em}
+%     {0.2em}
+%     {\noindent \rule{2cm}{4pt} \large 
+%     \scshape 
+%     \bfseries} % \Large \normalfont 
+%     }
+% \makeatother
+
+% \makeatletter
+% \def \semisection{%
+%     % \@startsection {section}
+%     \@startsection{section}
+%     {2}%
+%     {\z@}%
+%     % {-3.3ex \@plus -1ex \@minus -.2ex}%
+%     % {2.2ex \@plus.2ex}%
+%     % {-1em}%
+%     {0.1em}
+%     {0.1em}
+%     {\noindent \large  \it \bfseries} % \Large \normalfont 
+%     }
+% \makeatother
+
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+ % \href{https://ksolaiman.github.io/}{Website}
+ % pg number in footer
+	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+        \fancyhead[C]{Research Statement}
+        % \fancyhead[C]{\Name}
+	
+	\fancyfoot[R]{} % % pg number in footer
+	\fancyfoot[C]{} % % remove default centered page numbers
+	\fancyfoot[L]{} % last compiled in footer
+}
+
+% % application specific information % %
+\usepackage{school}
+
+
+\title{
+    \vspace{-3em}
+    \textbf{Research Statement} \hfill \href{https://ksolaiman.github.io/}{\textit{\Name}}
+    \vspace{-2.5em}
+}
+
+% \author{KMA Solaiman\vspace{-2em}}
+% \email{ksolaima@purdue.edu}
+\date{}
+
+\begin{document}
+% \maketitle
+\pagestyle{plain}
+
+%%
+% For long rs, comment out the newcommand in next line. Uncomment the philosophy and detailed-prolog. 
+% Uncomment previous def of custom and semisection, and comment the current def.
+%%
+\renewcommand{\medskip}{\smallskip}
+
+% \input{parts-rs/talk-title}
+\input{parts-rs/introduction} 
+% \newline \indent
+\input{parts-rs/intro-2nd-part}
+% \medskip
+\input{summary-prolog}
+\medskip
+\input{parts-rs/impact&application}
+\medskip
+% \input{parts-rs/philosophy}
+% \medskip
+% \input{parts-rs/detailed-prolog}
+% \medskip
+\input{future}
+\medskip
+\input{colab}
+
+
+% \input{publications.tex}
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}

@@ -1,0 +1,183 @@
+\documentclass[9pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} %{tgbonum}
+
+% Set page margins
+\usepackage[margin=1in,top=0.8in]{geometry} % 0.4
+
+% Mathematical things
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+
+% \makeatletter
+% \def\paragraph{\@startsection{paragraph}{4}%
+%   \z@\z@{-\fontdimen 2 \font}%
+%   {\normalfont\bfseries}}
+% \makeatother
+
+\makeatletter
+\def \section {%
+    \@startsection {section}
+    {1}%
+    {\z@}%
+    {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    % {-1em}%
+    {0.2em}
+    {\normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
+
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@%\z@%
+        {0.1em}
+        {-\fontdimen 6 \font}%
+        {\normalfont \bfseries}% style %\scshape \large
+    }
+\makeatother
+
+\usepackage[hidelinks]{hyperref} % % allows URLs and in-document hyperlinking
+
+% % header and footer % %
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+ % \href{https://ksolaiman.github.io/}{Website}
+ % pg number in footer
+	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+        \fancyhead[C]{Teaching Statement}
+        % \fancyhead[C]{\Name}
+	
+	\fancyfoot[R]{} % % pg number in footer
+	\fancyfoot[C]{} % % remove default centered page numbers
+	\fancyfoot[L]{} % last compiled in footer
+}
+
+% % application specific information % %
+\usepackage{school}
+
+
+\title{
+\vspace{-3em}
+\textbf{Teaching Statement} \hfill \href{https://ksolaiman.github.io/}{\textit{\Name}}
+\vspace{-2.5em}
+}
+
+% \author{KMA Solaiman\vspace{-2em}}
+% \email{ksolaima@purdue.edu}
+\date{}
+
+\newcommand{\textcourse}[1]{\textit{#1}}
+
+% \begin{abstract}
+%     Teaching statement
+
+% Mainly 3 parts
+% 1. Teaching Philosophy
+% 2. Teaching Experience
+%     1. Mentoring experience
+% 3. Teaching plans
+%     1. Mentoring plans
+
+% Lutfor-philosophy
+% 1. Creative thinking
+% 2. Interactive teaching
+% 3. Timely topic and syllabus
+% 4. More than classroom teaching
+
+% Jinguoung-philosophy
+% 1. Emphasize the importance of CS fundamental knowledge. 
+% 2. Learn by examples
+% 3. Learn by doing
+% 4. Give and receive feedback
+
+% Denis-philosophy
+% 1. Stimulate research and teach research skills to graduate students
+% 2. Prepare undergraduate students for successful careers
+
+% Shahabaz-philosophy
+% XX
+% \end{abstract}
+
+\begin{document}
+% \maketitle
+% \thispagestyle{empty}
+\pagestyle{plain}
+
+\noindent\rule{2cm}{4pt}~\textbf{\textsc{ Teaching Philosophy.}}
+
+\paragraph{Accessible Learning.} 
+% My teaching philosophy revolves around active learning and student well-being. Student well-being in a classroom can depend on their sense of autonomy, achievement, and participation. 
+% For example, in one of the courses I taught, Network Programming, the students were given a choice for their project topics from reproducible papers, novel idea implementation, or ongoing projects. Also, for the final presentation deliverable, they were asked to choose from multiple modalities i.e., video presentation, demo, or blog write-up. These choices gave the students a sense of autonomy.
+% Satisfying these needs could intrinsically motivate the students to participate and grow in the classroom actively.
+My teaching philosophy centers around active learning and student well-being, which relies on their autonomy, achievement, and participation. For instance, in one of my courses, Network Programming, I offered students the freedom to choose their project topics from reproducible papers, novel idea implementation, or ongoing projects. Similarly, for their final presentation, they could opt for video presentations, demos, or blog write-ups. These choices empowered students and fostered their active participation and growth in the classroom.
+
+\paragraph{Relationship with the Students.}
+% At the beginning of my classes, I make a conscious effort to know the students' backgrounds and their 
+% preferred outcomes from that course. This helps me understand them better, formulate relevant lectures during the teaching, and allow me to adjust the course outline accordingly. 
+% \textit{``If you cannot explain it simply, you do not understand it well enough.''} - I truly believe that and want that as an outcome for my students. To that end, I ask for 
+% \textit{frequent feedback} from my students
+% to learn more about their understanding and thought processes and identify any alternate conceptions students may have that need to be addressed. 
+To establish a strong connection with my students, I make a conscious effort to understand their backgrounds and desired outcomes from the course. This knowledge allows me to tailor my lectures and adjust the course outline accordingly. I firmly believe in the idea that if you cannot explain something simply, you don't understand it well enough. Thus, I encourage frequent feedback from students to gain insights into their understanding and thought processes, addressing any misconceptions they may have.
+
+\paragraph{Growth-focused Course Design.}
+% (i) \textit{Course Materials:} 
+I prefer to design courses in a way that gives the students the ability to measure their progress. 
+%
+The courses consist of both the foundational CS knowledge and the application of the concepts to problem-solving, with varying style of materials for industry and research focus.
+% Depending on the audience type, 
+% i.e., students aspiring industry positions, or pursuing research careers
+% the course will have varying styles of materials.
+%
+% delete the next line if space needed and uncomment last comment
+% For students aspiring for industry positions, it is imperative that they can apply academic knowledge to solve real-life problems. It is essential for those pursuing research careers to come up with solutions to new problems from existing knowledge.
+I grew very fond of the concept of \textit{learning by doing} from my courses and prefer to utilize this. Allowing students to do different types of written or programming assignments alongside the relevant lectures bolsters their understanding of theoretical knowledge.
+% Allowing students to work in teams teaches them real-world scenario in industry. 
+%
+%
+% (ii) \textit{Assessment:} 
+During grading, I always design fine-grained rubrics with lower stakes and provide detailed feedback to the students so that they can understand their mistakes and learn from them. Along with testing the fundamental and applied knowledge,
+% during the coursework
+I frequently add problems that make them think on a deeper level. 
+%%
+
+\medskip
+\noindent\rule{2cm}{4pt}~\textbf{\textsc{ Teaching Experience.~}}
+% \footnotesize{
+% \normalsize{
+% I have a teaching experience of 7 years, dating back to 2014. 
+%
+I have six years of hands-on teaching experience, starting from 2014, and I have also received training in \textit{\textbf{effective teaching in CS}} and \textit{\textbf{foundations of college teaching}}. 
+% I have adapted to online teaching and gained familiarity with tools like Brightspace, Campuswire, and Gradescope through graduate TA training during COVID-19.
+%
+In Bangladesh, I taught undergraduates in labs for \textit{graphics, data structures,} and \textit{programming languages}. These experiences involved explaining core concepts applied in problem-solving and mentoring students in building tangible outputs. I later taught larger classes (max 140+ students) in \textit{Network Programming, Database,} and \textit{Software Engineering}, where I delivered lectures, designed course materials, conducted labs, graded assignments, and provided advising. Handling large classes and multiple sections taught me how to guide and evaluate students effectively. I also contributed to curriculum development and departmental activities.
+%
+At Purdue University, I became a teaching assistant for \textit{object-oriented programming} and took on the role of structurally developing the course. I served as a GTA for 2 graduate and 3 undergraduate courses, interacting with a multicultural and diverse student body. My responsibilities included designing and grading assignments, teaching labs and sessions, assisting with exams, and advising students. I learned to adapt my teaching approach to different student levels and effectively communicate with them.
+%
+During weekly PSO sessions, my goal was to help students apply lecture concepts to assignments with a deep understanding. I provided detailed feedback on their implementations to facilitate learning from mistakes. I prioritized students' mental health, practicing empathy and creating a supportive environment. I have guest lectured on various topics such as \textit{multimodal information retrieval modelsm feature extraction from multiple modalities, graph embedding, graph matching techniques} and delivered presentations at conferences and review meetings.
+% I have guest lectured on multiple graudate courses where I talked about \textit{multimodal information retrieval models}, along with \textit{feature extraction from multiple modalities, graph embedding,} and \textit{graph matching techniques}. I have always enjoyed public speaking, which has helped me to deliver presentations at a large scale during my Ph.D. 
+I have presented our research works at Northrup Grumman Corporation Review Meetings and Techfest (with 100+ attendants), JPL Nasa, and Darpa Review Meetings.
+%
+In terms of mentoring, I guided seniors on their final year thesis and projects in Bangladesh and served as an external member of evaluation committees. I also participated as a coach for
+% \textit{‘Competitive Programming Competition’}. 
+\textit{ACM-ICPC} at AUST.
+At Purdue, I have mentored 13+ masters and undergraduate students for independent research. 
+
+% Extra: *For Computer networks, an assignment was released to implement a 3-way handshake protocol. I went through the original 3-way handshake protocol and TCP communication, along with how each functionality work - connect (), send(), close(), or receive(). For CS251 and CS543, I actively designed and developed assignments. When the semester was over, several students sent me emails to express their gratitude. It was a very satisfying experience for me.
+
+\medskip
+\noindent\rule{2cm}{4pt}~\textbf{\textsc{ Teaching Plans.~}}
+I am enthusiastic about teaching undergraduate and graduate students, and I am comfortable instructing a variety of courses such as software engineering, databases, networks, compilers, information retrieval, data management systems, and machine learning. For undergraduate students, I am open to teaching core courses like programming languages, data structures, theory of computation, and computer graphics. In the case of graduate students, I can offer advanced courses in information retrieval, natural language processing, distributed database systems, data science, and data mining.
+%
+I also plan to develop seminar courses that focus on topics such as multimodal information retrieval and adaptable and explainable AI, drawing from recent papers in leading conferences related to machine learning, information retrieval, OpenAI, and XAI. The projects in these courses will be designed to potentially lead to publications and simulate the peer-review process.
+
+Additionally, I have intentions to create a new course titled "Applied Machine Learning for Open World Systems". 
+% which will expand the existing curriculum based on my research experience. 
+This course will cover topics like data cleaning, handling lack of annotations, scalability, weakly supervised learning, multimodal information retrieval and feature extraction, intrinsic and extrinsic complexity of system domains, and real-world use case studies. Since learning algorithms must adapt to real-world scenarios, the course will also include the detection, adaptation, and analysis of difficulties in novel machine learning algorithms.
+
+% \paragraph{Mentoring Plans}
+% As a mentor, I plan to encourage students to be independent while helping as well as guiding them to make sure their effort is channeled in a fruitful direction. At the same time, I want to challenge students to do their best, and to have high standards for the results they produce. I plan to be involved in the low-level technical details of my student’s projects (such as reading or contributing to their code) because I think that such feedback is instructive for students in their early years. I want to help students find the kind of work they enjoy and to make them passionate about their work. Importantly, I hope to foster a friendly and collaborative atmosphere in my group.
+
+\end{document}
