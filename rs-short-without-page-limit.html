@@ -69,6 +69,121 @@ in situations where the resources are minimal, data sources are in a state of co
 interconnections, and predictive arguments. This can have broad implications for a variety of applications with societal and
 user-end impacts, including contextual search engines, digital libraries, AI-assisted journaling and mindfulness, urban
 information system, etc.
+</p><!-- l. 202 --><p class='indent'>
+                                                                                         
+                                                                                         
+</p><!-- l. 2 --><p class='noindent'>___________ <span class='ptmbc8t-x-x-120'>R<span class='small-caps'>ESOURCE</span> A<span class='small-caps'>WARE</span> D<span class='small-caps'>ATA</span> M<span class='small-caps'>ANAGEMENT </span><span class='small-caps'>FOR</span> M<span class='small-caps'>ULTIMODAL</span> A<span class='small-caps'>PPLICATIONS</span></span>
+</p><!-- l. 4 --><p class='indent'>   In designing data management systems for modern applications, such as missing person search, disaster resource
+management, triage, and emotion recognition, the focus has shifted to account for data-at-rest and streaming input while
+ensuring scalability to handle increasing information needs and data ingestion. To address these challenges, during our
+collaboration with local police department and MIT for building Missing-person Query engine <span class='cite'>[<span class='ptmb8t-'>?</span>]</span> and Human-in-the-Loop
+Video Querying system <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>, we proposed a novel multimodal knowledge querying system called <span class='ptmb8t-'>SKOD </span>(Situational
+Knowledge on Demand) <span class='cite'>[<span class='ptmb8t-'>?</span>, <span class='ptmb8t-'>?</span>]</span>. SKOD leverages entity-centric higher-level semantic concepts (such as objects, object types,
+physical relations, e.g., a person wearing blue shirt, time and place of an incident), and the functionalities of distributed systems
+and RDBMS to query domain-specific information needs in practical multimodal applications. SKOD was developed in
+collaboration with Northrop Grumman, MIT, and CMU and demonstrated at Northrop Grumman TechFest in 2019. The project
+has been funded by Northrop Grumman for three consecutive years since 2019, renewing the funding every
+year.
+</p><!-- l. 15 --><p class='indent'>
+</p><!-- l. 16 --><p class='noindent'> <span class='ptmbi8t-'>Heterogenous Data Ingestion, Scalability, and Delivery-on-demand</span>
+</p><!-- l. 17 --><p class='indent'>   We used Postgres as the backend architecture for both data storage and on-time delivery. Building on top of the RDBMS
+allows us to scale to practical data volumes, as well as using the querying interface with query-by-example and
+query-by-features dramatically lowers the human costs of multimodal and visual domain search <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. For consuming data from
+heterogeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD <span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. Any
+query to the system was formulated and considered as an <span class='ptmri8t-'>incident in real life</span>. For delivery-on-demand from
+incomplete modalities, we used Postgres Trigger functionality, which is activated whenever an insert occurs that
+matches a certain incident (any matching data). This feature allows us to deliver incomplete information need and
+complete it later when new matching data is encountered, while being capable of adapting to changing information
+requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing
+requirements, we proposed to build a <span class='ptmbi8t-'>query-drive knowledge base </span>for each user, where all queries can relate to a single
+incident. SKOD speeds up the data delivery by storing frequent incidents by caching hot queries, and recently used
+data.
+</p><!-- l. 35 --><p class='indent'>
+</p><!-- l. 36 --><p class='noindent'> <span class='ptmbi8t-'>Resource-constrained Feature Extraction</span>
+</p><!-- l. 37 --><p class='indent'>   Task-specific querying systems face challenges during the data preparation stage due to low-quality data sets and a lack of
+labeled training samples. Although large-scale language models have made significant progress, there exists
+very few task-specific attribute extractors for text. Our team addressed these issues in SKOD by implementing
+a <span class='ptmri8t-'>priority polling system </span>that selects candidate data samples for feature extraction from videos and images,
+instead of immediately processing features for batch inputs. This feature, coupled with trigger functionality,
+enables us to provide information needs on-demand and complete them with time. Additionally, we developed a
+<span class='ptmb8t-'>cloth-color extractor </span>for videos using common-sense reasoning and color and shape analysis <span class='cite'>[<span class='ptmb8t-'>?</span>]</span> on top of YOLO. To
+identify attributes in unstructured text, I propose a model called <span class='ptmb8t-'>HART </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span>, which solves the problem in two
+stages: (i) <span class='ptmb8t-'>candidate sentence identification </span>by transforming the problem into a similarity-search problem using
+pre-trained language representation models (SBERT) and lexical knowledge bases, and (ii) <span class='ptmb8t-'>semantic attribute
+</span><span class='ptmb8t-'>understanding </span>using syntactic characteristics and lexical meanings of the tokens in the candidate sentences.
+This approach can be generalized for any domain and lays the groundwork for intelligent document processing.
+</p><!-- l. 1 --><p class='noindent'>___________ <span class='ptmbc8t-x-x-120'>L<span class='small-caps'>ABEL</span>-<span class='small-caps'>EffiCIENT</span> D<span class='small-caps'>ATA</span> I<span class='small-caps'>NTEGRATION </span><span class='small-caps'>AT</span> H<span class='small-caps'>IGHER</span> S<span class='small-caps'>EMANTIC</span> L<span class='small-caps'>EVEL</span></span>
+</p><!-- l. 3 --><p class='indent'>
+</p><!-- l. 3 --><p class='noindent'><span class='ptmbi8t-'>View-based Data Integration</span>
+</p><!-- l. 5 --><p class='indent'>   Traditional data integration approaches suffer because of heterogeneity among data sources and incomplete modalities.
+Machine learning models for multimodal data fusion learn joint representations to exploit complementarity
+and redundancy of multiple modalities, but overlooks the information needs based on higher-level semantic
+concepts. With the use of Postgres trigger and by using a mediated schema for each queried incident, SKOD
+delivers integrated query results over time. Since the number of properties-of-interest are quite moderate, using
+similar approach to the <span class='ptmri8t-'>Global as View </span>data integration, I proposed to employ <span class='ptmb8t-'>schema mapping </span>between the
+<span class='ptmri8t-'>mediated schema </span>and <span class='ptmri8t-'>local schema </span>from different data sources. The proposed approach, <span class='ptmb8t-'>EARS </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span> adopts an
+entity-relationship-attribute schema for each new data source, and a wrapper is designed to translate the source schemas to the
+mediated schema. The queries are translated into conjunctive queries between features among data sources and a
+                                                                                         
+                                                                                         
+SQL-Join is performed at run-time to integrate all the relevant sources. Using the versatility of Postgres, we achieve
+the scalability and speed that is required for time sensitive use-cases, with minimal amount of computational
+resources.
+</p><!-- l. 8 --><p class='indent'>
+</p><!-- l. 8 --><p class='noindent'><span class='ptmbi8t-'>Approximate Matching using Graph Representation Learning</span>
+</p><!-- l. 9 --><p class='indent'>   While the SQL-JOIN based relational DBMS approach allows a lot of flexibility, it does not utilize the historical knowledge
+of previous queries, and cannot perform approximate matching. Considering the sensitivity of some open-world application
+domains, it is desirable to search for approximate relevance between different modalities and sources. Motivated
+by representation-invariant properties of graph representation models combined with the existing works on
+approximate graph matching techniques, I propose <span class='ptmb8t-'>co-ordinated graph representation learning of the data
+</span><span class='ptmb8t-'>samples comprised of their semantic features </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span>, where it learns to approximate a novel Edit distance metric,
+<span class='ptmri8t-'>CED</span>, based on the multiplicative comparison of the <span class='ptmri8t-'>Hierarchical Attributed Relational Graph </span>representations.
+</p><!-- l. 1 --><p class='noindent'><span class='ptmbi8t-'>Weakly Supervised Metric Learning for Cross-Modal Matching</span>
+</p><!-- l. 2 --><p class='indent'>   For real-world systems, <span class='ptmri8t-'>data discovery from heterogenous modalities </span>and <span class='ptmri8t-'>explanation of the relevant properties among
+</span><span class='ptmri8t-'>similar data objects </span>is of equal importance. Since in these applications, manual annotation is not feasible or they lack
+annotation resources, we need alternative supervision techniques for cross-modal matching. Motivated by the advancement in
+translation and captioning models (video/audio <span class='zptmcm7y-'>→ </span>text), I propose to embed data-objects and their semantic properties in a high
+dimensional embedding space via Contrastive Learning. After extracting the interaction among entity-centric higher-level
+semantic features (such as, topics, events, entities, triplets) from texts and other translated modalities, a <span class='ptmri8t-'>data
+</span><span class='ptmri8t-'>information network </span>is built by connecting data samples to their features via their interactions. Finally, I construct a
+structure-infused representation for the data-objects from all modalities in <span class='ptmb8t-'>WesJeM </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span>, by jointly embedding
+the data samples, the features, and the available similarity labels, in a single space. For learning, I defined a
+multi-task learning objective capturing the interaction information, by aligning the representation of the data
+samples, defined by their textual content, with the representation of features, based on their common relations.
+For open-world environment where data and information-need keep changing, along with the dynamic data
+sources, WesJeM opens up the path for <span class='ptmb8t-'>Zero-Shot similarity matching </span>and <span class='ptmb8t-'>Data Discovery </span>of multimodal data.
+</p><!-- l. 1 --><p class='noindent'>___________ <span class='ptmbc8t-x-x-120'>A<span class='small-caps'>DAPTION </span><span class='small-caps'>TO</span> O<span class='small-caps'>PEN</span>-<span class='small-caps'>WORLD</span> N<span class='small-caps'>OVELTIES</span></span>
+</p><!-- l. 3 --><p class='indent'>   AI systems are often limited by their inability to handle unexpected events that are not part of their training data or
+well-defined environments. These significant changes or events are referred to as <span class='ptmb8t-'>‘novelties’ </span>under DARPA SAIL-ON
+project, and their characterization and adaptation is critical for real-world applications. To build robust and
+intelligent AI systems, I developed novelty characterization and adaptation techniques at various stages, including
+data integration and relevance learning, environment modeling, feature extraction, training, and domain or data
+level.
+</p><!-- l. 5 --><p class='indent'>
+</p><!-- l. 5 --><p class='noindent'><span class='ptmbi8t-'>Novelty Characterization, Detection, and Difficulty Estimation</span>
+</p><!-- l. 6 --><p class='indent'>   I characterized the <span class='ptmb8t-'>novelties encountered in multimodal information retrieval </span>in <span class='cite'>[<span class='ptmb8t-'>?</span>]</span> and proposed how WesJeM can be
+adapted for changing data patterns and incomplete or noisy modalities in data integration and relevance learning stage.
+Moreover, motivated by the information-theoretic approach for difficulty estimation of novelties, I proposed an empirical
+framework for novelty characterization and difficulty estimation in <span class='ptmb8t-'>planning domains </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span>. For a reinforcement-learning based
+Monopoly agent, graphically modeling the environment to augment the state and action space allow to integrate graph edit
+distance as a novelty difficulty metric.
+</p><!-- l. 9 --><p class='noindent'><span class='ptmbi8t-'>Robust Feature Extraction with Dataset Augmentation</span>
+</p><!-- l. 10 --><p class='indent'>   The efficiency of entity-centric machine learning models in response to novelties depends on the efforts during the model
+training, design and data collection stages. We proposed a <span class='ptmb8t-'>novelty generation framework </span><span class='cite'>[<span class='ptmb8t-'>?</span>]</span> at the data preparation stage of
+training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic and
+budget efficient manner with generated novelties for visual modalities, and improved the <span class='ptmb8t-'>novel object detection </span>performance
+with the augmented dataset.
+</p><!-- l. 16 --><p class='noindent'><span class='ptmbi8t-'>Intrinsic Domain Complexity Estimation for Distributed AI Systems</span>
+</p><!-- l. 17 --><p class='indent'>   Understanding of the inherent characteristics of the domain is essential for novelty characterization and
+model adaptability. We proposed an <span class='ptmb8t-'>application-independent domain complexity </span>measure for the AI systems
+                                                                                         
+                                                                                         
+in perception domain <span class='cite'>[<span class='ptmb8t-'>?</span>]</span> using <span class='ptmb8t-'>federated learning as the reference paradigm </span>to handle distributed dataset
+operations. Building upon intrinsic dataset properties such as dimensionality, heterogeneity and sparsity for singular
+environment, we created a complexity metric <span class='ptmri8t-'>for the distributed environment</span>, showing efficacy for classification
+task.
+                                                                                         
+                                                                                         
 </p><!-- l. 2 --><p class='noindent'>___________ <span class='ptmbc8t-x-x-120'>F<span class='small-caps'>UTURE</span> R<span class='small-caps'>ESEARCH</span> A<span class='small-caps'>GENDA</span></span>
 </p><!-- l. 4 --><p class='indent'>   Currently, we are experiencing a thrilling era for multimodal information processing and robust AI research since it is
 highly supported by the core programs in NSF’s Division of Information and Intelligent Systems (IIS) and by
@@ -116,6 +231,8 @@ able to perform well even with incomplete data, as well as methods for effective
 organizations. Collaboration is needed between <span class='ptmb8t-'>machine learning experts, data management specialists, and domain
 </span><span class='ptmb8t-'>experts in various fields </span>to achieve a comprehensive and effective solution for data democratization and information
 completion.
+                                                                                         
+                                                                                         
 </li></ul>
 <!-- l. 1 --><p class='indent'>
 </p><!-- l. 1 --><p class='noindent'>___________ <span class='ptmbc8t-x-x-120'>C<span class='small-caps'>OLLABORATION </span><span class='small-caps'>AND</span> F<span class='small-caps'>UNDING</span></span>
