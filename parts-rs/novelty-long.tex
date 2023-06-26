@@ -1,20 +1,30 @@
-\customsection*{Adaption to Open-world Novelties}
+% \customsection*{Adaption to Open-world Novelties}
+\customsection*{Uncertainty Management in Open-world AI Systems}
 
-AI systems are often limited by their inability to handle unexpected events that are not part of their training data or well-defined environments. These significant changes or events are referred to as \textbf{`novelties'} under DARPA SAIL-ON project, and their characterization and adaptation is critical for real-world applications. To build robust and intelligent AI systems, I developed novelty characterization and adaptation techniques at various stages, including data integration and relevance learning, environment modeling, feature extraction, training, and domain or data level.
+AI systems are often limited by their inability to handle unexpected events that are not part of their training data or well-defined environments. These significant changes or events are referred to as \textbf{`novelties'} in recent literature. % under DARPA SAIL-ON project, 
+% Characterization and adaptation to these novelties are critical for real-world applications. 
+To build robust and intelligent AI systems for real-world applications, I developed novelty characterization and adaptation techniques at various stages of AI life cycle, including data integration and relevance learning, environment modeling, feature extraction, and training. %, and at domain or data level. % environemnt captures domain complexity
 
-\semisection*{Novelty Characterization, Detection, and Difficulty Estimation}
-I characterized the \textbf{novelties encountered in multimodal information retrieval} in \cite{solaiman2022open} and proposed how WesJeM can be adapted for changing data patterns and incomplete or noisy modalities in data integration and relevance learning stage.
-Moreover, motivated by the information-theoretic approach for difficulty estimation of novelties, I proposed an empirical framework for novelty characterization and difficulty estimation in \textbf{planning domains} \cite{solaiman2022measurement}. For a reinforcement-learning based Monopoly agent, graphically modeling the environment to augment the state and action space allow to integrate graph edit distance as a novelty difficulty metric.
-%
-\semisection*{Robust Feature Extraction with Dataset Augmentation}
-The efficiency of entity-centric machine learning models in response to novelties depends on the efforts during the model training, design and data collection stages. We proposed a \textbf{novelty generation framework} \cite{nesen2021dataset} at
-the data preparation stage of training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic
-and budget efficient manner with generated novelties for visual modalities, %perception domain%
-and improved the \textbf{novel object detection} performance with the augmented dataset.
-%
-%
-\semisection*{Intrinsic Domain Complexity Estimation for Distributed AI Systems} 
-Understanding of the inherent characteristics of the domain is essential for novelty characterization and model adaptability. % for building in fail-safe into the model
-We proposed an \textbf{application-independent domain complexity} measure for the AI systems in perception domain \cite{solaiman2023domainComplexity} using \textbf{federated learning as the reference paradigm} to handle distributed dataset operations.
-% We complement existing works in domain complexity estimation, by using inherent 
-Building upon intrinsic dataset properties such as dimensionality, heterogeneity and sparsity for singular environment, we created a complexity metric \textit{for the distributed environment}, showing efficacy for classification task. 
+% \semisection*{Novelty Characterization, Detection, and Difficulty Estimation.}
+\semisection*{Novelties in Perception Domain and Multimodal Applications.}
+\begin{enumerate}%[leftmargin=1.5em]
+    \item For the first time, I characterized the \textbf{novelties encountered in multimodal information retrieval} in terms of concept drift, covariate shift, and probability shift \cite{solaiman2022open}. We showed how WesJeM can be adapted for changing data patterns and how it would adapt to incomplete or noisy modalities during data integration and relevance learning.
+    \item %
+    % \semisection*{Robust Feature Extraction with Dataset Augmentation.}
+    The efficiency of entity-centric feature extraction % machine learning 
+    models in response to novelties depends on the efforts during the model training, design and data collection stages. We proposed a \textbf{novelty generation framework} \cite{nesen2021dataset} at
+    the data preparation stage of training a model to assure its robustness and reduce the bias. We augmented the original dataset in a domain-agnostic
+    and budget efficient manner with generated novelties for visual modalities, %perception domain%
+    and improved the \textbf{novel object detection} performance with the augmented dataset.
+    %
+    \item %
+    % \semisection*{Intrinsic Domain Complexity Estimation for Distributed AI Systems.} 
+    Understanding of the inherent characteristics of a domain is essential for novelty characterization and model adaptability. % for building in fail-safe into the model
+    We proposed an application-independent \textbf{intrinsic domain complexity measure} for the distributed AI systems in perception domain \cite{solaiman2023domainComplexity} using \textbf{federated learning as the reference paradigm} to handle distributed dataset operations.
+    % We complement existing works in domain complexity estimation, by using inherent 
+    Building upon intrinsic dataset properties such as dimensionality, heterogeneity and sparsity for singular environment, we created a complexity metric \textit{for the distributed environment}, showing efficacy for classification task. 
+\end{enumerate}
+
+% 
+% Moreover, motivated by the information-theoretic approaches of estimation of novelty difficulty, I proposed an empirical framework for novelty characterization and difficulty estimation in \textbf{planning domain} \cite{solaiman2022measurement}. For a reinforcement-learning based Monopoly agent, graphically modeling the environment to augment the state and action space allows to integrate graph edit distance as a difficulty metric for novelties.
+Additionally, drawing inspiration from information-theoretic methods for estimating the difficulty of novelty, I introduced an empirical framework to characterize and estimate novelty difficulty in the \textbf{planning domain} \cite{solaiman2022measurement}. By employing graphical modeling of the environment to enhance the state and action space, a Monopoly agent trained with reinforcement learning can incorporate graph edit distance as a metric for assessing the difficulty of novelties.

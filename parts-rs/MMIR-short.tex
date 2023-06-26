@@ -1,8 +1,19 @@
-\textbf{Data Integration:} 
-Data integration from various sources to answer queries over a single view of the data to users, is confronted with a multitude of heterogeneity issues. These problems arise from differences in data attributes names that hold similar data \cite{solaiman2021applying, solaiman2022femmir}, communication problems, and variations in data schema and types \cite{solaiman2022open}. As data volume increases and the necessity to share existing data intensifies, data integration becomes more prevalent.
+\textbf{Data Integration and Relevance Learning.} % and Relevance Learning/ Matching
+Data integration from various sources to answer queries over a single view of the data to users
+% , is confronted with a multitude of heterogeneity issues. These problems arise 
+suffers from heterogeneity issues
+from differences in feature % data attributes
+names that hold similar data \cite{solaiman2022femmir, solaiman2021applying}, annotation mismatch, and variations in data schema and types \cite{solaiman2022open}. As data volume increases and the necessity to share existing data intensifies, importance of data integration becomes more prevalent for multimodal data recommendation.
 %
 % To address the challenges of data integration in domain-specific applications, I propose three data integration approaches. 
 % The first approach, EARS, delivers integrated query results over time using a mediation approach and schema mapping \cite{solaiman2021applying}. The second approach, FemmIR, learns co-ordinated graph representation of the data samples comprised of their semantic features to deliver approximate matches \cite{solaiman2022femmir}. The third approach, WesJeM, uses Contrastive Learning to embed data-objects and their semantic properties in a high-dimensional space using higher semantic features in a data sample as weak labels \cite{solaiman2022open}, allowing zero-shot similarity matching and data discovery of multimodal data in open-world environments.
-My first approach for data integration, EARS, delivers integrated query results over time using a mediation approach and schema mapping \cite{solaiman2021applying}, solving the problem of scalability and quick throughput. The second approach, FemmIR, learns a co-ordinated graph representation of the data samples comprised of their semantic features to deliver approximate matches \cite{solaiman2022femmir}. 
+% http://mlwiki.org/index.php/Mediator_(Data_Integration)
+My first proposed approach for data integration, \textbf{EARS}, delivers integrated query results over time using a mediator approach along with Postgres triggers. A semantic mapping is employed between the mediated schema and the data sources \cite{solaiman2021applying} to query the limited properties-of-interest in real applications. % schema mapping
+% solving the problem of scalability and quick throughput. 
+The original query-by-example is translated into conjunctive queries among data sources and a SQL-Join on the task-specific features is performed at run-time to integrate all the relevant sources to the query example.
+%
+The second approach, \textbf{FemmIR}, learns a co-ordinated graph representation of the data samples from their semantic features to deliver a ranked list of the relevant data samples to user queries \cite{solaiman2022femmir}. I proposed a novel Edit distance metric, \textit{CED},  to measure the amount of difference between two data samples based on their semantic features. FemmIR learns an embedding function that maps the features extracted from the input data sample and the query example to a similarity score based on the multiplicative comparison of the Hierarchical Attributed Relational Graph representations (HARG) of the features.
 % Streaming data over time can be used online to train the model.
-The third approach, WesJeM, uses Contrastive Learning to embed data-objects and their semantic properties in a high-dimensional space using higher-level semantic features in a data sample as weak labels \cite{solaiman2022open}, allowing zero-shot similarity matching and data discovery of multimodal data in open-world environments.
+%
+The third approach, \textbf{WesJeM}, uses Contrastive Learning to embed data-samples and their semantic properties in a high-dimensional space using higher-level semantic features in a data sample as weak labels \cite{solaiman2022open}, allowing zero-shot similarity matching and data discovery of multimodal data in open-world environment.
+

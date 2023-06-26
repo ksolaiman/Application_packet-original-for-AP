@@ -1,4 +1,4 @@
-\textbf{Resource-aware Data Management:}
+% \textbf{Resource-aware Data Management:}
 % Obtaining optimal performance in open-world multimodal applications requires designing Data Management System that can handle domain-specific workloads, low computational resources, and changing requirements. 
 % During our collaboration with local police department and MIT for building Missing-person Query engine \cite{solaiman2021applying} and Human-in-the-Loop Video Querying system \cite{stonebraker2020surveillance}, we built a multimodal knowledge querying system \cite{palacios2019wip} by leveraging the capabilities of the feature extraction models and the functionalities of RDBMS.
 % %%
@@ -11,10 +11,31 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Junagaou style %%%%%%%%
-Data management systems require a comprehensive understanding of the data properties, user requirements, and limitations imposed by open-world to achieve optimal performance and scalability 
-for multimodal data recommendation. 
-Emerging multimodal applications impose challenges for traditional system (hardware and software) design choices ranging all the way from input (heterogeneous sources, context and modalities) and output (delivery-on-time, quick throughput and diverse users), changing information needs (knowledge base creation and query), to computational resources (lack of annotations, domain-specific feature extractors or human resources). 
-For instance, we showed that transfer learning for fine-grained semantic concept extraction from videos turned out to be ill-suited in large-scale systems \cite{stonebraker2020surveillance}.
+% \textbf{Multimodal Data Preparation: } %for Situational Knowledge on Demand
+% Multimodal data preparation, data completion and feature extraction
+\textbf{Multimodal Data Preparation, Data Completion, and Feature Extraction.}
+For data preparation and information recommendation in modern multimodal applications, we proposed a novel multimodal knowledge querying framework % system
+called \textbf{SKOD} (Situational Knowledge on Demand) \cite{palacios2019wip, stonebraker2020surveillance}. SKOD addressed the challenges imposed by heteregeneous restful and streaming input, increasing data volume, delivery-on-demand, lack of computational resources, and changing information needs in emerging multimodal applications, by leveraging the entity-centric higher-level semantic concepts and the functionalities of RDBMS. For
+satisfying an incomplete information need over time, we used the Trigger functionality from Postgres after feature extraction and data integration.
+% to query domain-specific information needs in real-world use cases. 
+%%%%%% 
+% Higher-level semantic concepts can include objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of an incident.
+% Data management systems require a comprehensive understanding of the data properties, user requirements, and limitations imposed by open-world to achieve optimal performance and scalability for multimodal data recommendation. 
+% Emerging multimodal applications impose challenges for traditional systems 
+% % (hardware and software) design choices 
+% ranging all the way from input 
+% % (heterogeneous sources, context and modalities) 
+% and output, 
+% % (delivery-on-time, quick throughput and diverse users), 
+% changing information needs, 
+% % (knowledge base creation and query), 
+% to computational resources. 
+% (lack of annotations, domain-specific feature extractors or human resources). 
+% For instance, we showed that transfer learning for fine-grained semantic concept extraction from videos turned out to be ill-suited in large-scale systems \cite{stonebraker2020surveillance}. 
+%
+%
+To tackle the challenges of lack of annotations or task-specific feature extractors for unstructured texts, I proposed an attribute detection model for text for the first time, \textbf{HART} \cite{solaiman2022femmir} using language representation models and syntactic properties of text. We also proposed customizations \cite{stonebraker2020surveillance} for object detection models to account for on-demand video and image processing.
 %%%%
 % During our collaboration with local police department and MIT for building Missing-person Query engine \cite{solaiman2021applying} and Human-in-the-Loop Video Querying system \cite{stonebraker2020surveillance}, we solved this problem by building a multimodal knowledge querying system \cite{palacios2019wip} by using \textit{entity-centric higher-level semantic features} (such as objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of  an event), distributed systems, and the functionalities of RDBMS.
 % leveraging the capabilities of the feature extraction models and the functionalities of RDBMS.
+We developed SKOD during our collaborations with West Lafayette police department, MIT, and CMU for building a Missing-person Query engine \cite{solaiman2021applying} and a Human-in-the-Loop Video Querying system \cite{stonebraker2020surveillance}. SKOD was demonstrated at Northrop Grumman TechFest in 2019. The project has been funded by Northrop Grumman for three consecutive years since 2019, renewing the funding every year.

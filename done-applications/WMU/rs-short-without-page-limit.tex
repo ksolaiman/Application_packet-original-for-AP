@@ -1,6 +1,6 @@
 \documentclass[9pt]{article}
 % \documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
-\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc} 
 \usepackage{mathptmx} %{tgbonum}
 % \usepackage{natbib}
 \usepackage[inline]{enumitem}
@@ -20,32 +20,32 @@
 % \makeatother
 
 
-% \makeatletter
-% \def \section {%
-%     \@startsection {section}
-%     {1}%
-%     {\z@}%
-%     % {-3.3ex \@plus -1ex \@minus -.2ex}%
-%     % {2.2ex \@plus.2ex}%
-%     {0.1em}%
-%     {0.1em}
-%     {\normalfont \Large \scshape \bfseries} % \Large
-%     }
-% \makeatother
+\makeatletter
+\def \section {%
+    \@startsection {section}
+    {1}%
+    {\z@}%
+    % {-3.3ex \@plus -1ex \@minus -.2ex}%
+    % {2.2ex \@plus.2ex}%
+    {0.1em}%
+    {0.1em}
+    {\normalfont \Large \scshape \bfseries} % \Large
+    }
+\makeatother
 
-% % https://latexref.xyz/_005c_0040startsection.html
-% \makeatletter
-% \def \paragraph {%
-%     \@startsection{paragraph}% name
-%         {4}%  level
-%         \z@\z@{-\fontdimen 6 \font}%
-%         % {0pt}% indent 
-%         % {\normalfont\bfseries}}
-%         % {\normalfont\scshape\bfseries}}
-%         % {2pt} %afterskip
-%         {\large \scshape \bfseries}% style
-%     }
-% \makeatother
+% https://latexref.xyz/_005c_0040startsection.html
+\makeatletter
+\def \paragraph {%
+    \@startsection{paragraph}% name
+        {4}%  level
+        \z@\z@{-\fontdimen 6 \font}%
+        % {0pt}% indent 
+        % {\normalfont\bfseries}}
+        % {\normalfont\scshape\bfseries}}
+        % {2pt} %afterskip
+        {\large \scshape \bfseries}% style
+    }
+\makeatother
 
 \makeatletter
 \def \customsection {%
@@ -71,11 +71,11 @@
     {1}%
     {\z@}%
     % {-3.3ex \@plus -1ex \@minus -.2ex}%
-    % {2.2ex \@plus.2ex}%
-    % {-1em}%
-    {0.5em}
-    {0.2em}
-    {\noindent \normalfont \large \it \bfseries} % \Large
+    {2.2ex \@plus.2ex}%
+    {-1em}%
+    % {0.5em}
+    % {0.2em}
+    {\noindent $\bullet$ \normalfont \it \bfseries} % \Large \large 
     }
 \makeatother
 
@@ -85,37 +85,37 @@
 
 \newcommand*\heading[1]{\textbf{\large #1.}}
 
-\makeatletter
-\def \customsection {%
-    % \@startsection {section}
-    \@startsection{section}
-    {1}%
-    {\z@}%
-    % {-3.3ex \@plus -1ex \@minus -.2ex}%
-    % {2.2ex \@plus.2ex}%
-    % {-1em}%
-    {0.2em}
-    {0.2em}
-    {\noindent \rule{2cm}{4pt} \large 
-    \scshape 
-    \bfseries} % \Large \normalfont 
-    }
-\makeatother
+% \makeatletter
+% \def \customsection {%
+%     % \@startsection {section}
+%     \@startsection{section}
+%     {1}%
+%     {\z@}%
+%     % {-3.3ex \@plus -1ex \@minus -.2ex}%
+%     % {2.2ex \@plus.2ex}%
+%     % {-1em}%
+%     {0.2em}
+%     {0.2em}
+%     {\noindent \rule{2cm}{4pt} \large 
+%     \scshape 
+%     \bfseries} % \Large \normalfont 
+%     }
+% \makeatother
 
-\makeatletter
-\def \semisection {%
-    % \@startsection {section}
-    \@startsection{section}
-    {1}%
-    {\z@}%
-    % {-3.3ex \@plus -1ex \@minus -.2ex}%
-    % {2.2ex \@plus.2ex}%
-    % {-1em}%
-    {0.2em}
-    {0.2em}
-    {\noindent \normalfont \it \bfseries} % \Large
-    }
-\makeatother
+% \makeatletter
+% \def \semisection {%
+%     % \@startsection {section}
+%     \@startsection{section}
+%     {1}%
+%     {\z@}%
+%     % {-3.3ex \@plus -1ex \@minus -.2ex}%
+%     % {2.2ex \@plus.2ex}%
+%     % {-1em}%
+%     {0.2em}
+%     {0.2em}
+%     {\noindent \normalfont \it \bfseries} % \Large
+%     }
+% \makeatother
 
 % \makeatletter
 % \def \customsection {%
@@ -154,10 +154,10 @@
 % % header and footer % %
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{
-	\fancyhead[L]{\textit{\InstitutionName}}  % left header     %
+	\fancyhead[L]{Research Statement}%{\textit{\InstitutionName}}  % left header     %
  % \href{https://ksolaiman.github.io/}{Website}
  % pg number in footer
-	\fancyhead[R]{\email{ksolaima@purdue.edu}} % right header
+	\fancyhead[R]{\href{https://ksolaiman.github.io/}{\textit{\Name}}}%{\email{ksolaima@purdue.edu}} % right header
         \fancyhead[C]{\thepage}
         % \fancyhead[C]{\Name}
 	
@@ -181,7 +181,7 @@
 \date{}
 
 \begin{document}
-\maketitle
+% \maketitle
 \pagestyle{plain}
 
 %%
@@ -191,25 +191,62 @@
 \renewcommand{\medskip}{\smallskip}
 
 % \input{parts-rs/talk-title}
-\input{parts-rs/introduction} 
-% \newline \indent
-\input{parts-rs/intro-2nd-part}
+\begin{center}
+    % \textbf{Multimodal Situational Knowledge on Demand in Open-world Environment}
+    % \textbf{Multimodal Information Retrieval and Robust AI Systems in Open-world Environment}
+    % \textbf{Multimodal Information Retrieval and Intelligent & autonomous AI Systems in Open-world Environment}
+    % \textbf{Multimodal Information Retrieval in Open-world Environment and\\ Uncertainty Management in AI Systems} 
+    \textsc{\large{\textbf{Multimodal Data Management in Open-world Environment and Uncertainty Management in AI Systems}}} % Info. retrieval sounds more appealing, but that limits the work!! THINK! - yes, data management involves both data integration and data processing, and feature extraction
+\end{center}
+
+\setlength{\parindent}{0pt}
+% \input{parts-rs/introduction} 
+% \input{parts-rs/intro-2nd-part}
+
 % \medskip
+% Research Questions/ 
+\textbf{Problem Statement:}
+Extraction of meaningful information from heterogenous and changing datasets in real-world data-centric applications requires achieving the complementary functionalities of \textit{ multimodal data integration and relevance matching, situationally-aware data recommendation} and \textit{uncertainty management in open-world}. My research goal is to understand how these functionalities can be achieved by designing interactive algorithms and robust systems that solve the problem of \textit{\textbf{situational knowledge on demand in open-world}} from multiple forms of data.
+% information, regardless of whether presented as text, images, videos, audio, or other modalities.
+%
+My research aims to provide answers to the following questions:
+% Page 8 of slide deck
+\begin{enumerate}[leftmargin=1.2em]
+    % \item User Preferrence Modeling and Data Discovery % Learn application needs and as new information streams in, determine future needs and provide user with relevant information
+    % \item How to determine current information need and predict future needs for an application. % User Preferrence Modeling, Query-by-example
+    % \item Fulfill future information needs as new information streams in and provide user with relevant information without additional queries
+    %
+    %
+    \item How to represent and analyze heteregenous source content and context for multimodal data recommendation? How to predict and fulfill current and future needs as new information streams in without user intervention? 
+    \item How to integrate disconnected data sources and learn relevant information for an application? How to scale from processing petabytes of data to exabytes?
+    %
+    %
+    % \item How to prepare and analyze heteregeneous and unstructured source contents for data recommendation? % How to represent and analyze heteregeneous source contents and context? % Relevance learning & FE, Data Integration and Feature Extraction % 
+    % \item How to represent and combine application contexts with information need for data recommendation?
+    % \item How to scale from processing petabytes of data to exabytes? % scalability
+    \item How to deal with uncertainties in open-world that goes beyond generalization capabilities of learning models? % for AI systems
+    How to create secure and robust AI systems?
+    % \item ------------
+    % \item How to model users' information need in a robust and efficient manner?
+    % \item How to avoid bias, increase trust and privacy in recommended results?
+    
+\end{enumerate}
+
 \input{done-applications/USU/summary-prolog}
-\medskip
+% \medskip
 \input{parts-rs/impact&application}
 \medskip
-\newpage
-\input{parts-rs/detailed-prolog}
-% \medskip
-\newpage
+\input{parts-rs/philosophy}
+% \newpage
+% \input{parts-rs/detailed-prolog}
+% \newpage
 \input{done-applications/WMU/future}
 \medskip
 \input{done-applications/WMU/colab}
-\medskip
-\input{parts-rs/philosophy}
+% \medskip
 % \medskip
 
+\newpage
 % \input{publications.tex}
 \bibliographystyle{plain}
 \bibliography{ref}

@@ -1,38 +1,68 @@
 % ChatGPT
-\customsection*{Resource Aware Data Management for Multimodal Applications}
+% \customsection*{Data Management for Multimodal Applications} % Resource Aware Data Management 
+\customsection*{Data Preparation for Multimodal Applications}
 %
-In designing data management systems for modern applications, such as missing person search, disaster resource management, triage, and emotion recognition, the focus has shifted to account for data-at-rest and streaming input while ensuring scalability to handle increasing information needs and data ingestion. To address these challenges, 
-%%%%%%
-during our collaboration with local police department and MIT for building Missing-person Query engine \cite{solaiman2021applying} and Human-in-the-Loop Video Querying system \cite{stonebraker2020surveillance}, we proposed a novel multimodal knowledge querying system called \textbf{SKOD} (Situational Knowledge on Demand) \cite{palacios2019wip, stonebraker2020surveillance}. SKOD leverages entity-centric higher-level semantic concepts
-%%%%
-(such as objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of  an incident),  
-%%%
-and the functionalities of distributed systems and RDBMS
-%%%
-to query domain-specific information needs in practical multimodal applications. SKOD was developed in collaboration with Northrop Grumman, MIT, and CMU and demonstrated at Northrop Grumman TechFest in 2019. The project has been funded by Northrop Grumman for three consecutive years since 2019, renewing the funding every year.
+% In designing 
+% information retrieval models % Data as a Service (DaaS) for multimodal applications
+% % data processing models 
+% for modern applications, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For data preparation in modern multimodal applications, such as missing person search, disaster resource management, triage, and emotion recognition, the focus has shifted to account for both data-at-rest and streaming input while ensuring scalability to increasing data volume and changing information needs. 
+% To address these challenges, 
+% %%%%%%
+% during our collaboration with local police department and MIT for building a Missing-person Query engine \cite{solaiman2021applying} and a Human-in-the-Loop Video Querying system \cite{stonebraker2020surveillance}, we proposed a novel multimodal knowledge querying framework % system
+% called \textbf{SKOD} (Situational Knowledge on Demand) \cite{palacios2019wip, stonebraker2020surveillance}. 
+% SKOD leverages entity-centric higher-level semantic concepts
+% % %%%%
+% % % (such as objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of  an incident),  
+% % %%%
+% and the functionalities of distributed stream-processing platforms and RDBMS
+% % %%%
+% to query domain-specific information needs in practical multimodal applications. 
+% Higher-level semantic concepts can include objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of an incident.
+% SKOD was developed in collaboration with Northrop Grumman, MIT, and CMU and demonstrated at Northrop Grumman TechFest in 2019. The project has been funded by Northrop Grumman for three consecutive years since 2019, renewing the funding every year.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SKOD leverages entity-centric
+% higher-level semantic concepts and the functionalities of distributed stream-processing platforms and RDBMS to query
+% domain-specific information needs in practical multimodal applications. Higher-level semantic concepts can include
+% objects, object types, physical relations, e.g., a person wearing blue shirt, time and place of an incident.
+SKOD \cite{palacios2019wip, stonebraker2020surveillance, solaiman2021applying} employs a combination of functionalities of distributed stream-processing platforms and RDBMS, and \textit{entity-centric higher-level semantic concepts} to cater to the information needs of various multimodal applications. These higher-level semantic concepts encompass entities, object types, and physical relationships, allowing for precise queries related to specific aspects, such as identifying a person wearing a blue shirt or determining the time and place of an incident. 
+% By leveraging these semantic concepts, SKOD facilitates efficient and accurate retrieval of domain-specific information in practical multimodal contexts.
 
-
-\semisection*{
-    Heterogenous Data Ingestion, Scalability, and Delivery-on-demand}
-    We used Postgres as the backend architecture  for both data storage and on-time delivery. 
+% \begin{itemize}[leftmargin=0pt, topsep=0.5em,itemsep=0.5em]
+% \item \textbf{\textit
+\semisection*
+{Heterogenous Data Ingestion, Scalability, and Delivery-on-demand.}
+    We used Postgres as the backend architecture for SKOD due to the flexibility it provides for data storage and retrieval. %on-time delivery. 
     %%
-    Building on top of the RDBMS allows us to scale to practical data % video 
-    volumes, as well as using the querying interface with query-by-example and query-by-features dramatically lowers the human costs of 
+    Building on top of a RDBMS allows us to scale to practical data % video 
+    volumes, as well as using a querying interface with data-examples and/or features
+    % query-by-example and query-by-features 
+    dramatically lowers the human costs of 
     % video-driven investigations \cite{stonebraker2020surveillance}.
-    multimodal and visual domain search \cite{stonebraker2020surveillance}.
+    search in multimodal data sources \cite{stonebraker2020surveillance}.
     %%
-    For consuming data from heterogeneous sources (both at rest and streaming), I integrated Kafka producers and consumers on top of SKOD \cite{palacios2019wip}. 
+    For consuming data from heterogeneous restful and streaming sources, %(both at rest and streaming), 
+    we integrated Kafka producers and consumers on top of SKOD \cite{palacios2019wip}. 
     %
-    Any query to the system was formulated and considered as an \textit{incident in real life}.
-    For delivery-on-demand from incomplete modalities, we used Postgres Trigger functionality, which 
+    Any query to the system is formulated as an \textit{incident} from real events. % and considered 
+    Each incident corresponds to a certain number of domain-specific features. We employ several data integration approaches in SKOD to find relevant data sources to the query incident.
+    % For delivery-on-demand from incomplete modalities, 
+    For satisfying an incomplete information need over time,
+    we used the Postgres Trigger functionality \cite{stonebraker2020surveillance}, which 
     %
-    is activated whenever an insert occurs that matches a certain incident (any matching data). 
-    This feature allows us to deliver incomplete 
-    information need %data 
-    and complete it later when new matching data is encountered, while being capable of adapting to changing information requirements. Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we proposed to build a \textit{\textbf{query-drive knowledge base}} for each user, where all queries can relate to a single incident. SKOD speeds up the data delivery by storing frequent incidents by caching hot queries, and recently used data.
+    is activated whenever a matching incident streams in from any modality.
+    % an insert occurs that matches a certain incident (any matching data). 
+    %
+    % This feature allows us to deliver incomplete 
+    % information need %data 
+    % and complete it later when new matching data is encountered, while being capable of adapting to changing information requirements. 
+    Queries in SKOD can be both standing queries or one-shot queries. To deal with the changing requirements, we proposed to build a \textit{\textbf{query-driven knowledge base}} for each user, where all queries can relate to a single incident. SKOD speeds up the data delivery by storing frequent incidents by caching hot queries, and recently used data.
 
 
-     \semisection*{
-    Resource-constrained Feature Extraction}
-    Task-specific querying systems face challenges during the data preparation stage due to low-quality data sets and a lack of labeled training samples. Although large-scale language models have made significant progress, there exists very few task-specific attribute extractors for text. Our team addressed these issues in SKOD by implementing a \textit{priority polling system} that selects candidate data samples for feature extraction from videos and images, instead of immediately processing features for batch inputs. This feature, coupled with trigger functionality, enables us to provide information needs on-demand and complete them with time. Additionally, we developed a \textbf{cloth-color extractor} for videos using common-sense reasoning and color and shape analysis \cite{stonebraker2020surveillance} on top of YOLO. To identify attributes in unstructured text, I propose a model called \textbf{HART} \cite{solaiman2022femmir}, which solves the problem in two stages: (i) \textbf{candidate sentence identification} by transforming the problem into a similarity-search problem using pre-trained language representation models (SBERT) and lexical knowledge bases, and (ii) \textbf{semantic attribute understanding} using syntactic characteristics and lexical meanings of the tokens in the candidate sentences. This approach can be generalized for any domain and lays the groundwork for intelligent document processing.
+     \semisection*
+    {Semantic Concept and Feature Extraction.} % Resource-constrained Feature Extraction
+    Task-specific querying systems face challenges during the data preparation stage due to low-quality datasets and a lack of labeled training samples. Although large-scale language models have made significant progress, there exists very few task-specific attribute extractors for text. Our team addressed these issues in SKOD by implementing a \textit{priority polling system} that selects candidate data samples for feature extraction from videos and images, instead of immediately processing features for batch inputs. This feature, coupled with trigger functionality, enables us to provide information needs on-demand and complete them with time. Additionally, we developed a \textbf{cloth-color extractor} for videos on top of YOLO using common-sense reasoning, and color and shape analysis \cite{stonebraker2020surveillance}. To identify attributes in unstructured text, I propose a model called \textbf{HART} \cite{solaiman2022femmir}, which solves the problem in two stages: (i) \textbf{candidate sentence identification} transformed the problem into a similarity-search problem using pre-trained language representation models (SBERT) and lexical knowledge bases, and (ii) \textbf{semantic attribute understanding} used syntactic characteristics and lexical meanings of the tokens in the candidate sentences. This approach can be generalized for any domain and lays the groundwork for \textit{intelligent document processing}.
     % For unstructured text, I propose an attribute identification model, \textbf{HART} \cite{solaiman2022femmir} which solves the problem in two stages: \textbf{candidate sentence identification} with by forming the problem as a similarity-search problem using pre-trained language representation models (SBERT) and lexical knowledge bases, and \textbf{semantic attribute understanding} using syntactic characteristics and lexical meanings of the tokens in the Candidate Sentences. This approach can be generalized for any domain and  paves the path for intelligent document processing. 
+% \end{itemize}

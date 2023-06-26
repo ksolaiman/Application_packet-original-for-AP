@@ -1,15 +1,15 @@
-\semisection*{Weakly Supervised Metric Learning for Cross-Modal Matching}
+\semisection*{Weakly Supervised Metric Learning for Cross-Modal Matching. }
 For real-world systems, \textit{data discovery 
-from heterogenous modalities}
+from heterogenous sources} % modalities
 %based on \textit{relevance matching on domain-specific objective function}
 % higher-level semantic properties} 
 and \textit{explanation of the relevant properties among similar data objects} is of equal importance. 
 Since in these applications, manual annotation is not feasible or they lack annotation resources, we need alternative supervision techniques for cross-modal matching. 
 %
-Motivated by the advancement in translation and captioning models (video/audio $\rightarrow$ text), I propose to embed data-objects and their semantic properties in a high dimensional embedding space via Contrastive Learning. 
+Motivated by the advancement in translation and captioning models (video/audio $\rightarrow$ text), I propose to embed data-objects and their semantic properties in a high dimensional embedding space via Contrastive Learning in \textbf{WesJeM} \cite{solaiman2022open}. 
 After extracting the interaction among entity-centric higher-level semantic features (such as, topics, events, entities, triplets) from texts and other translated modalities, a \textit{data information network} is built by connecting data samples to
 their features via their interactions.
-Finally, I construct a structure-infused representation for the data-objects from all modalities in \textbf{WesJeM} \cite{solaiman2022open}, by jointly embedding the data samples, the features, and the available similarity labels, 
+Finally, I construct a structure-infused representation for the data-objects from all available modalities, by jointly embedding the data samples, the features, and any available similarity labels, 
 % associated with them, 
 in a single space.
 %
@@ -19,4 +19,5 @@ by aligning the
 representation of the data samples, defined by their textual content, with the representation of features, based on their common relations. 
 % positive and negative samples are selceted by that method
 %
-For open-world environment where data and information-need keep changing, along with the dynamic data sources, WesJeM opens up the path for \textbf{Zero-Shot similarity matching} and \textbf{Data Discovery} of multimodal data.
+For open-world environments where data and information-need keep changing, %along with the dynamic data sources,
+WesJeM opens up the path for \textbf{Zero-Shot Similarity Matching} and \textbf{Data Discovery} of multimodal data.
